@@ -104,7 +104,7 @@
                   <a href="#">No1 120ml</a>
                 </h4>
                 <h5>£3.99</h5>
-                <p class="card-text">Candied Raspberries with a surprise centre.</p>
+                <p class="card-text">A delicious mixed berry pop, popular among many brits.</p>
               </div>
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
