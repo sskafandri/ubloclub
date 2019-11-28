@@ -21,6 +21,12 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 
+$query        = $conn->query("SELECT * FROM `shop_categories` ORDER BY `name` ASC");
+$categories   = $query->fetchAll(PDO::FETCH_ASSOC);
+
+$query        = $conn->query("SELECT * FROM `shop_products` WHERE `status` = 'available' ORDER BY `title` ASC");
+$products     = $query->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,13 +65,13 @@ $start = $time;
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="?c=products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="?c=about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="?c=contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -78,16 +84,18 @@ $start = $time;
             <div class="col-lg-3">
                 <h1 class="my-4">UBLO Club</h1>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    <?php
+                        foreach($categories as $category){
+                            echo '
+                                <a href="?c=category&id='.$category['id'].'" class="list-group-item">'.stripslashes($category['name']).'</a>
+                            ';
+                        }
+                    ?>
                 </div>
-
             </div>
-            <!-- /.col-lg-3 -->
 
             <div class="col-lg-9">
-
+                <!-- 
                 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -114,9 +122,9 @@ $start = $time;
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
+                -->
 
                 <div class="row">
-
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="card h-100">
                             <a href="#"><img class="card-img-top" src="images/No1-120ml-600x750.png" width="700" height="400" alt="No1 120ml"></a>
