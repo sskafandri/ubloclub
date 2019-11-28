@@ -21,10 +21,10 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 
-$query        = $conn->query("SELECT * FROM `shop_categories` ORDER BY `name` ASC");
+$query        = $conn->query("SELECT * FROM `shop_categories` ORDER BY `name` + 0 ASC");
 $categories   = $query->fetchAll(PDO::FETCH_ASSOC);
 
-$query        = $conn->query("SELECT * FROM `shop_products` WHERE `status` = 'available' ORDER BY `title` ASC");
+$query        = $conn->query("SELECT * FROM `shop_products` WHERE `status` = 'available' ORDER BY `title` + 0 ASC");
 $products     = $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
