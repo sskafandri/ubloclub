@@ -130,7 +130,7 @@ $products     = $query->fetchAll(PDO::FETCH_ASSOC);
                             echo '
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="card h-100">
-                                        <a href="#"><img class="card-img-top" src="'.$product['image_main'].'" width="700" height="400" alt="No1 120ml"></a>
+                                        <a href="#"><img class="card-img-top" src="images/'.$product['image_main'].'" width="700" height="400" alt="No1 120ml"></a>
                                         <div class="card-body">
                                             <h4 class="card-title">
                                                 <a href="#">'.stripslashes($product['title']).'</a>
