@@ -125,101 +125,27 @@ $products     = $query->fetchAll(PDO::FETCH_ASSOC);
                 -->
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No1-120ml-600x750.png" width="700" height="400" alt="No1 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                  <a href="#">No1 120ml</a>
-                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">A delicious mixed berry pop, popular among many brits.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No2-120ml-600x750.png" width="700" height="400" alt="No2 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                  <a href="#">No2 120ml</a>
-                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">Chilled Cherry Candy, the best Cherry Menthol around.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No3-120ml-600x750.png" width="700" height="400" alt="No3 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                  <a href="#">No3 120ml</a>
-                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">Blackcurrants and blackberries with a refreshing cool breeze.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No4-120ml-600x750.png" width="700" height="400" alt="No4 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                  <a href="#">No4 120ml</a>
-                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">Mixed berry fruits with a hint of menthol.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No5-120ml-600x750.png" width="700" height="400" alt="No5 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                  <a href="#">No5 120ml</a>
-                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">An icy cold blast with frozen mint.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="images/No6-120ml-600x750.png" width="700" height="400" alt="No6 120ml"></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">No6 120ml</a>
-                                </h4>
-                                <h5>£3.99</h5>
-                                <p class="card-text">Candied Raspberries with a surprise centre.</p>
-                            </div>
-                            <div class="card-footer">
-                                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        foreach($products as $product){
+                            echo '
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="card h-100">
+                                        <a href="#"><img class="card-img-top" src="'.$product['image_main'].'" width="700" height="400" alt="No1 120ml"></a>
+                                        <div class="card-body">
+                                            <h4 class="card-title">
+                                                <a href="#">'.stripslashes($product['title']).'</a>
+                                            </h4>
+                                            <h5>£'.$product['price'].'</h5>
+                                            <p class="card-text">'.$product['title_2'].'</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            ';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
