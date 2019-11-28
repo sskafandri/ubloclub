@@ -21,8 +21,6 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 
-debug($global_vars);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +32,7 @@ debug($global_vars);
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $global_vars['shop_title']; ?></title>
+    <title><?php echo $global_settings['shop_title']; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +47,7 @@ debug($global_vars);
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="<?php echo $global_vars['shop_site_url']; ?>"><?php echo $global_vars['shop_title']; ?></a>
+            <a class="navbar-brand" href="<?php echo $global_settings['shop_site_url']; ?>"><?php echo $global_settings['shop_title']; ?></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -222,7 +220,7 @@ debug($global_vars);
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; <?php echo $global_vars['shop_title']; ?> <?php echo date("Y", time()); ?></p>
+            <p class="m-0 text-center text-white">Copyright &copy; <?php echo $global_settings['shop_title']; ?> <?php echo date("Y", time()); ?></p>
         </div>
     </footer>
 
