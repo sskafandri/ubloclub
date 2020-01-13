@@ -71,9 +71,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<link rel="stylesheet" href="css/theme-elements.css">
 		<link rel="stylesheet" href="css/theme-blog.css">
 		<link rel="stylesheet" href="css/theme-shop.css">
-		
-		<!-- Demo CSS -->
-
 
 		<!-- Skin CSS -->
 		<link rel="stylesheet" href="css/skins/default.css"> 
@@ -84,9 +81,97 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
+		<!-- Basic Age Verification -->
+		<link href="dist/agecheck.min.css" rel="stylesheet" />
+        <script src="dist/jquery.agecheck-min.js"></script>
+        <script>
+            $(document).ready(function(){ 
+                //THIS CODE IS ONLY NEEDED FOR DEMO:
+                var minAge = $('select').val();
+                $('select').on('change', function(){
+                   minAge = $(this).val(); 
+                });
+                $('button').on('click', function(){
+                    sessionStorage.clear();
+                    $.ageCheck({minAge: minAge});
+                });
+                //END DEMO CODE.
+                //THIS IS ALL YOU NEED FOR PLUGIN:
+                $.ageCheck({minAge: minAge});        
+            });        
+        </script>
+        
+        <style>
+            .demo select {
+                border: 1px solid #ccc;
+                border-radius: 2px;
+                padding: 2px;
+            }
+            .demo h3 {
+                font-family:'Bree Serif', arial; 
+                font-weight:bold; 
+                font-size:30px; 
+                text-align:center; 
+                border-bottom:1px dashed #ccc;  
+                padding:0 0 20px 0; 
+                line-height:38px;
+            }
+            .demo p {
+                font-family: georgia, serif; 
+                font-size:18px; 
+                line-height:26px; 
+                text-align:center;
+                margin-bottom:10px;
+                color:#ADADAD;
+            }
+            .demo button {
+                box-sizing: border-box;
+                display: inline-block;
+                margin-bottom: 10px;
+                margin-top:5px;
+                font-weight: bold;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                padding: 4px 20px 6px 20px;
+                font-size: 24px;
+                line-height: 1.5;
+                background:#8EB908;
+                color:#fff; 
+                text-shadow:1px 1px 0 #84A51D;
+                 font-family: 'Bree Serif', serif; 
+            }
+            .demo button:hover{
+                box-sizing: border-box;
+                background:#82A711;
+            }
+            @media (max-width: 500px) {
+                .demo p {
+                    font-size:12px;
+                    line-height: 17px;
+                }
+                .demo h3 {
+                    font-size:18px;
+                    line-height:22px;
+                }
+                .demo button {
+                    font-size:17px;
+                }
+            }
+        </style>
 	</head>
 	<body>
-
+		<div class="demo">
 		<div class="body">
 			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 135, 'stickySetTop': '-135px', 'stickyChangeLogo': true}">
 				<div class="header-body border-color-primary border-bottom-0 box-shadow-none" data-sticky-header-style="{'minResolution': 0}" data-sticky-header-style-active="{'background-color': '#f7f7f7'}" data-sticky-header-style-deactive="{'background-color': '#FFF'}">
@@ -168,6 +253,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</li>
 									</ul>
 									<!-- cart summary -->
+									<!--
 									<div class="header-nav-features">
 										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
 											<a href="#" class="header-nav-features-toggle">
@@ -202,6 +288,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											</div>
 										</div>
 									</div>
+									-->
 								</div>
 							</div>
 						</div>
