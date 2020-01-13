@@ -1449,7 +1449,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<li class="nav-item"><a class="nav-link py-3 px-4" href="#productReviews" data-toggle="tab">Reviews (2)</a></li>
 									</ul>
 									<div class="tab-content p-0">
-										<div class="tab-pane p-4 active" id="productDescription">
+										<div class="tab-pane p-4 active" id="productDescription" style="text-align: left;">
 											<span style="text-align: left;">
 												<p><?php echo stripslashes($product['description']); ?></p>
 											</span>
