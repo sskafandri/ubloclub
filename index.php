@@ -1139,89 +1139,120 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 			</header>
 
-			<div role="main" class="main shop py-4">
+			<?php
+				$c = $_GET['c'];
+				switch ($c){
+					// staging
+					case "staging":
+						staging();
+						break;
 
-				<div class="container">
+					case "about_us":
+						about_us();
+						break;
 
-					<div class="masonry-loader masonry-loader-showing">
-						<div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
-							<!-- sample product with sale icon -->
-							<!--
-							<div class="col-12 col-sm-6 col-lg-3 product">
-								<a href="shop-product-sidebar-left.html">
-									<span class="onsale">Sale!</span>
-								</a>
-								<span class="product-thumb-info border-0">
-									<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-										<span class="text-uppercase text-1">Add to Cart</span>
-									</a>
-									<a href="shop-product-sidebar-left.html">
-										<span class="product-thumb-info-image">
-											<img alt="" class="img-fluid" src="img/products/product-grey-1.jpg">
-										</span>
-									</a>
-									<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-										<a href="shop-product-sidebar-left.html">
-											<h4 class="text-4 text-primary">Photo Camera</h4>
-											<span class="price">
-												<del><span class="amount">$325</span></del>
-												<ins><span class="amount text-dark font-weight-semibold">$299</span></ins>
-											</span>
-										</a>
-									</span>
-								</span>
-							</div>
-							-->
-							
-							<?php foreach($all_products as $product){ ?>
+					case "contact_us":
+						contact_us();
+						break;
+
+					case "product":
+						product();
+						break;
+
+					case "cart":
+						cart();
+						break;
+
+					// home
+					default:
+						home();
+						break;
+				}
+			?>
+
+			<?php function home(){ ?>
+	        	<?php global $conn, $globals, $global_settings, $site; ?>
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<div class="masonry-loader masonry-loader-showing">
+							<div class="row products product-thumb-info-list" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
+								<!-- sample product with sale icon -->
+								<!--
 								<div class="col-12 col-sm-6 col-lg-3 product">
-									<?php if($product['sale_icon'] == 'yes'){ ?>
-										<a href="shop-product-sidebar-left.html">
-											<span class="onsale">Sale!</span>
-										</a>
-									<?php } ?>
+									<a href="shop-product-sidebar-left.html">
+										<span class="onsale">Sale!</span>
+									</a>
 									<span class="product-thumb-info border-0">
-										<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
-											<span class="text-uppercase text-1">Select Options</span>
+										<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+											<span class="text-uppercase text-1">Add to Cart</span>
 										</a>
-										<a href="?c=product&id=<?php echo $product['id']; ?>">
+										<a href="shop-product-sidebar-left.html">
 											<span class="product-thumb-info-image">
-												<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
+												<img alt="" class="img-fluid" src="img/products/product-grey-1.jpg">
 											</span>
 										</a>
 										<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-											<a href="?c=product&id=<?php echo $product['id']; ?>">
-												<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
+											<a href="shop-product-sidebar-left.html">
+												<h4 class="text-4 text-primary">Photo Camera</h4>
 												<span class="price">
-													<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
+													<del><span class="amount">$325</span></del>
+													<ins><span class="amount text-dark font-weight-semibold">$299</span></ins>
 												</span>
 											</a>
 										</span>
 									</span>
 								</div>
-							<?php } ?>
+								-->
+								
+								<?php foreach($all_products as $product){ ?>
+									<div class="col-12 col-sm-6 col-lg-3 product">
+										<?php if($product['sale_icon'] == 'yes'){ ?>
+											<a href="shop-product-sidebar-left.html">
+												<span class="onsale">Sale!</span>
+											</a>
+										<?php } ?>
+										<span class="product-thumb-info border-0">
+											<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
+												<span class="text-uppercase text-1">Select Options</span>
+											</a>
+											<a href="?c=product&id=<?php echo $product['id']; ?>">
+												<span class="product-thumb-info-image">
+													<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
+												</span>
+											</a>
+											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+												<a href="?c=product&id=<?php echo $product['id']; ?>">
+													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
+													<img src="img/star.jpg" alt="">
+													<span class="price">
+														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
+													</span>
+												</a>
+											</span>
+										</span>
+									</div>
+								<?php } ?>
 
-						</div>
-
-						<!-- pagination -->
-						<!--
-						<div class="row">
-							<div class="col">
-								<ul class="pagination float-right">
-									<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
-									<li class="page-item active"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
-								</ul>
 							</div>
+
+							<!-- pagination -->
+							<!--
+							<div class="row">
+								<div class="col">
+									<ul class="pagination float-right">
+										<li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+										<li class="page-item active"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
+									</ul>
+								</div>
+							</div>
+							-->
 						</div>
-						-->
 					</div>
-
 				</div>
-
-			</div>
+			<?php } ?>
 
 			<footer id="footer">
 				<div class="container my-4 py-2">
