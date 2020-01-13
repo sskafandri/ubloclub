@@ -1173,7 +1173,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 							-->
 							
-							<?php foreach(){ ?>
+							<?php foreach($all_products as $product){ ?>
 								<div class="col-12 col-sm-6 col-lg-3 product">
 									<a href="shop-product-sidebar-left.html">
 										<span class="onsale">Sale!</span>
