@@ -1171,7 +1171,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 			?>
 
 			<?php function home(){ ?>
-	        	<?php global $conn, $globals, $global_settings, $site; ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
 						<div class="masonry-loader masonry-loader-showing">
