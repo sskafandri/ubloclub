@@ -1189,9 +1189,9 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</a>
 										<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
 											<a href="shop-product-sidebar-left.html">
-												<h4 class="text-4 text-primary"><?php $product['title']; ?></h4>
+												<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
 												<span class="price">
-													<ins><span class="amount text-dark font-weight-semibold">£<?php $product['price_month']; ?></span></ins>
+													<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
 												</span>
 											</a>
 										</span>
