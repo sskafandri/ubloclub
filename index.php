@@ -1420,7 +1420,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<span class="amount">£<?php echo stripslashes($product['price_month']); ?></span>
 									</p>
 
-									<p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p>
+									<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
 									<form enctype="multipart/form-data" method="post" class="cart">
 										<div class="quantity quantity-lg">
@@ -1431,9 +1431,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
 									</form>
 
+									<!--
 									<div class="product-meta">
 										<span class="posted-in">Categories: <a rel="tag" href="#">Accessories</a>, <a rel="tag" href="#">Bags</a>.</span>
 									</div>
+									-->
 								</div>
 							</div>
 						</div>
@@ -1448,8 +1450,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 									</ul>
 									<div class="tab-content p-0">
 										<div class="tab-pane p-4 active" id="productDescription">
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. </p>
-											<p class="m-0">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+											<p><?php echo stripslashes($product['description']); ?></p>
 										</div>
 										<div class="tab-pane p-4" id="productInfo">
 											<table class="table m-0">
