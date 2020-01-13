@@ -168,7 +168,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</li>
 									</ul>
 									<!-- cart summary -->
-									<!--
 									<div class="header-nav-features">
 										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
 											<a href="#" class="header-nav-features-toggle">
@@ -203,7 +202,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											</div>
 										</div>
 									</div>
-									-->
 								</div>
 							</div>
 						</div>
