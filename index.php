@@ -1179,16 +1179,16 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<span class="onsale">Sale!</span>
 									</a>
 									<span class="product-thumb-info border-0">
-										<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-											<span class="text-uppercase text-1">Add to Cart</span>
+										<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
+											<span class="text-uppercase text-1">Select Options</span>
 										</a>
-										<a href="shop-product-sidebar-left.html">
+										<a href="?c=product&id=<?php echo $product['id']; ?>">
 											<span class="product-thumb-info-image">
 												<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
 											</span>
 										</a>
 										<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-											<a href="shop-product-sidebar-left.html">
+											<a href="?c=product&id=<?php echo $product['id']; ?>">
 												<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
 												<span class="price">
 													<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
