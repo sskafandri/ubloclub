@@ -1229,7 +1229,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 													<div class="pb-0 clearfix"></div>
 
-													<br><h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
+													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
 													
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
