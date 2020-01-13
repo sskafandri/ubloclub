@@ -1294,7 +1294,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 			<?php } ?>
 
-			<?php function product() ?>
+			<?php function product(){ ?>
 				<?php 
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
 					
