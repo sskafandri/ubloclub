@@ -1,17 +1,11 @@
 <?php
 
-$config['base_fir'] 							= '/home2/ukmarketingclub/public_html/';
+$config['base_fir'] 							= '/home/ublu/public_html/';
 
 $config['version']								= '1';
 
 // site vars
-$site['url']									= 'http://ukmarketingclub.com';
-$site['title']									= 'CMS';
 $site['copyright']								= 'Written by DeltaColo.';
-
-// logo name vars
-$site['name_long']								= 'CMS Portal';
-$site['name_short']								= '<b>CMS</b>';
 
 // get settings table contents
 $query = $conn->query("SELECT `config_name`,`config_value` FROM `global_settings` ");

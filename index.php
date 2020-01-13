@@ -39,7 +39,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>Shop | Porto - Responsive HTML5 Template 7.0.0</title>	
+		<title><?php echo $site['title']; ?></title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -476,7 +476,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 							<div class="row footer-top-light-border mt-4 pt-4">
 								<div class="col-lg-5 text-center text-md-left">
-									<p class="text-2 mt-1">© Copyright 2018. All Rights Reserved.</p>
+									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved.</p>
 								</div>
 								<div class="col-lg-3 text-center text-md-left">
 									<p class="text-3 mb-0 font-weight-semibold text-color-light opacity-8">BUSINESS HOURS</p>
@@ -493,7 +493,22 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		</div>
 
 		<!-- Vendor -->
-		<script src="vendor/jquery/jquery.min.js"></script>		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>		<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>		<script src="master/style-switcher/style.switcher.js" id="styleSwitcherScript" data-base-path="" data-skin-src=""></script>		<script src="vendor/popper/umd/popper.min.js"></script>		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>		<script src="vendor/common/common.min.js"></script>		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>		<script src="vendor/isotope/jquery.isotope.min.js"></script>		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>		<script src="vendor/vide/jquery.vide.min.js"></script>
+		<script src="vendor/jquery/jquery.min.js"></script>
+		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
+		<script src="master/style-switcher/style.switcher.js" id="styleSwitcherScript" data-base-path="" data-skin-src=""></script>
+		<script src="vendor/popper/umd/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="vendor/common/common.min.js"></script>
+		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
+		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="vendor/vide/jquery.vide.min.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
 		<script src="js/theme.js"></script>
