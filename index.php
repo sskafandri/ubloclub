@@ -1239,7 +1239,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</span>
 									</div>
 								<?php } ?>
-
 							</div>
 
 							<!-- pagination -->
