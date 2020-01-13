@@ -1265,7 +1265,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 														<img src="img/star.png" width="25px" alt="">
 													<?php } ?>
 													
-
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
 													</span>
