@@ -157,16 +157,18 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<li class="d-none d-sm-inline-flex">
 											<div class="header-extra-info-text">
 												<label>SEND US AN EMAIL</label>
-												<strong><a href="mailto:mail@example.com">MAIL@EXAMPLE.COM</a></strong>
+												<strong><a href="mailto:mail@example.com">support@ublo.club</a></strong>
 											</div>
 										</li>
 										<li>
 											<div class="header-extra-info-text">
 												<label>CALL US NOW</label>
-												<strong><a href="tel:8001234567">800-123-4567</a></strong>
+												<strong><a href="tel:8001234567">0800 123 4567</a></strong>
 											</div>
 										</li>
 									</ul>
+									<!-- cart summary -->
+									<!--
 									<div class="header-nav-features">
 										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
 											<a href="#" class="header-nav-features-toggle">
@@ -201,6 +203,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											</div>
 										</div>
 									</div>
+									-->
 								</div>
 							</div>
 						</div>
