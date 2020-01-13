@@ -1225,45 +1225,9 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<a href="?c=product&id=<?php echo $product['id']; ?>">
 													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
 
-													<?php if($product['stars'] == 1){ ?>
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-													<?php } ?>
-
-													<?php if($product['stars'] == 2){ ?>
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-													<?php } ?>
-
-													<?php if($product['stars'] == 3){ ?>
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-													<?php } ?>
-
-													<?php if($product['stars'] == 4){ ?>
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
-													<?php } ?>
-
-													<?php if($product['stars'] == 5){ ?>
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-														<img src="img/star.png" width="25px" alt="">
-													<?php } ?>
+													<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
+														<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
+													</div>
 													
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
@@ -1331,8 +1295,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 								<div class="summary entry-summary">
 									<h1 class="mb-0 font-weight-bold text-7"><?php echo stripslashes($product['title']); ?></h1>
 									<div class="pb-0 clearfix">
-										<div title="Rated 3 out of 5" class="float-left">
-											<input type="text" class="d-none" value="3" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
+										<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
+											<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
 										</div>
 
 										<div class="review-num">
