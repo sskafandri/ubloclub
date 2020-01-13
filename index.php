@@ -1827,8 +1827,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 			      copy: 'This Website requires you to be [18] years or older to enter. Please enter your Date of Birth in the fields below in order to continue:',
 			      success: null,
 			      successMsg: {
-			        header: 'Success!',
-			        body: 'You are now being redirected back to the our website.'
+			        header: 'Thank you!',
+			        body: 'Loading ...'
 			      },
 			      underAgeMsg: 'Sorry, you are not old enough to view this site.',
 			      underAge: null,
