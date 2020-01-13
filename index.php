@@ -208,6 +208,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					</div>
+					<!-- top menu bar -->
+					<!-- 
 					<div class="container">
 						<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
 							<div class="header-row">
@@ -1133,6 +1135,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					</div>
+				-->
 				</div>
 			</header>
 
