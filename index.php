@@ -1147,7 +1147,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<nav class="collapse">
 													<ul class="nav nav-pills" id="mainNav">
 														<li class="dropdown">
-															<a class="dropdown-item dropdown-toggle" href="index.html">
+															<a class="" href="<?php echo $site['url']; ?>">
 																Home
 															</a>
 														</li>
