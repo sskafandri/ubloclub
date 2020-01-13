@@ -1172,6 +1172,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 			<?php function home(){ ?>
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+	        	<?php $max_stars = 5; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
 						<div class="masonry-loader masonry-loader-showing">
@@ -1223,8 +1224,13 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
 												<a href="?c=product&id=<?php echo $product['id']; ?>">
 													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
-													<img src="img/star.png" width="25px" alt="">
-													<img src="img/star.png" width="25px" alt="" style="filter: grayscale(100%);">
+
+													<img src="img/star.png" width="25px" alt="" <?php if($product['stars'] <= 1){echo 'style="filter: grayscale(100%);"'; } ?>>
+													<img src="img/star.png" width="25px" alt="" <?php if($product['stars'] <= 2){echo 'style="filter: grayscale(100%);"'; } ?>>
+													<img src="img/star.png" width="25px" alt="" <?php if($product['stars'] <= 3){echo 'style="filter: grayscale(100%);"'; } ?>>
+													<img src="img/star.png" width="25px" alt="" <?php if($product['stars'] <= 4){echo 'style="filter: grayscale(100%);"'; } ?>>
+													<img src="img/star.png" width="25px" alt="" <?php if($product['stars'] <= 4){echo 'style="filter: grayscale(100%);"'; } ?>>
+
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
 													</span>
