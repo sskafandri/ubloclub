@@ -1588,26 +1588,29 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											$query 						= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY RAND() LIMIT 4 ");
 											$related_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
 										?>
-										<div class="col-12 col-sm-6 col-lg-3 product">
-											<span class="product-thumb-info border-0">
-												<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-													<span class="text-uppercase text-1">Select Options</span>
-												</a>
-												<a href="shop-product-sidebar-left.html">
-													<span class="product-thumb-info-image">
-														<img alt="" class="img-fluid" src="img/products/product-grey-1.jpg">
-													</span>
-												</a>
-												<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+
+										<?php foreach($related_products as $related_product){ ?>
+											<div class="col-12 col-sm-6 col-lg-3 product">
+												<span class="product-thumb-info border-0">
+													<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+														<span class="text-uppercase text-1">Select Options</span>
+													</a>
 													<a href="shop-product-sidebar-left.html">
-														<h4 class="text-4 text-primary">Photo Camera</h4>
-														<span class="price">
-															<ins><span class="amount text-dark font-weight-semibold">$299</span></ins>
+														<span class="product-thumb-info-image">
+															<img alt="" class="img-fluid" src="<?php echo $related_product['main_image']; ?>">
 														</span>
 													</a>
+													<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+														<a href="shop-product-sidebar-left.html">
+															<h4 class="text-4 text-primary"><?php echo stripslashes($related_product['title']); ?></h4>
+															<span class="price">
+																<ins><span class="amount text-dark font-weight-semibold">£<?php echo $related_product['price_month']; ?></span></ins>
+															</span>
+														</a>
+													</span>
 												</span>
-											</span>
-										</div>
+											</div>
+										<?php } ?>
 									</div>
 								</div>
 							</div>
