@@ -83,22 +83,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 		<!-- Basic age verification -->
 		<link href="dist/agecheck.min.css" rel="stylesheet" />
-        <script>
-            $(document).ready(function(){ 
-                //THIS CODE IS ONLY NEEDED FOR DEMO:
-                var minAge = $('select').val();
-                $('select').on('change', function(){
-                   minAge = $(this).val(); 
-                });
-                $('button').on('click', function(){
-                    sessionStorage.clear();
-                    $.ageCheck({minAge: minAge});
-                });
-                //END DEMO CODE.
-                //THIS IS ALL YOU NEED FOR PLUGIN:
-                $.ageCheck({minAge: minAge});        
-            });        
-        </script>
 
         <style>
             .demo select {
@@ -1824,6 +1808,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 		<!-- Basic age verification -->
 		<script src="dist/jquery.agecheck-min.js"></script>
-
+		<script>
+            $(document).ready(function(){ 
+                //THIS IS ALL YOU NEED FOR PLUGIN:
+                $.ageCheck({minAge: minAge});        
+            });        
+        </script>
 	</body>
 </html>
