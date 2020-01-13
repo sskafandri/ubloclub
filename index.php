@@ -39,7 +39,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 
-		<title>4 Columns Full Width  | Porto - Responsive HTML5 Template 7.6.0</title>	
+		<title><?php echo $site['title']; ?></title>	
 
 		<meta name="keywords" content="HTML5 Template" />
 		<meta name="description" content="Porto - Responsive HTML5 Template">
@@ -1399,7 +1399,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 							<div class="row footer-top-light-border mt-4 pt-4">
 								<div class="col-lg-5 text-center text-md-left">
-									<p class="text-2 mt-1">© Copyright 2019. All Rights Reserved.</p>
+									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved.</p>
 								</div>
 								<div class="col-lg-3 text-center text-md-left">
 									<p class="text-3 mb-0 font-weight-semibold text-color-light opacity-8">BUSINESS HOURS</p>
