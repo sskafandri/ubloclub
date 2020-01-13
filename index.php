@@ -1583,10 +1583,15 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 								<h4 class="mb-3">Related <strong>Products</strong></h4>
 								<div class="masonry-loader masonry-loader-showing">
 									<div class="row products product-thumb-info-list mt-3" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
+										
+										<?php
+											$query 						= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY RAND() LIMIT 4 ");
+											$related_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
+										?>
 										<div class="col-12 col-sm-6 col-lg-3 product">
 											<span class="product-thumb-info border-0">
 												<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-													<span class="text-uppercase text-1">Add to Cart</span>
+													<span class="text-uppercase text-1">Select Options</span>
 												</a>
 												<a href="shop-product-sidebar-left.html">
 													<span class="product-thumb-info-image">
@@ -1597,68 +1602,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													<a href="shop-product-sidebar-left.html">
 														<h4 class="text-4 text-primary">Photo Camera</h4>
 														<span class="price">
-															<del><span class="amount">$325</span></del>
 															<ins><span class="amount text-dark font-weight-semibold">$299</span></ins>
-														</span>
-													</a>
-												</span>
-											</span>
-										</div>
-										<div class="col-12 col-sm-6 col-lg-3 product">
-											<span class="product-thumb-info border-0">
-												<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-													<span class="text-uppercase text-1">Add to Cart</span>
-												</a>
-												<a href="shop-product-sidebar-left.html">
-													<span class="product-thumb-info-image">
-														<img alt="" class="img-fluid" src="img/products/product-grey-2.jpg">
-													</span>
-												</a>
-												<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-													<a href="shop-product-sidebar-left.html">
-														<h4 class="text-4 text-primary">Golf Bag</h4>
-														<span class="price">
-															<span class="amount text-dark font-weight-semibold">$72</span>
-														</span>
-													</a>
-												</span>
-											</span>
-										</div>
-										<div class="col-12 col-sm-6 col-lg-3 product">
-											<span class="product-thumb-info border-0">
-												<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-													<span class="text-uppercase text-1">Add to Cart</span>
-												</a>
-												<a href="shop-product-sidebar-left.html">
-													<span class="product-thumb-info-image">
-														<img alt="" class="img-fluid" src="img/products/product-grey-3.jpg">
-													</span>
-												</a>
-												<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-													<a href="shop-product-sidebar-left.html">
-														<h4 class="text-4 text-primary">Workout</h4>
-														<span class="price">
-															<span class="amount text-dark font-weight-semibold">$60</span>
-														</span>
-													</a>
-												</span>
-											</span>
-										</div>
-										<div class="col-12 col-sm-6 col-lg-3 product">
-											<span class="product-thumb-info border-0">
-												<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-													<span class="text-uppercase text-1">Add to Cart</span>
-												</a>
-												<a href="shop-product-sidebar-left.html">
-													<span class="product-thumb-info-image">
-														<img alt="" class="img-fluid" src="img/products/product-grey-4.jpg">
-													</span>
-												</a>
-												<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-													<a href="shop-product-sidebar-left.html">
-														<h4 class="text-4 text-primary">Luxury bag</h4>
-														<span class="price">
-															<span class="amount text-dark font-weight-semibold">$199</span>
 														</span>
 													</a>
 												</span>
