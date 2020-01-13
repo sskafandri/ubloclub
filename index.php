@@ -1184,7 +1184,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</a>
 										<a href="shop-product-sidebar-left.html">
 											<span class="product-thumb-info-image">
-												<img alt="" class="img-fluid" src="<?php $product['image_main']; ?>">
+												<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
 											</span>
 										</a>
 										<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
