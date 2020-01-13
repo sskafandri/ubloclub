@@ -98,13 +98,13 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills">
 												<li class="nav-item nav-item-borders py-2">
-													<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> 1234 Street Name, City Name</span>
+													<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> 1 Blah Street, City, County, A1 2BC</span>
 												</li>
 												<li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
-													<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 123-456-7890</a>
+													<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
 												</li>
 												<li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
-													<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> mail@domain.com</a>
+													<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> support@ublo.club</a>
 												</li>
 											</ul>
 										</nav>
@@ -115,11 +115,12 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills">
 												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													<a class="nav-link pl-0" href="about-us.html"><i class="fas fa-angle-right"></i> About Us</a>
+													<a class="nav-link pl-0" href="?c=about_us"><i class="fas fa-angle-right"></i> About Us</a>
 												</li>
 												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													<a class="nav-link" href="contact-us.html"><i class="fas fa-angle-right"></i> Contact Us</a>
+													<a class="nav-link" href="?c=contact_us"><i class="fas fa-angle-right"></i> Contact Us</a>
 												</li>
+												<!--
 												<li class="nav-item dropdown nav-item-left-border d-none d-sm-block">
 													<a class="nav-link" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 														<img src="img/blank.gif" class="flag flag-us" alt="English" /> English
@@ -131,6 +132,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-fr" alt="English" /> Française</a>
 													</div>
 												</li>
+												-->
 											</ul>
 										</nav>
 									</div>
