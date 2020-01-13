@@ -1175,9 +1175,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							
 							<?php foreach($all_products as $product){ ?>
 								<div class="col-12 col-sm-6 col-lg-3 product">
-									<a href="shop-product-sidebar-left.html">
-										<span class="onsale">Sale!</span>
-									</a>
+									<?php if($product['sale_icon'] == 'yes'){ ?>
+										<a href="shop-product-sidebar-left.html">
+											<span class="onsale">Sale!</span>
+										</a>
+									<?php } ?>
 									<span class="product-thumb-info border-0">
 										<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
 											<span class="text-uppercase text-1">Select Options</span>
