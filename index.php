@@ -41,9 +41,9 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 		<title><?php echo $site['title']; ?></title>	
 
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="Porto - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+		<meta name="keywords" content="<?php echo $site['title']; ?>" />
+		<meta name="description" content="<?php echo $site['title']; ?> e-Cig vape store and supplies.">
+		<meta name="author" content="<?php echo $site['url']; ?>">
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
