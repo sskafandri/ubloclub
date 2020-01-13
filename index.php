@@ -2017,7 +2017,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
             $(document).ready(function(){ 
                 //THIS IS ALL YOU NEED FOR PLUGIN:
-                $.ageCheck({minAge: minAge});        
+                $.ageCheck({minAge: '18'});        
             });        
         </script>
 	</body>
