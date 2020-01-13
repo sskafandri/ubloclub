@@ -1,3 +1,35 @@
+<?php
+
+if(isset($_GET['dev']) && $_GET['dev'] == 'yes'){
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	ini_set('error_reporting', E_ALL);
+}
+
+date_default_timezone_set('UTC');
+
+session_start();
+
+// includes
+include('inc/db.php');
+include('inc/global_vars.php');
+include('inc/functions.php');
+
+// start timer for page loaded var
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$start = $time;
+
+// get products
+$query 					= $conn->query("SELECT * FROM `shop_products` ORDER BY `title` ");
+$all_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
+
+// get products
+$query 					= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY `name` ");
+$all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
