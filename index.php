@@ -1585,7 +1585,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 									<div class="row products product-thumb-info-list mt-3" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
 										
 										<?php
-											$query 						= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY RAND() LIMIT 4 ");
+											$query 						= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `id` != '".$product_id."' ORDER BY RAND() LIMIT 4 ");
 											$related_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
 										?>
 
