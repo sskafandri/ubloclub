@@ -1225,11 +1225,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<a href="?c=product&id=<?php echo $product['id']; ?>">
 													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
 
-													<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
-														<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
-													</div>
 
-													<br>
 													
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
