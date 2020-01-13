@@ -1152,22 +1152,17 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="<?php echo $site['url']; ?>">
-																Ublo Numbers
-															</a>
-														</li>
-														<li class="dropdown">
-															<a class="" href="<?php echo $site['url']; ?>">
+															<a class="" href="?c=cart">
 																Cart
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="<?php echo $site['url']; ?>">
+															<a class="" href="?c=about_us">
 																About Us
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="<?php echo $site['url']; ?>">
+															<a class="" href="?c=contact_us">
 																Contact Us
 															</a>
 														</li>
