@@ -1223,7 +1223,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
 												<a href="?c=product&id=<?php echo $product['id']; ?>">
 													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
-													<img src="img/star.jpg" alt="">
+													<img src="img/star.png" width="25px" alt="">
 													<span class="price">
 														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
 													</span>
