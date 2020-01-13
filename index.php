@@ -1450,13 +1450,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 									</ul>
 									<div class="tab-content p-0">
 										<div class="tab-pane p-4 active" id="productDescription" style="text-align: left;">
-											<ul class="comments">
-												<li>
-													<div class="comment">
-														<p><?php echo stripslashes($product['description']); ?></p>
-													</div>
-												</li>
-											</ul>
+												<?php echo stripslashes($product['description']); ?>
 										</div>
 										<div class="tab-pane p-4" id="productInfo">
 											<table class="table m-0">
