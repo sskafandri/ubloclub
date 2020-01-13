@@ -22,7 +22,7 @@ $time = $time[1] + $time[0];
 $start = $time;
 
 // get products
-$query 					= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY `title` ");
+$query 					= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY `title` + 0 ");
 $all_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // get products
