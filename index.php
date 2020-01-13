@@ -1450,8 +1450,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 									</ul>
 									<div class="tab-content p-0">
 										<div class="tab-pane p-4 active" id="productDescription">
-											<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. </p>
-											<p class="m-0">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+											<p style="text-align: left;"><?php echo stripslashes($product['description']); ?></p>
 										</div>
 										<div class="tab-pane p-4" id="productInfo">
 											<table class="table m-0">
