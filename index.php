@@ -1818,7 +1818,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 			 *
 			 */
 
-			(function ($) {
 			  $.ageCheck = function (options) {
 			    const settings = $.extend({
 			      minAge: 18,
@@ -2014,10 +2013,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 			      }, 500);
 			    });
 			  };
-			}(jQuery));
+			
 
-		</script>
-		<script>
             $(document).ready(function(){ 
                 //THIS IS ALL YOU NEED FOR PLUGIN:
                 $.ageCheck({minAge: minAge});        
