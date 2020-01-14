@@ -1360,15 +1360,16 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
 											<form enctype="multipart/form-data" method="post" class="cart">
+												<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
 												<div class="form-group row">
-													<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
+													<label class="col-lg-6 col-xs-12 control-label pt-2" for="blend">Strength and Blends</label>
 													<div class="col-lg-12">
 														<select id="blend" name="blend" class="form-control form-control-sm mb-3">
 															<option value="" disabled="">Choose an option</option>
-															<option value="3MG 50/50" >3MG 50/50</option>
-															<option value="6MG 50/50" >6MG 50/50</option>
-															<option value="12MG 50/20" >12MG 50/20</option>
-															<option value="16MG 50/50" >16MG 50/50</option>
+															<option value="3_50_50">3MG 50/50</option>
+															<option value="6_50_50">6MG 50/50</option>
+															<option value="12_50_20">12MG 50/20</option>
+															<option value="16_50_20">16MG 50/50</option>
 														</select>
 													</div>
 												</div>
