@@ -21,13 +21,20 @@ $time = $time[1] + $time[0];
 $start = $time;
 
 // get products
-$query 					= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY `title` + 0 ");
-$all_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
+$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' ORDER BY `title` + 0 ");
+$all_products 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // get products
-$query 					= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY `name` ");
-$all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
+$query 								= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY `name` ");
+$all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 
+// set some defaults
+if(!isset($_SESSION['cart_total'])){
+	$_SESSION['cart_total'] 		= 0;
+}
+if(!isset($_SESSION['cart'])){
+	$_SESSION['cart'] 				= array();
+}
 ?>
 
 <!DOCTYPE html>
