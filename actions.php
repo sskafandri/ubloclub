@@ -56,14 +56,14 @@ function test(){
 
 function add_to_cart()
 {
-	global $conn, $global_settings;
+	global $conn;
 
 	$product_id 	= post('product_id');
 	$quantity 		= post('quantity');
 	$rand 			= rand(00000,99999);
 
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
-	$_SESSION['cart'][$rand]['quantity']		= $quantity;
+	$_SESSION['cart'][$rand]['quantity']		= $product_id;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
