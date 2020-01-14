@@ -75,14 +75,14 @@
 
 #modal_content nav a.av_btn {
 	display: block;
-	text-align: center;
+	text-align: left;
 	width: 65px;
-	border-radius: 0px;
+	border-radius: 2px;
 	margin:1em auto 0;
 	text-decoration: none;
 	padding: 1em;
 	color: #fff;
-	font:normal .7em/1em 'AmericanTypwrterITCW01- 731031';
+	font: normal .7em/1em 'AmericanTypwrterITCW01- 731031';
 	text-transform: none;
 	letter-spacing: 0;
 }
