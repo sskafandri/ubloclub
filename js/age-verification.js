@@ -89,9 +89,7 @@ av_positionPrompt = function() {
 		'left': left
 	});
 
-	/*
 	if (modal_content.is(':hidden') && ($.cookie('is_legal') != "yes")) {
 		modal_content.fadeIn('slow')
 	}
-	*/
 };
