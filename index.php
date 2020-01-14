@@ -1694,6 +1694,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
     		<script src="js/age-verification.js"></script>
     	-->
 
+    	<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
     	<script>
     		$(document).ready(function(){
                /**
