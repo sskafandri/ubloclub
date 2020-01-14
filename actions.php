@@ -80,6 +80,8 @@ function add_to_cart()
 	$price 			= post('price');
 	$rand 			= rand(00000,99999);
 
+	// see if this product is already in the cart, update totals if needed
+
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
 	$_SESSION['cart'][$rand]['quantity']		= $quantity;
 	$_SESSION['cart'][$rand]['price']			= $price;
