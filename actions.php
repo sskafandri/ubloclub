@@ -89,16 +89,6 @@ function add_to_cart()
 		$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
 	}
 
-	$insert = $conn->exec("INSERT IGNORE INTO `shop_carts` 
-        (`key`,`product_id`,`quantity`,`price`)
-        VALUE
-        ('".$_SESSION['cart_key']."',
-        '".$product_id."',
-        '".$quantity."',
-        '".$price."'
-    	)"
-    );
-
 	// check for existing products like this one
 	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' AND `product_id` = '".$product_id."' ");
 	$existing_item 				= $query->fetch(PDO::FETCH_ASSOC);
@@ -109,6 +99,16 @@ function add_to_cart()
 
 		// update the quantity
 		$update = $conn->exec("UPDATE `shop_carts` SET `quantity` = '".$new_quantity."' 	WHERE `key` = '".$_SESSION['cart_key']."' AND `product_id` = '".$product_id."' ");
+	}else{
+		$insert = $conn->exec("INSERT IGNORE INTO `shop_carts` 
+	        (`key`,`product_id`,`quantity`,`price`)
+	        VALUE
+	        ('".$_SESSION['cart_key']."',
+	        '".$product_id."',
+	        '".$quantity."',
+	        '".$price."'
+	    	)"
+	    );
 	}
 
 	// update cart total
