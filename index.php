@@ -172,7 +172,13 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<a href="#" class="header-nav-features-toggle">
 												<img src="img/icons/icon-cart-big.svg" height="34" alt="" class="header-nav-top-icon-img">
 												<span class="cart-info">
-													<span class="cart-qty">1</span>
+													<?php
+														if(isset($_SESSION['cart'])){
+															$cart_total = count($_SESSION['cart']);
+
+															echo '<span class="cart-qty">'.$cart_total.'</span>';
+														}
+													?>
 												</span>
 											</a>
 											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
