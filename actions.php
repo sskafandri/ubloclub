@@ -73,6 +73,7 @@ function empty_cart()
 function add_to_cart()
 {
 	global $conn;
+	$cart_total 	= 0; 
 
 	$product_id 	= post('product_id');
 	$quantity 		= post('quantity');
@@ -82,6 +83,13 @@ function add_to_cart()
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
 	$_SESSION['cart'][$rand]['quantity']		= $quantity;
 	$_SESSION['cart'][$rand]['price']			= $price;
+
+	// calc cart total
+	foreach($_SESSION['cart'] as $cart_item){
+		$cart_total = ($cart_total + $price);
+	}
+
+	$_SESSION['cart_total'] = $cart_total;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
