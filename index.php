@@ -1360,6 +1360,26 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
 											<form enctype="multipart/form-data" method="post" class="cart">
+												<div class="form-group row">
+													<label class="col-lg-3 control-label text-lg-right pt-2">Select sizing</label>
+													<div class="col-lg-6">
+														<select class="form-control form-control-lg mb-3">
+															<option>Option 1</option>
+															<option>Option 2</option>
+															<option>Option 3</option>
+														</select>
+														<select class="form-control mb-3">
+															<option>Option 1</option>
+															<option>Option 2</option>
+															<option>Option 3</option>
+														</select>
+														<select class="form-control form-control-sm mb-3">
+															<option>Option 1</option>
+															<option>Option 2</option>
+															<option>Option 3</option>
+														</select>
+													</div>
+												</div>
 												<div class="quantity quantity-lg">
 													<input type="button" class="minus" value="-">
 													<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
