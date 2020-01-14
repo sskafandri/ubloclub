@@ -1703,7 +1703,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 				  var age_verification = function(){
 
-					  var info = ['<img src="img/logo.png" alt="" width="">'];
+					  var info = ['You must be 18 years or over to access this website. Please confirm that you are over 18 to use this site.'];
 
 					  $('#myModal').html("");
 					  $('body').append($('<footer/>'));
@@ -1714,6 +1714,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 					  $('.modal-header').append($('<button/>',{'class':'close', 'data-dismiss':'modal'}));
 					  $('.modal-header').append($('<h4/>',{'class':'modal-title',text:'Age Verification'}));
 					  $('.modal-content').append($('<div/>',{'class':'modal-body'}));
+					  $('.modal-body').append($('<img src="img/logo.png" alt="" width="">');
 					  $('.modal-body').append($('<p/>',{text:info}));
 					  $('.modal-body').append($('<div/>',{'class':'modal-footer'}));
 
