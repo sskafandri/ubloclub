@@ -28,6 +28,16 @@ $all_products 						= $query->fetchAll(PDO::FETCH_ASSOC);
 $query 								= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY `name` ");
 $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 
+// setup the cart
+if(!isset($_SESSION['cart_key'])){
+	$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
+	$insert = $conn->exec("INSERT INTO `shop_carts` 
+        (`key`)
+        VALUE
+        ('".$_SESSION['cart_key']."')"
+    );
+}
+
 // set some defaults
 if(!isset($_SESSION['cart_total'])){
 	$_SESSION['cart_total'] 		= 0;
