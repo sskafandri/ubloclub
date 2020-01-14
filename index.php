@@ -1703,13 +1703,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 				  var age_verification = function(){
 
-					  var info = ['This section may contain adult oriented material of a graphic and sexual nature, and could be viewed objectionable to some persons This material is intended for persons over 18 ' +
-					              'years of age, and may be against the law in some areas. If you are accessing this area from any location that deems this type of material to be inappropriate or illegal, you should not proceed '+
-					              'You must agree with each of the following statements and indicate your comprehension and permission to abide by the laws that are applicable to you in your geographical location ' +
-					              'I am an adult, being of legal age, 18 or 21, in my legal jurisdiction to view adult oriented material that may be sexual or graphical in nature. (Local laws vary throughout the United States, so if you are not 100% sure of the laws applicable to you, you are advised to proceed no further. '+
-					              'I will not redistribute this material to anyone for which it is illegal for them to view or possess such material, nor will I permit any minor, or any person who would find this personally offensive, to view this material '+
-					              'I will hold harmless homenetwork.com, its officers, ISP and employees, from and against any claims, liability, losses, costs, damages, or expenses arising from my use of or participation in this service or the information contained therein. Furthermore, I will defend homenetwork.com, against all claims of impropriety regarding my use of this service '
-					               ];
+					  var info = ['<img src="img/logo.png" alt="" width="">'];
 
 					  $('#myModal').html("");
 					  $('body').append($('<footer/>'));
