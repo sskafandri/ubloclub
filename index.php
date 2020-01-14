@@ -1147,27 +1147,27 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<nav class="collapse">
 													<ul class="nav nav-pills" id="mainNav">
 														<li class="dropdown">
-															<a class="" href="<?php echo $site['url']; ?>">
+															<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="<?php echo $site['url']; ?>">
 																Home
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="active" href="?c=cart">
+															<a class="<?php if(get('c')=='cart'){echo'active';} ?>" href="?c=cart">
 																Cart
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="?c=faq">
+															<a class="<?php if(get('c')=='faq'){echo'active';} ?>" href="?c=faq">
 																FAQs
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="?c=about_us">
+															<a class="<?php if(get('c')=='about_us'){echo'active';} ?>" href="?c=about_us">
 																About Us
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="?c=contact_us">
+															<a class="<?php if(get('c')=='cart'){echo'contact_us';} ?>" href="?c=contact_us">
 																Contact Us
 															</a>
 														</li>
