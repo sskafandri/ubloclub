@@ -12,7 +12,6 @@ session_start();
 
 // includes
 include('inc/db.php');
-include('inc/global_vars.php');
 include('inc/functions.php');
 
 // start timer for page loaded var
