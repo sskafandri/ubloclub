@@ -81,14 +81,14 @@
 	margin:1em auto 0;
 	text-decoration: none;
 	padding: 1em;
-	color: #58cc00;
+	color: #fff;
 	font: normal .7em/1em 'AmericanTypwrterITCW01- 731031';
 	text-transform: none;
 	letter-spacing: 0;
 }
 
 #modal_content nav .av_go {
-	background-color: #7fbf4d;
+	background-color: #58cc00;
 }
 
 #modal_content nav .av_no {
