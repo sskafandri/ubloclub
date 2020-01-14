@@ -1386,11 +1386,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<div class="form-group row">
 													<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
 													<div class="col-lg-6 col-xs-12">
-														<select id="blend" name="blend" class="form-control form-control-sm mb-3">
+														<select id="blend" name="blend" class="form-control form-control-sm mb-3" onchange="jump_to_product(this);">
 															<option value="" disabled="" selected="">Choose an option</option>
 															<?php if(is_array($linked_products)){ ?>
 																<?php foreach($linked_products as $linked_product){ ?>
-																	<option value="3_50_50"><?php echo $linked_product['title']; ?></option>
+																	<option value="<?php echo $linked_product['product_id']; ?>"><?php echo $linked_product['title']; ?></option>
 																<?php } ?>
 															<?php } ?>
 														</select>
@@ -1901,5 +1901,12 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<!-- Basic age verification -->
 		<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
     	<script src="js/age-verification.js"></script>
+
+    	<script>
+    		function jump_to_product(selectObject) {
+			    var product_id = selectObject.value; 
+			    window.location.href = "dashboard.php?c=product&id="+product_id;
+			}
+		</script>
 	</body>
 </html>
