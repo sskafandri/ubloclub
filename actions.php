@@ -62,7 +62,7 @@ function empty_cart()
 {
 	global $conn;
 
-	$_SESSION['cart']							= array();
+	unset($_SESSION['cart']);
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart empty.");
