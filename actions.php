@@ -73,32 +73,48 @@ function empty_cart()
 function add_to_cart()
 {
 	global $conn;
-	$cart_total 	= 0; 
 
+	$cart_total 	= 0;
 	$product_id 	= post('product_id');
 	$quantity 		= post('quantity');
 	$price 			= post('price');
 	$rand 			= rand(00000,99999);
 
-	// see if this product is already in the cart, update totals if needed
-	/*
-	foreach($_SESSION['cart'] as $cart_item){
-		if($product_id == $cart_item['product_id']){
-			$cart_item['quantity']				= ($cart_item['quantity'] + $quantity);
-		}
+	// setup the cart
+	$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
+	$insert = $conn->exec("INSERT IGNORE INTO `shop_carts` 
+        (`key`,`product_id`,`quantity`,`price`)
+        VALUE
+        ('".$_SESSION['cart_key']."',
+        '".$product_id."',
+        '".$quantity."',
+        '".$price."'
+    	)"
+    );
+
+	// check for existing products like this one
+	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' AND `product_id` = '".$product_id."' ");
+	$existing_item 				= $query->fetch(PDO::FETCH_ASSOC);
+
+	if(isset($existing_item['id'])){
+		// this item is already in the cart
+		$new_quantity = ($existing_item['quantity'] + $quantity);
+
+		// update the quantity
+		$update = $conn->exec("UPDATE `shop_carts` SET `quantity` = '".$new_quantity."' 	WHERE `key` = '".$_SESSION['cart_key']."' AND `product_id` = '".$product_id."' ");
 	}
-	*/
 
-	$_SESSION['cart'][$rand]['product_id']		= $product_id;
-	$_SESSION['cart'][$rand]['quantity']		= $quantity;
-	$_SESSION['cart'][$rand]['price']			= $price;
+	// update cart total
+	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+	$cart_items 				= $query->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($cart_items as $cart_item){
+		$item_total_price 		= ($cart_item['price'] * $cart_item['quantity']);
 
-	// calc cart total
-	foreach($_SESSION['cart'] as $cart_item){
-		$cart_total = ($cart_total + $price);
+		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	$_SESSION['cart_total'] = $cart_total;
+	$_SESSION['cart_total']		= $cart_total;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
