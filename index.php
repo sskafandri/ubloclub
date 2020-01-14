@@ -1148,7 +1148,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													<ul class="nav nav-pills" id="mainNav">
 														<li class="dropdown">
 															<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="<?php echo $site['url']; ?>">
-																Home
+																Shop
 															</a>
 														</li>
 														<li class="dropdown">
@@ -1575,7 +1575,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="col-12 col-sm-6 col-lg-3 product">
 												<span class="product-thumb-info border-0">
 													<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-														<span class="text-uppercase text-1">Select Options</span>
+														<?php if($related_product['homepage'] == 'yes') ?>
+															<span class="text-uppercase text-1">Select Options</span>
+														<?php }else{ ?>
+															<span class="text-uppercase text-1">Order Now</span>
+														<?php } ?>
 													</a>
 													<a href="shop-product-sidebar-left.html">
 														<span class="product-thumb-info-image">
