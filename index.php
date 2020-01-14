@@ -73,10 +73,12 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css"> 
+		<link rel="stylesheet" href="css/skins/skin-ublo.css"> 
 
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
+		<!--
+			<link rel="stylesheet" href="css/custom.css">
+		-->
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
