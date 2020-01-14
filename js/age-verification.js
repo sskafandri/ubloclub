@@ -26,13 +26,14 @@ av_legality_check = function() {
 av_showmodal = function() {
 	modal_screen = $('<div id="modal_screen"></div>');
 	modal_content = $('<div id="modal_content" style="display:none"></div>');
+
 	var modal_content_wrapper = $('<div id="modal_content_wrapper" class="content_wrapper"></div>');
 	var modal_regret_wrapper = $('<div id="modal_regret_wrapper" class="content_wrapper" style="display:none;"></div>');
 
 	// Question Content
-	var content_heading = $('<h2>Age Check</h2>');
+	var content_heading = $('<h2>You must be 18 years of age or olver to use this website. Please verify your age before entering this site.</h2>');
 	var content_buttons = $('<nav><ul><li><a href="#nothing" class="av_btn av_go" rel="yes">Yes</a></li><li><a href="#nothing" class="av_btn av_no" rel="no">No</a></li></nav>');
-	var content_text = $('<p>You must be 18 years of age or olver to use this website. Please verify your age before entering this site.</p>');
+	var content_text = $('<p></p>');
 
 	// Regret Content
 	var regret_heading = $('<h2>We\'re Sorry!</h2>');
