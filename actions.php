@@ -63,6 +63,7 @@ function empty_cart()
 	global $conn;
 
 	unset($_SESSION['cart']);
+	unset($_SESSION['cart_key']);
 	$_SESSION['cart_total'] = 0;
 
     // log_add("[".$name."] has been updated.");
@@ -81,7 +82,10 @@ function add_to_cart()
 	$rand 			= rand(00000,99999);
 
 	// setup the cart
-	$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
+	if(!isset($_SESSION['cart_key'])){
+		$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
+	}
+
 	$insert = $conn->exec("INSERT IGNORE INTO `shop_carts` 
         (`key`,`product_id`,`quantity`,`price`)
         VALUE
