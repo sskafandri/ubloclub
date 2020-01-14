@@ -1381,7 +1381,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
-											<form enctype="multipart/form-data" method="post" class="cart">
+											<form action="actions.php?a=add_to_cart" enctype="multipart/form-data" method="post" class="cart">
 												<?php if($product['homepage'] == 'yes'){ ?>
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Step 1:</label>
@@ -1408,7 +1408,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 																<input type="button" class="plus" value="+">
 															</div>
 
-															<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
+															<button type="submit" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
 														</div>
 													</div>
 
@@ -1773,6 +1773,16 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			<?php } ?>
+
+			<?php function staging(){ ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+	        	<?php $max_stars = 5; ?>
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<?php debug($_SESSION); ?>
 					</div>
 				</div>
 			<?php } ?>
