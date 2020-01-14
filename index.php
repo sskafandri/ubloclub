@@ -104,7 +104,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
 												</li>
 												<li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
-													<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> support@ublo.club</a>
+													<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> sales@ublo.club</a>
 												</li>
 											</ul>
 										</nav>
@@ -157,7 +157,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										<li class="d-none d-sm-inline-flex">
 											<div class="header-extra-info-text">
 												<label>SEND US AN EMAIL</label>
-												<strong><a href="mailto:mail@example.com">support@ublo.club</a></strong>
+												<strong><a href="mailto:mail@example.com">sales@ublo.club</a></strong>
 											</div>
 										</li>
 										<li>
@@ -1158,7 +1158,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 														</li>
 														<li class="dropdown">
 															<a class="" href="?c=faq">
-																FAQ
+																FAQs
 															</a>
 														</li>
 														<li class="dropdown">
@@ -1661,56 +1661,45 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 				?>
 
 				<div role="main" class="main">
-					<section class="page-header page-header-classic">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<ul class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li class="active">Pages</li>
-									</ul>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col p-static">
-									<h1 data-title-border>FAQ</h1>
-								</div>
-							</div>
-						</div>
-					</section>
-
 					<div class="container py-4">
 						<div class="row">
 							<div class="col">
-								<h2 class="font-weight-normal text-7 mb-2">Frequently Asked <strong class="font-weight-extra-bold">Questions</strong></h2>
-								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula.</p>
-
-								<hr class="solid my-5">
-
 								<div class="toggle toggle-primary" data-plugin-toggle>
 									<section class="toggle active">
-										<label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+										<label>Is vape legal in the UK?</label>
+										<p>
+											Vape is perfectly legal in the UK.
+										</p>
 									</section>
 
 									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet viaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
+										<label>Is is safe to vape?</label>
+										<p>
+											On this matter, we can only speak for our own brand, Ublo.
+
+											Yes, all our product is tested, certified and made in the UK. The product is organically sourced and bottled here in the UK, unlike some other cheaper products available on the market.
+										</p>
 									</section>
 
 									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet varius iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+										<label>Do I need a special E-Cig?</label>
+										<p>
+											You do not need a special E-Cig, you simply need a medium to high wattage E-Cig to get the best experience.
+										</p>
 									</section>
 
 									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+										<label>How much should I use?</label>
+										<p>
+											We recommended initially using the product in small doses until you feel comfortable with the dosage that you are using.
+										</p>
 									</section>
 
 									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet viaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
+										<label>I have some doubts.</label>
+										<p>
+											If you are unsure about anything please feel free to contact us on sales@ublo.club
+										</p>
 									</section>
 
 									<section class="toggle">
