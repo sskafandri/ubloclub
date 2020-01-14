@@ -30,10 +30,10 @@ $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // set some defaults
 if(!isset($_SESSION['cart_total'])){
-	$_SESSION['cart_total'] 		= 0;
+	// $_SESSION['cart_total'] 		= 0;
 }
 if(!isset($_SESSION['cart'])){
-	$_SESSION['cart'] 				= array();
+	// $_SESSION['cart'] 				= array();
 }
 ?>
 
