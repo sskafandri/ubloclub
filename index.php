@@ -1152,7 +1152,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="" href="?c=cart">
+															<a class="active" href="?c=cart">
 																Cart
 															</a>
 														</li>
@@ -1656,8 +1656,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php function faq(){ ?>
 				<?php 
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
-					
-					
 				?>
 
 				<div role="main" class="main">
