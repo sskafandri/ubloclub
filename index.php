@@ -73,20 +73,16 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<link rel="stylesheet" href="css/theme-shop.css">
 
 		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/skin-ublo.css"> 
+		<link rel="stylesheet" href="css/skins/default.css"> 
 
 		<!-- Theme Custom CSS -->
-		<!--
-			<link rel="stylesheet" href="css/custom.css">
-		-->
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 		<!-- Basic age verification -->
-		<!-- 
-			<link href="css/age-verification.css" rel="stylesheet">
-		-->
+		<link href="css/age-verification.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="demo">
@@ -1678,88 +1674,20 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 		<!-- Theme Initialization Files -->
 		<script src="js/theme.init.js"></script>
 
-		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
-			<script>
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			
-				ga('create', 'UA-12345678-1', 'auto');
-				ga('send', 'pageview');
-			</script>
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to https://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 		-->
 
 		<!-- Basic age verification -->
-		<!--
-			<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
-    		<script src="js/age-verification.js"></script>
-    	-->
-
-    	<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
-    	<script>
-    		$(document).ready(function(){
-               /**
-			   * Age verification modal
-			   */
-
-				  var age_verification = function(){
-
-					  var info = ['You must be 18 years or over to access this website. Please confirm that you are over 18 to use this site.'];
-
-					  $('#myModal').html("");
-					  $('body').append($('<footer/>'));
-					  $('footer').append($('<div/>',{'class':'modal fade','id':'myModal','role':'dialog'}));
-					  $('#myModal').append($('<div/>',{'class':'modal-dialog'}));
-					  $('.modal-dialog').append($('<div/>',{'class':'modal-content'}));
-					  $('.modal-content').append($('<div/>',{'class':'modal-header'}));
-					  $('.modal-header').append($('<button/>',{'class':'close', 'data-dismiss':'modal'}));
-					  $('.modal-header').append($('<h4/>',{'class':'modal-title',text:'Age Verification'}));
-					  $('.modal-content').append($('<div/>',{'class':'modal-body'}));
-					  $('.modal-body').append($('<img src="img/logo.png" alt="" width="">',{'class':'modal-body'}));
-					  $('.modal-body').append($('<p/>',{text:info}));
-					  $('.modal-body').append($('<div/>',{'class':'modal-footer'}));
-
-					  $('.modal-footer').append($('<button/>',{'class':'btn btn-success','data-dismiss':'modal',text:'I accept','id':'age-yes'}));
-					  $('.modal-footer').append($('<button/>',{'class':'btn btn-dangert','data-dismiss':'modal',text:'I reject','id':'age-no'}));
-
-					/**
-					 * Click to check age
-					 */
-					  $('.modal-footer button').click(function(){
-
-                                  var id = $(this).attr('id');
-                                  var age_18 = sessionStorage.getItem('age');
-
-                            if(age_18 == null){
-
-                                  if(id == "age-no"){
-
-                                      sessionStorage.setItem('age','false');
-
-                                  }else if(id == "age-yes"){
-
-                                      sessionStorage.setItem('age','true');
-
-                                    /*
-                                     *Execute click on button shows Adult content on the page
-                                     */
-                                        $('#myBtn4').trigger("click");
-                                  }
-                            }else if(age_18 == 'false'){
-                                return;
-                            }
-					  });//end $('.modal-footer button').click(function()
-
-					/**
-					 * Toggles modal window
-					 */
-					    $('#myModal').modal("toggle");
-				  }//end age verification()
-				  
-				  age_verification();
-				  
-    			});
-    	</script>
+		<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+    	<script src="js/age-verification.js"></script>
 	</body>
 </html>
