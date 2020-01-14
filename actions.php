@@ -76,6 +76,7 @@ function add_to_cart()
 
 	$product_id 	= post('product_id');
 	$quantity 		= post('quantity');
+	$price 			= post('price');
 	$rand 			= rand(00000,99999);
 
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
