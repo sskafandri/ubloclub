@@ -1387,7 +1387,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
 													<div class="col-lg-6 col-xs-12">
 														<select id="blend" name="blend" class="form-control form-control-sm mb-3">
-															<option value="" disabled="">Choose an option</option>
+															<option value="" disabled="" selected="">Choose an option</option>
 															<?php if(is_array($linked_products)){ ?>
 																<?php foreach($linked_products as $linked_product){ ?>
 																	<option value="3_50_50"><?php echo $linked_product['title']; ?></option>
