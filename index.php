@@ -1317,64 +1317,69 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 				?>
 
 				<div role="main" class="main shop py-4">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1}">
-									<div>
-										<img alt="" class="img-fluid" src="<?php echo stripslashes($product['image_main']); ?>">
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-9">
+
+							<div class="row">
+								<div class="col-lg-6">
+
+									<div class="owl-carousel owl-theme" data-plugin-options="{'items': 1, 'margin': 10}">
+										<div>
+											<img alt="" height="300" class="img-fluid" src="img/products/product-grey-7.jpg">
+										</div>
+										<div>
+											<img alt="" height="300" class="img-fluid" src="img/products/product-grey-7-2.jpg">
+										</div>
+										<div>
+											<img alt="" height="300" class="img-fluid" src="img/products/product-grey-7-3.jpg">
+										</div>
 									</div>
-									<!--
-										<div>
-											<img alt="" class="img-fluid" src="img/products/product-grey-7-2.jpg">
-										</div>
-										<div>
-											<img alt="" class="img-fluid" src="img/products/product-grey-7-3.jpg">
-										</div>
-									-->
+
 								</div>
-							</div>
 
-							<div class="col-lg-6">
-								<div class="summary entry-summary">
-									<h1 class="mb-0 font-weight-bold text-7"><?php echo stripslashes($product['title']); ?></h1>
-									<div class="pb-0 clearfix">
-										<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
-											<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
+								<div class="col-lg-6">
+
+									<div class="summary entry-summary">
+
+										<h1 class="mb-0 font-weight-bold text-7">Blue Ladies Handbag</h1>
+
+										<div title="Rated 5.00 out of 5" class="star-rating">
+											<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 										</div>
 
-										<!--
-											<div class="review-num">
-												<span class="count" itemprop="ratingCount">2</span> reviews
+										<div class="review-num">
+											<span class="count" itemprop="ratingCount">2</span> reviews
+										</div>
+
+										<p class="price">
+											<span class="amount">$22</span>
+										</p>
+
+										<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elimttis adipiscing. Fusce in hendrerit purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elimttis adipiscing. Fusce in hendrerit purus. </p>
+
+										<form enctype="multipart/form-data" method="post" class="cart">
+											<div class="quantity quantity-lg">
+												<input type="button" class="minus" value="-">
+												<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+												<input type="button" class="plus" value="+">
 											</div>
-										-->
-									</div>
+											<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
+										</form>
 
-									<p class="price">
-										<span class="amount">£<?php echo stripslashes($product['price_month']); ?></span>
-									</p>
-
-									<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
-
-									<form enctype="multipart/form-data" method="post" class="cart">
-										<div class="quantity quantity-lg">
-											<input type="button" class="minus" value="-">
-											<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
-											<input type="button" class="plus" value="+">
+										<div class="product-meta">
+											<span class="posted-in">Categories: <a rel="tag" href="#">Accessories</a>, <a rel="tag" href="#">Bags</a>.</span>
 										</div>
-										<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
-									</form>
 
-									<!--
-									<div class="product-meta">
-										<span class="posted-in">Categories: <a rel="tag" href="#">Accessories</a>, <a rel="tag" href="#">Bags</a>.</span>
 									</div>
-									-->
+
+
 								</div>
 							</div>
-						</div>
 
-						<div class="row">
+							<div class="row">
 								<div class="col">
 									<div class="tabs tabs-product mb-2">
 										<ul class="nav nav-tabs">
@@ -1384,7 +1389,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 										</ul>
 										<div class="tab-content p-0">
 											<div class="tab-pane p-4 active" id="productDescription">
-												<?php echo stripslashes($product['description']); ?>
+												<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. </p>
+												<p class="m-0">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, massa fringilla consequat blandit, mauris ligula porta nisi, non tristique enim sapien vel nisl. Suspendisse vestibulum lobortis dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
 											</div>
 											<div class="tab-pane p-4" id="productInfo">
 												<table class="table m-0">
@@ -1428,14 +1434,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 																<span class="comment-by">
 																	<strong>Jack Doe</strong>
 																	<span class="float-right">
-																		<div class="pb-0 clearfix">
-																			<div title="Rated 3 out of 5" class="float-left">
-																				<input type="text" class="d-none" value="3" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
-																			</div>
-									
-																			<div class="review-num">
-																				<span class="count" itemprop="ratingCount">2</span> reviews
-																			</div>
+																		<div title="Rated 5.00 out of 5" class="star-rating">
+																			<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 																		</div>
 																	</span>
 																</span>
@@ -1453,14 +1453,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 																<span class="comment-by">
 																	<strong>John Doe</strong>
 																	<span class="float-right">
-																		<div class="pb-0 clearfix">
-																			<div title="Rated 3 out of 5" class="float-left">
-																				<input type="text" class="d-none" value="3" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
-																			</div>
-									
-																			<div class="review-num">
-																				<span class="count" itemprop="ratingCount">2</span> reviews
-																			</div>
+																		<div title="Rated 5.00 out of 5" class="star-rating">
+																			<span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
 																		</div>
 																	</span>
 																</span>
@@ -1473,13 +1467,8 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<h4>Add a review</h4>
 												<div class="row">
 													<div class="col">
+									
 														<form action="" id="submitReview" method="post">
-															<div class="form-row">
-																<div class="form-group col pb-2">
-																	<label class="required font-weight-bold text-dark">Rating</label>
-																	<input type="text" class="rating-loading" value="0" title="" data-plugin-star-rating data-plugin-options="{'color': 'primary', 'size':'xs'}">
-																</div>
-															</div>
 															<div class="form-row">
 																<div class="form-group col-lg-6">
 																	<label class="required font-weight-bold text-dark">Name</label>
@@ -1511,46 +1500,103 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 								</div>
 							</div>
 
-						<div class="row">
-							<div class="col">
-								<hr class="solid my-5">
-								<h4 class="mb-3">Related <strong>Products</strong></h4>
-								<div class="masonry-loader masonry-loader-showing">
-									<div class="row products product-thumb-info-list mt-3" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
-										
-										<?php
-											$query 						= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `id` != '".$product_id."' ORDER BY RAND() LIMIT 4 ");
-											$related_products 			= $query->fetchAll(PDO::FETCH_ASSOC);
-										?>
+							<hr class="solid my-5">
 
-										<?php foreach($related_products as $related_product){ ?>
-											<div class="col-12 col-sm-6 col-lg-3 product">
-												<span class="product-thumb-info border-0">
-													<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-														<span class="text-uppercase text-1">Select Options</span>
-													</a>
-													<a href="shop-product-sidebar-left.html">
-														<span class="product-thumb-info-image">
-															<img alt="" class="img-fluid" src="<?php echo $related_product['image_main']; ?>">
-														</span>
-													</a>
-													<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-														<a href="shop-product-sidebar-left.html">
-															<h4 class="text-4 text-primary"><?php echo stripslashes($related_product['title']); ?></h4>
-															<span class="price">
-																<ins><span class="amount text-dark font-weight-semibold">£<?php echo $related_product['price_month']; ?></span></ins>
-															</span>
-														</a>
-													</span>
+							<h4 class="mb-3">Related <strong>Products</strong></h4>
+							<div class="masonry-loader masonry-loader-showing">
+								<div class="row products product-thumb-info-list mt-3" data-plugin-masonry data-plugin-options="{'layoutMode': 'fitRows'}">
+									<div class="col-12 col-sm-6 col-lg-3 product">
+										<span class="product-thumb-info border-0">
+											<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+												<span class="text-uppercase text-1">Add to Cart</span>
+											</a>
+											<a href="shop-product-sidebar.html">
+												<span class="product-thumb-info-image">
+													<img alt="" class="img-fluid" src="img/products/product-grey-1.jpg">
 												</span>
-											</div>
-										<?php } ?>
+											</a>
+											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+												<a href="shop-product-sidebar.html">
+													<h4 class="text-4 text-primary">Photo Camera</h4>
+													<span class="price">
+														<del><span class="amount">$325</span></del>
+														<ins><span class="amount text-dark font-weight-semibold">$299</span></ins>
+													</span>
+												</a>
+											</span>
+										</span>
+									</div>
+									<div class="col-12 col-sm-6 col-lg-3 product">
+										<span class="product-thumb-info border-0">
+											<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+												<span class="text-uppercase text-1">Add to Cart</span>
+											</a>
+											<a href="shop-product-sidebar.html">
+												<span class="product-thumb-info-image">
+													<img alt="" class="img-fluid" src="img/products/product-grey-2.jpg">
+												</span>
+											</a>
+											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+												<a href="shop-product-sidebar.html">
+													<h4 class="text-4 text-primary">Golf Bag</h4>
+													<span class="price">
+														<span class="amount text-dark font-weight-semibold">$72</span>
+													</span>
+												</a>
+											</span>
+										</span>
+									</div>
+									<div class="col-12 col-sm-6 col-lg-3 product">
+										<span class="product-thumb-info border-0">
+											<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+												<span class="text-uppercase text-1">Add to Cart</span>
+											</a>
+											<a href="shop-product-sidebar.html">
+												<span class="product-thumb-info-image">
+													<img alt="" class="img-fluid" src="img/products/product-grey-3.jpg">
+												</span>
+											</a>
+											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+												<a href="shop-product-sidebar.html">
+													<h4 class="text-4 text-primary">Workout</h4>
+													<span class="price">
+														<span class="amount text-dark font-weight-semibold">$60</span>
+													</span>
+												</a>
+											</span>
+										</span>
+									</div>
+									<div class="col-12 col-sm-6 col-lg-3 product">
+										<span class="product-thumb-info border-0">
+											<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
+												<span class="text-uppercase text-1">Add to Cart</span>
+											</a>
+											<a href="shop-product-sidebar.html">
+												<span class="product-thumb-info-image">
+													<img alt="" class="img-fluid" src="img/products/product-grey-4.jpg">
+												</span>
+											</a>
+											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+												<a href="shop-product-sidebar.html">
+													<h4 class="text-4 text-primary">Luxury bag</h4>
+													<span class="price">
+														<span class="amount text-dark font-weight-semibold">$199</span>
+													</span>
+												</a>
+											</span>
+										</span>
 									</div>
 								</div>
 							</div>
+
+						</div>
+						<div class="col-lg-3">
+							<aside class="sidebar">								<form action="page-search-results.html" method="get">									<div class="input-group mb-3 pb-1">										<input class="form-control text-1" placeholder="Search..." name="s" id="s" type="text">										<span class="input-group-append">											<button type="submit" class="btn btn-dark text-1 p-2"><i class="fas fa-search m-2"></i></button>										</span>									</div>								</form>								<h5 class="font-weight-bold pt-4">Tags</h5>								<div class="mb-3 pb-1">									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Nike</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Travel</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Sport</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">TV</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Books</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Tech</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Adidas</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Promo</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Reading</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Social</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Books</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">Tech</span></a>									<a href="#"><span class="badge badge-dark badge-sm badge-pill text-uppercase px-2 py-1 mr-1">New</span></a>								</div>								<h5 class="font-weight-bold pt-4">Top Rated Products</h5>								<ul class="simple-post-list">									<li>										<div class="post-image">											<div class="d-block">												<a href="shop-product-sidebar.html">													<img alt="" width="60" height="60" class="img-fluid" src="img/products/product-grey-1.jpg">												</a>											</div>										</div>										<div class="post-info">											<a href="shop-product-sidebar.html">Photo Camera</a>											<div class="post-meta text-dark font-weight-semibold">												$299											</div>										</div>									</li>									<li>										<div class="post-image">											<div class="d-block">												<a href="shop-product-sidebar.html">													<img alt="" width="60" height="60" class="img-fluid" src="img/products/product-grey-2.jpg">												</a>											</div>										</div>										<div class="post-info">											<a href="shop-product-sidebar.html">Golf Bag</a>											<div class="post-meta text-dark font-weight-semibold">												$72											</div>										</div>									</li>									<li>										<div class="post-image">											<div class="d-block">												<a href="shop-product-sidebar.html">													<img alt="" width="60" height="60" class="img-fluid" src="img/products/product-grey-3.jpg">												</a>											</div>										</div>										<div class="post-info">											<a href="shop-product-sidebar.html">Workout</a>											<div class="post-meta text-dark font-weight-semibold">												$60											</div>										</div>									</li>								</ul>							</aside>
 						</div>
 					</div>
 				</div>
+
+			</div>
 			<?php } ?>
 
 			<footer id="footer">
