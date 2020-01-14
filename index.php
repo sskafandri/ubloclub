@@ -184,7 +184,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
 												<?php if(isset($_SESSION['cart'])){ ?>
 													<ol class="mini-products-list">
-														<?php foreach($_SESSION['cart']){ ?>
+														<?php foreach($_SESSION['cart'] as $cart_item){ ?>
 															<li class="item">
 																<a href="#" title="Camera X1000" class="product-image"><img src="img/products/product-1.jpg" alt="Camera X1000"></a>
 																<div class="product-details">
