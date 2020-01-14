@@ -181,7 +181,9 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													?>
 												</span>
 											</a>
-											
+											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
+												Cart is empty
+											</div>
 										</div>
 									</div>
 								</div>
