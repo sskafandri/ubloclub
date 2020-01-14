@@ -18,4 +18,4 @@ foreach($global_settings_temp as $bits){
 $site['url']									= $global_settings['shop_site_url'];
 $site['title']									= $global_settings['shop_site_title'];
 $site['name_long']								= $global_settings['shop_site_name'];
-$site['name_short']								= $global_settings['shop_site_name_short'];
+// $site['name_short']								= $global_settings['shop_site_name_short'];
