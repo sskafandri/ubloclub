@@ -1384,10 +1384,10 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<form enctype="multipart/form-data" method="post" class="cart">
 												<?php if($product['homepage'] == 'yes'){ ?>
 													<div class="form-group row">
-														<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
+														<label class="col-lg-12 control-label pt-2" for="blend">Step 1:</label>
 														<div class="col-lg-6 col-xs-12">
 															<select id="blend" name="blend" class="form-control form-control-sm mb-3" onchange="jump_to_product(this);">
-																<option value="" selected="">Choose an option</option>
+																<option value="" selected="">Choose a strength and blend</option>
 																<?php if(is_array($linked_products)){ ?>
 																	<?php foreach($linked_products as $linked_product){ ?>
 																		<option value="<?php echo $linked_product['secondary']; ?>"><?php echo $linked_product['title']; ?></option>
@@ -1398,13 +1398,20 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													</div>
 												<?php }else{ ?>
 													<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
-												
-													<div class="quantity quantity-lg">
-														<input type="button" class="minus" value="-">
-														<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
-														<input type="button" class="plus" value="+">
+													
+													<div class="form-group row">
+														<label class="col-lg-12 control-label pt-2" for="blend">Step 2:</label>
+														<div class="col-lg-6 col-xs-12">
+															<div class="quantity quantity-lg">
+																<input type="button" class="minus" value="-">
+																<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+																<input type="button" class="plus" value="+">
+															</div>
+
+															<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
+														</div>
 													</div>
-													<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
+
 												<?php } ?>
 											</form>
 
