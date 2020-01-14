@@ -111,8 +111,8 @@
 		top: 30vh;
 		left: 30vw;
 		width: 90%;
-		max-width: 400px;
-		height: 400px;
+		max-width: 500px;
+		height: 500px;
 		padding: 3em;
 		border-radius: 5%;
 		background-position: center 3em;
@@ -121,7 +121,7 @@
 	}
 
 	#modal_content .content_wrapper {
-		padding-top: 150px;
+		padding-top: 50px;
 		margin: 3em auto 0;
 		text-align: center;
 	}
