@@ -185,18 +185,23 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<?php if(isset($_SESSION['cart'])){ ?>
 													<ol class="mini-products-list">
 														<?php foreach($_SESSION['cart'] as $cart_item){ ?>
-															<li class="item">
-																<a href="#" title="Camera X1000" class="product-image"><img src="img/products/product-1.jpg" alt="Camera X1000"></a>
-																<div class="product-details">
-																	<p class="product-name">
-																		<a href="#">Camera X1000 </a>
-																	</p>
-																	<p class="qty-price">
-																		 1X <span class="price">$890</span>
-																	</p>
-																	<a href="#" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
-																</div>
-															</li>
+															<?php foreach($all_products as $product){ ?>
+																<?php if($_SESSION['cart']['product_id'] == $product['id']){ ?>
+																	<li class="item">
+																		<a href="#" title="Camera X1000" class="product-image"><img src="<?php echo stripslashes($product['image_main']); ?>" alt="<?php echo stripslashes($product['title']); ?>"></a>
+																		<div class="product-details">
+																			<p class="product-name">
+																				<a href="#"><?php echo stripslashes($product['title']); ?></a>
+																			</p>
+																			<p class="qty-price">
+																				 <?php echo stripslashes($_SESSION['cart']['quantity']); ?> X <span class="price">£<?php echo stripslashes($product['price_month']); ?></span>
+																			</p>
+																			<a href="#" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+																		</div>
+																	</li>
+																	<?php break; ?>
+																<?php } ?>
+															<?php } ?>
 														<?php } ?>
 													</ol>
 													<div class="totals">
