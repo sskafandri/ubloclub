@@ -199,12 +199,12 @@ if(!isset($_SESSION['cart'])){
 																		<a href="#" title="Camera X1000" class="product-image"><img src="<?php echo stripslashes($product['image_main']); ?>" alt="<?php echo stripslashes($product['title']); ?>"></a>
 																		<div class="product-details">
 																			<p class="product-name">
-																				<a href="#"><?php echo key($cart_item); ?> <?php echo stripslashes($product['title']); ?></a>
+																				<a href="#"><?php echo stripslashes($product['title']); ?></a>
 																			</p>
 																			<p class="qty-price">
 																				 <?php echo stripslashes($cart_item['quantity']); ?> X <span class="price">£<?php echo stripslashes($product['price_month']); ?></span>
 																			</p>
-																			<a href="" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+																			<!-- <a href="" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a> -->
 																		</div>
 																	</li>
 																	<?php break; ?>
