@@ -1390,7 +1390,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
-											<form action="actions.php?a=test" enctype="multipart/form-data" method="post" class="cart">
+											<form action="actions.php?a=add_to_cart" enctype="multipart/form-data" method="post" class="cart">
 												<?php if($product['homepage'] == 'yes'){ ?>
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Step 1:</label>
