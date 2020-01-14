@@ -81,6 +81,13 @@ function add_to_cart()
 	$rand 			= rand(00000,99999);
 
 	// see if this product is already in the cart, update totals if needed
+	/*
+	foreach($_SESSION['cart'] as $cart_item){
+		if($product_id == $cart_item['product_id']){
+			$cart_item['quantity']				= ($cart_item['quantity'] + $quantity);
+		}
+	}
+	*/
 
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
 	$_SESSION['cart'][$rand]['quantity']		= $quantity;
