@@ -184,18 +184,21 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
 												<?php if(isset($_SESSION['cart'])){ ?>
 													<ol class="mini-products-list">
-														<li class="item">
-															<a href="#" title="Camera X1000" class="product-image"><img src="img/products/product-1.jpg" alt="Camera X1000"></a>
-															<div class="product-details">
-																<p class="product-name">
-																	<a href="#">Camera X1000 </a>
-																</p>
-																<p class="qty-price">
-																	 1X <span class="price">$890</span>
-																</p>
-																<a href="#" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
-															</div>
-														</li>
+														<?php foreach($_SESSION['cart']){ ?>
+															<?php
+															<li class="item">
+																<a href="#" title="Camera X1000" class="product-image"><img src="img/products/product-1.jpg" alt="Camera X1000"></a>
+																<div class="product-details">
+																	<p class="product-name">
+																		<a href="#">Camera X1000 </a>
+																	</p>
+																	<p class="qty-price">
+																		 1X <span class="price">$890</span>
+																	</p>
+																	<a href="#" title="Remove This Item" class="btn-remove"><i class="fas fa-times"></i></a>
+																</div>
+															</li>
+														<?php } ?>
 													</ol>
 													<div class="totals">
 														<span class="label">Total:</span>
@@ -1388,7 +1391,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
-											<form action="actions.php?a=add_to_cart" enctype="multipart/form-data" method="post" class="cart">
+											<form action="actions.php?a=test" enctype="multipart/form-data" method="post" class="cart">
 												<?php if($product['homepage'] == 'yes'){ ?>
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Step 1:</label>
@@ -1411,7 +1414,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 														<div class="col-lg-6 col-xs-12">
 															<div class="quantity quantity-lg">
 																<input type="button" class="minus" value="-">
-																<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+																<input type="text" class="input-text qty text" title="Qty" value="1" id="quantity" name="quantity" min="1" step="1">
 																<input type="button" class="plus" value="+">
 															</div>
 
