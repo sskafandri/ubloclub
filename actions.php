@@ -20,6 +20,10 @@ switch ($a)
 		test();
 		break;
 
+	case "empty_cart":
+		empty_cart();
+		break;
+
 	case "add_to_cart":
 		add_to_cart();
 		break;
@@ -52,6 +56,17 @@ function test(){
 	print_r($_GET);
 	echo '</pre>';
 	echo '<hr>';
+}
+
+function empty_cart()
+{
+	global $conn;
+
+	$_SESSION['cart']							= array();
+
+    // log_add("[".$name."] has been updated.");
+    status_message('success',"Cart empty.");
+    go($_SERVER['HTTP_REFERER']);
 }
 
 function add_to_cart()
