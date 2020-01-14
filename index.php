@@ -1257,38 +1257,40 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 								-->
 								
 								<?php foreach($all_products as $product){ ?>
-									<div class="col-12 col-sm-6 col-lg-3 product">
-										<?php if($product['sale_icon'] == 'yes'){ ?>
-											<a href="shop-product-sidebar-left.html">
-												<span class="onsale">Sale!</span>
-											</a>
-										<?php } ?>
-										<span class="product-thumb-info border-0">
-											<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
-												<span class="text-uppercase text-1">Select Options</span>
-											</a>
-											<a href="?c=product&id=<?php echo $product['id']; ?>">
-												<span class="product-thumb-info-image">
-													<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
-												</span>
-											</a>
-											<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+									<?php if($product['homepage'] == 'yes'){ ?>
+										<div class="col-12 col-sm-6 col-lg-3 product">
+											<?php if($product['sale_icon'] == 'yes'){ ?>
+												<a href="shop-product-sidebar-left.html">
+													<span class="onsale">Sale!</span>
+												</a>
+											<?php } ?>
+											<span class="product-thumb-info border-0">
+												<a href="?c=product&id=<?php echo $product['id']; ?>" class="add-to-cart-product bg-color-primary">
+													<span class="text-uppercase text-1">Select Options</span>
+												</a>
 												<a href="?c=product&id=<?php echo $product['id']; ?>">
-													<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
-													
-													<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
-														<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
-													</div>
-
-													<div class="pb-0 clearfix"></div>
-
-													<span class="price">
-														<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
+													<span class="product-thumb-info-image">
+														<img alt="" class="img-fluid" src="<?php echo $product['image_main']; ?>">
 													</span>
 												</a>
+												<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
+													<a href="?c=product&id=<?php echo $product['id']; ?>">
+														<h4 class="text-4 text-primary"><?php echo $product['title']; ?></h4>
+														
+														<div title="Rated <?php echo stripslashes($product['stars']); ?> out of 5" class="float-left">
+															<input type="text" class="d-none" value="<?php echo stripslashes($product['stars']); ?>" title="" data-plugin-star-rating data-plugin-options="{'displayOnly': true, 'color': 'primary', 'size':'xs'}">
+														</div>
+
+														<div class="pb-0 clearfix"></div>
+
+														<span class="price">
+															<ins><span class="amount text-dark font-weight-semibold">£<?php echo $product['price_month']; ?></span></ins>
+														</span>
+													</a>
+												</span>
 											</span>
-										</span>
-									</div>
+										</div>
+									<?php } ?>
 								<?php } ?>
 							</div>
 
