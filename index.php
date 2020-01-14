@@ -1144,7 +1144,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 												<nav class="collapse">
 													<ul class="nav nav-pills" id="mainNav">
 														<li class="dropdown">
-															<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="<?php echo $site['url']; ?>">
+															<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="?c=home">
 																Shop
 															</a>
 														</li>
