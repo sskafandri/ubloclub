@@ -181,7 +181,7 @@ if(!isset($_SESSION['cart'])){
 												<img src="img/icons/icon-cart-big.svg" height="34" alt="" class="header-nav-top-icon-img">
 												<span class="cart-info">
 													<?php
-														if(empty($_SESSION['cart'])){
+														if(!empty($_SESSION['cart'])){
 															$cart_total = count($_SESSION['cart']);
 
 															echo '<span class="cart-qty">'.$cart_total.'</span>';
@@ -190,7 +190,7 @@ if(!isset($_SESSION['cart'])){
 												</span>
 											</a>
 											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
-												<?php if(empty($_SESSION['cart'])){ ?>
+												<?php if(!empty($_SESSION['cart'])){ ?>
 													<ol class="mini-products-list">
 														<?php foreach($_SESSION['cart'] as $cart_item){ ?>
 															<?php foreach($all_products as $product){ ?>
