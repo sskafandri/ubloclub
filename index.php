@@ -213,7 +213,7 @@ if(!isset($_SESSION['cart'])){
 													</ol>
 													<div class="totals">
 														<span class="label">Total:</span>
-														<span class="price-total"><span class="price">$890</span></span>
+														<span class="price-total"><span class="price">£<?php echo $_SESSION['cart_total']; ?></span></span>
 													</div>
 													<div class="actions">
 														<a class="btn btn-red" href="actions.php?a=empty_cart">Empty Cart</a>
