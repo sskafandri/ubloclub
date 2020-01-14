@@ -216,7 +216,7 @@ if(!isset($_SESSION['cart'])){
 														<span class="price-total"><span class="price">£<?php echo number_format($_SESSION['cart_total'], 2); ?></span></span>
 													</div>
 													<div class="actions">
-														<a class="btn btn-red" href="actions.php?a=empty_cart">Empty Cart</a>
+														<!-- <a class="btn btn-red" href="actions.php?a=empty_cart">Empty Cart</a> -->
 														<a class="btn btn-dark" href="#">View Cart</a>
 														<a class="btn btn-primary" href="#">Checkout</a>
 													</div>
