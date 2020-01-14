@@ -1412,6 +1412,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													</div>
 												<?php }else{ ?>
 													<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
+													<input type="Hidden" name="price" value="<?php echo $product['price_month']; ?>">
 													
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Step 2:</label>

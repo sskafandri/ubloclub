@@ -63,6 +63,7 @@ function empty_cart()
 	global $conn;
 
 	unset($_SESSION['cart']);
+	$_SESSION['cart_total'] = 0;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart empty.");
@@ -79,6 +80,7 @@ function add_to_cart()
 
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
 	$_SESSION['cart'][$rand]['quantity']		= $quantity;
+	$_SESSION['cart'][$rand]['price']			= $price;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
