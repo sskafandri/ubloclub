@@ -144,7 +144,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="index.html">
+										<a href="?c=home">
 											<img alt="Ublo Club" width="150" height="48" data-sticky-width="82" data-sticky-height="40" data-sticky-top="84" src="img/ublo_logo.png">
 										</a>
 									</div>
