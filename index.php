@@ -1382,7 +1382,6 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
 											<form enctype="multipart/form-data" method="post" class="cart">
-												<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
 												<?php if($product['homepage'] == 'yes'){ ?>
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
@@ -1397,13 +1396,16 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 															</select>
 														</div>
 													</div>
+												<?php }else{ ?>
+													<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
+												
+													<div class="quantity quantity-lg">
+														<input type="button" class="minus" value="-">
+														<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+														<input type="button" class="plus" value="+">
+													</div>
+													<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
 												<?php } ?>
-												<div class="quantity quantity-lg">
-													<input type="button" class="minus" value="-">
-													<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
-													<input type="button" class="plus" value="+">
-												</div>
-												<button href="#" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
 											</form>
 
 											<!--
