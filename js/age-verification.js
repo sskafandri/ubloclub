@@ -32,7 +32,7 @@ av_showmodal = function() {
 
 	// Question Content
 	var content_heading = $('<h4>You must be 18 years of age or over to use this website. Please verify your age before entering this site.</h4>');
-	var content_buttons = $('<nav><a href="#nothing" class="btn btn-xs av_btn av_go" rel="yes">I am 18 or over</a><br><a href="#nothing" class="av_btn av_no" rel="no">I am under 18</a></nav>');
+	var content_buttons = $('<nav><a href="#nothing" class="av_btn av_go" rel="yes">I am 18 or over</a><br><a href="#nothing" class="av_btn av_no" rel="no">I am under 18</a></nav>');
 	var content_text = $('<p></p>');
 
 	// Regret Content
