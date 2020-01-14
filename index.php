@@ -1319,11 +1319,31 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 					
 					$product_id = get('id');
 				
+					// get product from existing array
 					foreach($all_products as $all_product){
 						if($product_id == $all_product['id']){
 							$product = $all_product;
 							break;
 						}
+					}
+
+					// get linked products
+					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ");
+					$linked_products_raw 		= $query->fetchAll(PDO::FETCH_ASSOC);
+
+					// get the linked product name
+					$count 						= 0;
+					foreach($linked_products_raw as $linked_product_raw){
+						$linked_products[$count]['id'] 				= $linked_product_raw['id'];
+						$linked_products[$count]['product_id'] 		= $linked_product_raw['primary'];
+						$linked_products[$count]['primary'] 		= $linked_product_raw['primary'];
+						$linked_products[$count]['secondary'] 		= $linked_product_raw['secondary'];
+
+						$query 					= $conn->query("SELECT `id`,`title` FROM `shop_productss` WHERE `id` = '".$linked_product_raw['secondary']."' ");
+						$linked_product_data 	= $query->fetch(PDO::FETCH_ASSOC);
+						$linked_products[$count]['title']			= stripslashes($linked_product_data['title']);
+
+						$count++;
 					}
 				?>
 
@@ -1368,10 +1388,11 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 													<div class="col-lg-6 col-xs-12">
 														<select id="blend" name="blend" class="form-control form-control-sm mb-3">
 															<option value="" disabled="">Choose an option</option>
-															<option value="3_50_50">3MG 50/50</option>
-															<option value="6_50_50">6MG 50/50</option>
-															<option value="12_50_20">12MG 50/20</option>
-															<option value="16_50_20">16MG 50/50</option>
+															<?php if(is_array($linked_products)){ ?>
+																<?php foreach($linked_products as $linked_product){ ?>
+																	<option value="3_50_50"><?php echo $linked_product['title'];</option>
+																<?php } ?>
+															<?php } ?>
 														</select>
 													</div>
 												</div>
