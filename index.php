@@ -1714,7 +1714,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 					  $('.modal-header').append($('<button/>',{'class':'close', 'data-dismiss':'modal'}));
 					  $('.modal-header').append($('<h4/>',{'class':'modal-title',text:'Age Verification'}));
 					  $('.modal-content').append($('<div/>',{'class':'modal-body'}));
-					  $('.modal-body').append($('<img src="img/logo.png" alt="" width="">');
+					  $('.modal-body').append($('<img src="img/logo.png" alt="" width="">',{'class':'modal-body'}));
 					  $('.modal-body').append($('<p/>',{text:info}));
 					  $('.modal-body').append($('<div/>',{'class':'modal-footer'}));
 
