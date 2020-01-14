@@ -1362,7 +1362,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<form enctype="multipart/form-data" method="post" class="cart">
 												<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
 												<div class="form-group row">
-													<label class="col-lg-6 col-xs-12 control-label pt-2" for="blend">Strength and Blends</label>
+													<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
 													<div class="col-lg-6 col-xs-12">
 														<select id="blend" name="blend" class="form-control form-control-sm mb-3">
 															<option value="" disabled="">Choose an option</option>
