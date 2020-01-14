@@ -1907,7 +1907,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
     	<script>
     		function jump_to_product(selectObject) {
 			    var product_id = selectObject.value; 
-			    window.location.href = "dashboard.php?c=product&id="+product_id;
+			    window.location.href = "?c=product&id="+product_id;
 			}
 		</script>
 	</body>
