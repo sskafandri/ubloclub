@@ -78,7 +78,7 @@ function add_to_cart()
 	$rand 			= rand(00000,99999);
 
 	$_SESSION['cart'][$rand]['product_id']		= $product_id;
-	$_SESSION['cart'][$rand]['quantity']		= $product_id;
+	$_SESSION['cart'][$rand]['quantity']		= $quantity;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
