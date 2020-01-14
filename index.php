@@ -1383,19 +1383,21 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 											<form enctype="multipart/form-data" method="post" class="cart">
 												<input type="Hidden" name="product_id" value="<?php echo $product_id; ?>">
-												<div class="form-group row">
-													<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
-													<div class="col-lg-6 col-xs-12">
-														<select id="blend" name="blend" class="form-control form-control-sm mb-3" onchange="jump_to_product(this);">
-															<option value="" disabled="" selected="">Choose an option</option>
-															<?php if(is_array($linked_products)){ ?>
-																<?php foreach($linked_products as $linked_product){ ?>
-																	<option value="<?php echo $linked_product['product_id']; ?>"><?php echo $linked_product['title']; ?></option>
+												<?php if($product['homepage'] == 'yes'){ ?>
+													<div class="form-group row">
+														<label class="col-lg-12 control-label pt-2" for="blend">Strength and Blends</label>
+														<div class="col-lg-6 col-xs-12">
+															<select id="blend" name="blend" class="form-control form-control-sm mb-3" onchange="jump_to_product(this);">
+																<option value="" disabled="" selected="">Choose an option</option>
+																<?php if(is_array($linked_products)){ ?>
+																	<?php foreach($linked_products as $linked_product){ ?>
+																		<option value="<?php echo $linked_product['product_id']; ?>"><?php echo $linked_product['title']; ?></option>
+																	<?php } ?>
 																<?php } ?>
-															<?php } ?>
-														</select>
+															</select>
+														</div>
 													</div>
-												</div>
+												<?php } ?>
 												<div class="quantity quantity-lg">
 													<input type="button" class="minus" value="-">
 													<input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
