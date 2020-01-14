@@ -1575,7 +1575,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="col-12 col-sm-6 col-lg-3 product">
 												<span class="product-thumb-info border-0">
 													<a href="shop-cart.html" class="add-to-cart-product bg-color-primary">
-														<?php if($related_product['homepage'] == 'yes') ?>
+														<?php if($related_product['homepage'] == 'yes'){ ?>
 															<span class="text-uppercase text-1">Select Options</span>
 														<?php }else{ ?>
 															<span class="text-uppercase text-1">Order Now</span>
