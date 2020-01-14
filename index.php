@@ -209,6 +209,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 														<span class="price-total"><span class="price">$890</span></span>
 													</div>
 													<div class="actions">
+														<a class="btn btn-red" href="actions.php?a=empty_cart">Empty Cart</a>
 														<a class="btn btn-dark" href="#">View Cart</a>
 														<a class="btn btn-primary" href="#">Checkout</a>
 													</div>
