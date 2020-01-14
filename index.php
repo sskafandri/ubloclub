@@ -1283,7 +1283,7 @@ if(!isset($_SESSION['cart'])){
 									<?php if($product['homepage'] == 'yes'){ ?>
 										<div class="col-12 col-sm-6 col-lg-3 product">
 											<?php if($product['sale_icon'] == 'yes'){ ?>
-												<a href="shop-product-sidebar-left.html">
+												<a href="?c=product&id=<?php echo $product['id']; ?>">
 													<span class="onsale">Sale!</span>
 												</a>
 											<?php } ?>
@@ -1605,13 +1605,13 @@ if(!isset($_SESSION['cart'])){
 															<span class="text-uppercase text-1">Order Now</span>
 														<?php } ?>
 													</a>
-													<a href="shop-product-sidebar-left.html">
+													<a href="?c=product&id=<?php echo $related_product['id']; ?>">
 														<span class="product-thumb-info-image">
 															<img alt="" class="img-fluid" src="<?php echo $related_product['image_main']; ?>">
 														</span>
 													</a>
 													<span class="product-thumb-info-content product-thumb-info-content pl-0 bg-color-light">
-														<a href="shop-product-sidebar-left.html">
+														<a href="?c=product&id=<?php echo $related_product['id']; ?>">
 															<h4 class="text-4 text-primary"><?php echo stripslashes($related_product['title']); ?></h4>
 															<span class="price">
 																<ins><span class="amount text-dark font-weight-semibold">£<?php echo $related_product['price_month']; ?></span></ins>
