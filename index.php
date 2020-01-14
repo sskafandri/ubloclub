@@ -1167,7 +1167,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="<?php if(get('c')=='cart'){echo'contact_us';} ?>" href="?c=contact_us">
+															<a class="<?php if(get('c')=='contact_us'){echo'active';} ?>" href="?c=contact_us">
 																Contact Us
 															</a>
 														</li>
