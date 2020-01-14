@@ -1390,7 +1390,7 @@ $all_categories 		= $query->fetchAll(PDO::FETCH_ASSOC);
 															<option value="" disabled="">Choose an option</option>
 															<?php if(is_array($linked_products)){ ?>
 																<?php foreach($linked_products as $linked_product){ ?>
-																	<option value="3_50_50"><?php echo $linked_product['title'];</option>
+																	<option value="3_50_50"><?php echo $linked_product['title']; ?></option>
 																<?php } ?>
 															<?php } ?>
 														</select>
