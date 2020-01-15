@@ -1386,15 +1386,17 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									<h5 class="text-4 text-color-light mb-3 mt-4 mt-lg-0">MY ACCOUNT</h5>
 									<div class="row">
 										<div class="col-md-5">
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">About us</a></p>
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Contact Us</a></p>
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">My account</a></p>
+											<p class="mb-1"><a href="?c=about_us" class="text-3 link-hover-style-1">About us</a></p>
+											<p class="mb-1"><a href="?c=contact_us" class="text-3 link-hover-style-1">Contact Us</a></p>
+											<p class="mb-1"><a href="https://ublo.club/billing" class="text-3 link-hover-style-1">My account</a></p>
 										</div>
-										<div class="col-md-5">
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Orders history</a></p>
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Advanced search</a></p>
-											<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Login</a></p>
-										</div>
+										<!--
+											<div class="col-md-5">
+												<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Orders history</a></p>
+												<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Advanced search</a></p>
+												<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Login</a></p>
+											</div>
+										-->
 									</div>
 								</div>
 								<div class="col-md-5 col-lg-4">
