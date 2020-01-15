@@ -62,12 +62,11 @@ function empty_cart()
 {
 	global $conn;
 
-	unset($_SESSION['cart']);
-	unset($_SESSION['cart_key']);
-
 	$delete = $conn->exec("DELETE FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
 
-	$_SESSION['cart_total'] = 0;
+	unset($_SESSION['cart']);
+	unset($_SESSION['cart_key']);
+	unset($_SESSION['cart_total']);
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart empty.");
