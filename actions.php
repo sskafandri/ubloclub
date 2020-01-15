@@ -186,7 +186,6 @@ function checkout(){
 		$upline_id 		= $_SESSION['mlm_affiliate'];
 	}
 	
-
 	$ip_address 		= $_SERVER['REMOTE_ADDR'];
 
 	/*
@@ -270,8 +269,8 @@ function checkout(){
 
 	$results = json_decode($data, true);
 
-	# debug($data);
-	# debug($results);
+	debug($data);
+	debug($results);
 
 	if($results["result"]=="success"){
 		// account registered
