@@ -188,44 +188,6 @@ function checkout(){
 	
 	$ip_address 		= $_SERVER['REMOTE_ADDR'];
 
-	/*
-	$insert = $conn->exec("INSERT INTO `users` 
-		(`type`, `added`, `updated`, `status`, `upline_id`, `username`, `password`, `avatar`, `email`, `tel`, `company_name`, `first_name`, `last_name`, `address_1`, `address_2`, `address_city`, `address_state`, `address_country`, `address_zip`,`signup_ip`) VALUES
-		
-		('".$account_type."',
-		'".time()."',
-		'".time()."',
-		'pending',
-		'".$upline_id."',
-		'".$username."',
-		'".$password."',
-		'img/avatar.png',
-		'".$email."',
-		'".$tel."',
-		'".$company_name."',
-		'".$first_name."',
-		'".$last_name."',
-		'".$address_1."',
-		'".$address_2."',
-		'".$address_city."',
-		'".$address_state."',
-		'".$address_country."',
-		'".$address_zip."',
-		'".$ip_address."'
-		);
-	");
-    
-    $user_id = $conn->lastInsertId();
-
-    $_SESSION['registration'] 				= '1';
-    $_SESSION['logged_in']					= true;
-	$_SESSION['account']['id']				= $user_id;
-	$_SESSION['account']['type']			= $account_type;
-
-	status_message('success',"Registration stage complete.");
-    go('index.php?c=process_payment');
-    */
-
 	// register account with whmcs
 	$postfields["username"] 		= $whmcs['username']; 
 	$postfields["password"] 		= $whmcs['password'];
@@ -269,8 +231,8 @@ function checkout(){
 
 	$results = json_decode($data, true);
 
-	debug($data);
-	debug($results);
+	// debug($data);
+	// debug($results);
 
 	if($results["result"]=="success"){
 		// account registered
