@@ -256,7 +256,9 @@ function checkout(){
 		$cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($cart_items as $cart_item){
-			$order_pids[] = $cart_item['product_id'];
+			for($x = 0; $x <= $cart_item['quantity']; $x++) {
+				$order_pids[] = $cart_item['product_id'];
+			}
 		}
 
 		// place order with whmcs
