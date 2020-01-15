@@ -817,50 +817,54 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div id="collapseOne" class="collapse show">
 												<div class="card-body">
 													<div class="card-body">
-														<table class="shop_table cart">
-															<thead>
-																<tr>
-																	<th class="product-name">
-																		Product
-																	</th>
-																	<th class="product-price">
-																		Price
-																	</th>
-																	<th class="product-quantity">
-																		Quantity
-																	</th>
-																	<th class="product-subtotal">
-																		Total
-																	</th>
-																</tr>
-															</thead>
-															<tbody>
-																<?php if(isset($cart_items[0])){ ?>
-																	<ol class="mini-products-list">
-																		<?php foreach($cart_items as $cart_item){ ?>
-																			<?php foreach($all_products as $product){ ?>
-																				<?php if($cart_item['product_id'] == $product['id']){ ?>
-																					<tr class="cart_table_item">
-																						<td class="product-name">
-																							<strong><?php echo stripslashes($product['title']); ?></strong>
-																						</td>
-																						<td class="product-price">
-																							<span class="amount">£<?php echo $cart_item['price']; ?></span>
-																						</td>
-																						<td class="product-quantity">
-																							<?php echo stripslashes($cart_item['quantity']); ?>
-																						</td>
-																						<td class="product-subtotal">
-																							<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
-																						</td>
-																					</tr>
-																				<?php break; ?>
+														<?php if(isset($cart_items[0])){ ?>
+															<table class="shop_table cart">
+																<thead>
+																	<tr>
+																		<th class="product-name">
+																			Product
+																		</th>
+																		<th class="product-price">
+																			Price
+																		</th>
+																		<th class="product-quantity">
+																			Quantity
+																		</th>
+																		<th class="product-subtotal">
+																			Total
+																		</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<?php if(isset($cart_items[0])){ ?>
+																		<ol class="mini-products-list">
+																			<?php foreach($cart_items as $cart_item){ ?>
+																				<?php foreach($all_products as $product){ ?>
+																					<?php if($cart_item['product_id'] == $product['id']){ ?>
+																						<tr class="cart_table_item">
+																							<td class="product-name">
+																								<strong><?php echo stripslashes($product['title']); ?></strong>
+																							</td>
+																							<td class="product-price">
+																								<span class="amount">£<?php echo $cart_item['price']; ?></span>
+																							</td>
+																							<td class="product-quantity">
+																								<?php echo stripslashes($cart_item['quantity']); ?>
+																							</td>
+																							<td class="product-subtotal">
+																								<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
+																							</td>
+																						</tr>
+																					<?php break; ?>
+																				<?php } ?>
 																			<?php } ?>
 																		<?php } ?>
 																	<?php } ?>
-																<?php } ?>
-															</tbody>
-														</table>
+																</tbody>
+															</table>
+														<?php }else{ ?>
+															Cart is empty.
+														<?php } ?>
 													</div>
 
 													<div class="form-row">
