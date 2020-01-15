@@ -172,7 +172,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</ul>
 									<!-- cart summary -->
 									<div class="header-nav-features">
-										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '178px'}" data-sticky-header-style-deactive="{'top': '0'}">
+										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
 											<a href="#" class="header-nav-features-toggle">
 												<img src="img/icons/icon-cart-big.svg" height="34" alt="" class="header-nav-top-icon-img">
 												<span class="cart-info">
@@ -214,8 +214,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 													</div>
 													<div class="actions">
 														<a class="btn btn-danger" href="actions.php?a=empty_cart">Empty Cart</a>
-														<a class="btn btn-dark" href="#">View Cart</a>
-														<a class="btn btn-primary" href="#">Checkout</a>
+														<a class="btn btn-primary" href="#">View Cart</a>
+														<!-- <a class="btn btn-primary" href="#">Checkout</a> -->
 													</div>
 												<?php }else{ ?>
 													Cart is empty.
@@ -227,934 +227,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 						</div>
 					</div>
-					<!-- top menu bar -->
-					<!-- 
-						<div class="container">
-							<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
-								<div class="header-row">
-									<div class="header-column">
-										<div class="header-row justify-content-end">
-											<div class="header-nav header-nav-links justify-content-start" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'margin-left': '150px'}" data-sticky-header-style-deactive="{'margin-left': '0'}">
-												<div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-dropdown-arrow header-nav-main-effect-3 header-nav-main-sub-effect-1">
-													<nav class="collapse">
-														<ul class="nav nav-pills" id="mainNav">
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="index.html">
-																	Home
-																</a>
-																<ul class="dropdown-menu">
-																	<li>
-																		<a class="dropdown-item" href="index.html">
-																			Landing Page
-																		</a>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Classic</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-classic.html" data-thumb-preview="img/previews/preview-classic.jpg">Classic - Original</a></li>
-																			<li><a class="dropdown-item" href="index-classic-color.html" data-thumb-preview="img/previews/preview-classic-color.jpg">Classic - Color</a></li>
-																			<li><a class="dropdown-item" href="index-classic-light.html" data-thumb-preview="img/previews/preview-classic-light.jpg">Classic - Light</a></li>
-																			<li><a class="dropdown-item" href="index-classic-video.html" data-thumb-preview="img/previews/preview-classic-video.jpg">Classic - Video</a></li>
-																			<li><a class="dropdown-item" href="index-classic-video-light.html" data-thumb-preview="img/previews/preview-classic-video-light.jpg">Classic - Video - Light</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Corporate <span class="tip tip-dark">hot</span></a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-corporate.html" data-thumb-preview="img/previews/preview-corporate.jpg">Corporate - Version 1</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-2.html" data-thumb-preview="img/previews/preview-corporate-2.jpg">Corporate - Version 2</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-3.html" data-thumb-preview="img/previews/preview-corporate-3.jpg">Corporate - Version 3</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-4.html" data-thumb-preview="img/previews/preview-corporate-4.jpg">Corporate - Version 4</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-5.html" data-thumb-preview="img/previews/preview-corporate-5.jpg">Corporate - Version 5</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-6.html" data-thumb-preview="img/previews/preview-corporate-6.jpg">Corporate - Version 6</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-7.html" data-thumb-preview="img/previews/preview-corporate-7.jpg">Corporate - Version 7</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-8.html" data-thumb-preview="img/previews/preview-corporate-8.jpg">Corporate - Version 8</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-9.html" data-thumb-preview="img/previews/preview-corporate-9.jpg">Corporate - Version 9</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-10.html" data-thumb-preview="img/previews/preview-corporate-10.jpg">Corporate - Version 10</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-11.html" data-thumb-preview="img/previews/preview-corporate-11.jpg">Corporate - Version 11</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-12.html" data-thumb-preview="img/previews/preview-corporate-12.jpg">Corporate - Version 12</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-13.html" data-thumb-preview="img/previews/preview-corporate-13.jpg">Corporate - Version 13</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-14.html" data-thumb-preview="img/previews/preview-corporate-14.jpg">Corporate - Version 14</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-15.html" data-thumb-preview="img/previews/preview-corporate-15.jpg">Corporate - Version 15</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-16.html" data-thumb-preview="img/previews/preview-corporate-16.jpg">Corporate - Version 16</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-17.html" data-thumb-preview="img/previews/preview-corporate-17.jpg">Corporate - Version 17</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-18.html" data-thumb-preview="img/previews/preview-corporate-18.jpg">Corporate - Version 18</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-19.html" data-thumb-preview="img/previews/preview-corporate-19.jpg">Corporate - Version 19</a></li>
-																			<li><a class="dropdown-item" href="index-corporate-20.html" data-thumb-preview="img/previews/preview-corporate-20.jpg">Corporate - Version 20</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Portfolio</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-portfolio.html" data-thumb-preview="img/previews/preview-portfolio.jpg">Portfolio - Version 1</a></li>
-																			<li><a class="dropdown-item" href="index-portfolio-2.html" data-thumb-preview="img/previews/preview-portfolio-2.jpg">Portfolio - Version 2</a></li>
-																			<li><a class="dropdown-item" href="index-portfolio-3.html" data-thumb-preview="img/previews/preview-portfolio-3.jpg">Portfolio - Version 3</a></li>
-																			<li><a class="dropdown-item" href="index-portfolio-4.html" data-thumb-preview="img/previews/preview-portfolio-4.jpg">Portfolio - Version 4</a></li>
-																			<li><a class="dropdown-item" href="index-portfolio-5.html" data-thumb-preview="img/previews/preview-portfolio-5.jpg">Portfolio - Version 5</a></li>
-																		</ul>
-																	</li>		
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Blog</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-blog.html" data-thumb-preview="img/previews/preview-blog.jpg">Blog - Version 1</a></li>
-																			<li><a class="dropdown-item" href="index-blog-2.html" data-thumb-preview="img/previews/preview-blog-2.jpg">Blog - Version 2</a></li>
-																			<li><a class="dropdown-item" href="index-blog-3.html" data-thumb-preview="img/previews/preview-blog-3.jpg">Blog - Version 3</a></li>
-																			<li><a class="dropdown-item" href="index-blog-4.html" data-thumb-preview="img/previews/preview-blog-4.jpg">Blog - Version 4</a></li>
-																			<li><a class="dropdown-item" href="index-blog-5.html" data-thumb-preview="img/previews/preview-blog-5.jpg">Blog - Version 5</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">One Page</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-one-page.html" data-thumb-preview="img/previews/preview-one-page.jpg">One Page Original</a></li>
-																		</ul>
-																	</li>
-																</ul>
-															</li>
-															<li class="dropdown dropdown-mega">
-																<a class="dropdown-item dropdown-toggle" href="elements.html">
-																	Elements
-																</a>
-																<ul class="dropdown-menu">
-																	<li>
-																		<div class="dropdown-mega-content">
-																			<div class="row">
-																				<div class="col-lg-3">
-																					<span class="dropdown-mega-sub-title">Elements 1</span>
-																					<ul class="dropdown-mega-sub-nav">
-																						<li><a class="dropdown-item" href="elements-accordions.html">Accordions</a></li>
-																						<li><a class="dropdown-item" href="elements-toggles.html">Toggles</a></li>
-																						<li><a class="dropdown-item" href="elements-tabs.html">Tabs</a></li>
-																						<li><a class="dropdown-item" href="elements-icons.html">Icons</a></li>
-																						<li><a class="dropdown-item" href="elements-icon-boxes.html">Icon Boxes</a></li>
-																						<li><a class="dropdown-item" href="elements-carousels.html">Carousels</a></li>
-																						<li><a class="dropdown-item" href="elements-modals.html">Modals</a></li>
-																						<li><a class="dropdown-item" href="elements-lightboxes.html">Lightboxes</a></li>
-																						<li><a class="dropdown-item" href="elements-word-rotator.html">Word Rotator</a></li>
-																						<li><a class="dropdown-item" href="elements-before-after.html">Before / After</a></li>
-																						<li><a class="dropdown-item" href="elements-360-image-viewer.html">360º Image Viewer</a></li>
-																					</ul>
-																				</div>
-																				<div class="col-lg-3">
-																					<span class="dropdown-mega-sub-title">Elements 2</span>
-																					<ul class="dropdown-mega-sub-nav">
-																						<li><a class="dropdown-item" href="elements-buttons.html">Buttons</a></li>
-																						<li><a class="dropdown-item" href="elements-badges.html">Badges</a></li>
-																						<li><a class="dropdown-item" href="elements-lists.html">Lists</a></li>
-																						<li><a class="dropdown-item" href="elements-cards.html">Cards</a></li>
-																						<li><a class="dropdown-item" href="elements-image-gallery.html">Image Gallery</a></li>
-																						<li><a class="dropdown-item" href="elements-image-frames.html">Image Frames</a></li>
-																						<li><a class="dropdown-item" href="elements-image-hotspots.html">Image Hotspots</a></li>
-																						<li><a class="dropdown-item" href="elements-testimonials.html">Testimonials</a></li>
-																						<li><a class="dropdown-item" href="elements-blockquotes.html">Blockquotes</a></li>							
-																						<li><a class="dropdown-item" href="elements-sticky-elements.html">Sticky Elements</a></li>
-																					</ul>
-																				</div>
-																				<div class="col-lg-3">
-																					<span class="dropdown-mega-sub-title">Elements 3</span>
-																					<ul class="dropdown-mega-sub-nav">
-																						<li><a class="dropdown-item" href="elements-typography.html">Typography</a></li>
-																						<li><a class="dropdown-item" href="elements-call-to-action.html">Call to Action</a></li>
-																						<li><a class="dropdown-item" href="elements-pricing-tables.html">Pricing Tables</a></li>
-																						<li><a class="dropdown-item" href="elements-tables.html">Tables</a></li>
-																						<li><a class="dropdown-item" href="elements-progressbars.html">Progress Bars</a></li>
-																						<li><a class="dropdown-item" href="elements-process.html">Process</a></li>
-																						<li><a class="dropdown-item" href="elements-counters.html">Counters</a></li>
-																						<li><a class="dropdown-item" href="elements-countdowns.html">Countdowns</a></li>
-																						<li><a class="dropdown-item" href="elements-sections-parallax.html">Sections &amp; Parallax</a></li>
-																						<li><a class="dropdown-item" href="elements-tooltips-popovers.html">Tooltips &amp; Popovers</a></li>							
-																					</ul>
-																				</div>
-																				<div class="col-lg-3">
-																					<span class="dropdown-mega-sub-title">Elements 4</span>
-																					<ul class="dropdown-mega-sub-nav">
-																						<li><a class="dropdown-item" href="elements-headings.html">Headings</a></li>
-																						<li><a class="dropdown-item" href="elements-dividers.html">Dividers</a></li>
-																						<li><a class="dropdown-item" href="elements-animations.html">Animations</a></li>
-																						<li><a class="dropdown-item" href="elements-medias.html">Medias</a></li>
-																						<li><a class="dropdown-item" href="elements-maps.html">Maps</a></li>
-																						<li><a class="dropdown-item" href="elements-arrows.html">Arrows</a></li>
-																						<li><a class="dropdown-item" href="elements-star-ratings.html">Star Ratings</a></li>
-																						<li><a class="dropdown-item" href="elements-alerts.html">Alerts</a></li>
-																						<li><a class="dropdown-item" href="elements-posts.html">Posts</a></li>
-																						<li><a class="dropdown-item" href="elements-forms-basic-contact.html">Forms</a></li>
-																					</ul>
-																				</div>
-																			</div>
-																		</div>
-																	</li>
-																</ul>
-															</li>
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="#">
-																	Features
-																</a>
-																<ul class="dropdown-menu">
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Headers</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-headers-overview.html">Overview</a></li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Classic</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-classic.html">Classic</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-classic-language-dropdown.html">Classic + Language Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-classic-big-logo.html">Classic + Big Logo</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Flat</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-flat.html">Flat</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-flat-top-bar.html">Flat + Top Bar</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-flat-top-bar-top-borders.html">Flat + Top Bar + Top Border</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-flat-colored-top-bar.html">Flat + Colored Top Bar</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-flat-borders.html">Flat + Borders</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Center</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-center.html">Center</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-center-double-navs.html">Center + Double Navs</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-center-nav-buttons.html">Center + Nav + Buttons</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-center-below-slider.html">Center Below Slider</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Floating</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-floating-bar.html">Floating Bar</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-floating-icons.html">Floating Icons</a></li>
-																				</ul>
-																			</li>
-																			<li><a class="dropdown-item" href="feature-headers-below-slider.html">Below Slider</a></li>
-																			<li><a class="dropdown-item" href="feature-headers-full-video.html">Full Video</a></li>
-																			<li><a class="dropdown-item" href="feature-headers-narrow.html">Narrow</a></li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Sticky</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-sticky-shrink.html">Sticky Shrink</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-sticky-static.html">Sticky Static</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-sticky-change-logo.html">Sticky Change Logo</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-sticky-reveal.html">Sticky Reveal</a></li>
-																				</ul>
-																			</li>				
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Transparent</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-transparent-light.html">Transparent Light</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-transparent-dark.html">Transparent Dark</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-transparent-light-bottom-border.html">Transparent Light + Bottom Border</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-transparent-dark-bottom-border.html">Transparent Dark + Bottom Border</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-transparent-bottom-slider.html">Transparent Bottom Slider</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-semi-transparent-light.html">Semi Transparent Light</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-semi-transparent-dark.html">Semi Transparent Dark</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-semi-transparent-bottom-slider.html">Semi Transparent Bottom Slider</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-semi-transparent-top-bar-borders.html">Semi Transparent + Top Bar + Borders</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Full Width</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-full-width.html">Full Width</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-full-width-borders.html">Full Width + Borders</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-full-width-transparent-light.html">Full Width Transparent Light</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-full-width-transparent-dark.html">Full Width Transparent Dark</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-full-width-semi-transparent-light.html">Full Width Semi Transparent Light</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-full-width-semi-transparent-dark.html">Full Width Semi Transparent Dark</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Navbar</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-navbar.html">Navbar</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-navbar-full.html">Navbar Full</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-navbar-pills.html">Navbar Pills</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-navbar-divisors.html">Navbar Divisors</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-navbar-icons-search.html">Nav Bar + Icons + Search</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Side Header</a>
-																				<ul class="dropdown-menu">
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Side Header Left</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-dropdown.html">Dropdown</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-expand.html">Expand</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-columns.html">Columns</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-slide.html">Slide</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-semi-transparent.html">Semi Transparent</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-left-dark.html">Dark</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Side Header Right</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-dropdown.html">Dropdown</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-expand.html">Expand</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-columns.html">Columns</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-slide.html">Slide</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-semi-transparent.html">Semi Transparent</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-right-dark.html">Dark</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Side Header Offcanvas</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-headers-side-header-offcanvas-push.html">Push</a></li>
-																							<li><a class="dropdown-item" href="feature-headers-side-header-offcanvas-slide.html">Slide</a></li>
-																						</ul>
-																					</li>
-																					<li><a class="dropdown-item" href="feature-headers-side-header-narrow-bar.html">Side Header Narrow Bar</a></li>
-																				</ul>
-																			</li>
-																			<li><a class="dropdown-item" href="feature-headers-sign-in-sign-up.html">Sign In / Sign Up</a></li>
-																			<li><a class="dropdown-item" href="feature-headers-logged.html">Logged</a></li>
-																			<li><a class="dropdown-item" href="feature-headers-mini-cart.html">Mini Cart</a></li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Search Styles</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-search-simple-input.html">Simple Input</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-search-simple-input-reveal.html">Simple Input Reveal</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-search-dropdown.html">Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-search-big-input-hidden.html">Big Input Hidden</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-search-full-screen.html">Full Screen</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Extra</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-headers-extra-big-icon.html">Big Icon</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-extra-big-icons-top.html">Big Icons Top</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-extra-button.html">Button</a></li>
-																					<li><a class="dropdown-item" href="feature-headers-extra-background-color.html">Background Color</a></li>
-																				</ul>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Navigations</a>
-																		<ul class="dropdown-menu">
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Pills</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-pills.html">Pills</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-pills-arrows.html">Pills + Arrows</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-pills-dark-text.html">Pills Dark Text</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-pills-color-dropdown.html">Pills Color Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-pills-square.html">Pills Square</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-pills-rounded.html">Pills Rounded</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Stripes</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-stripe.html">Stripe</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-stripe-dark-text.html">Stripe Dark Text</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-stripe-color-dropdown.html">Stripe Color Dropdown</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Hover Effects</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-hover-top-line.html">Top Line</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-top-line-animated.html">Top Line Animated</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-top-line-color-dropdown.html">Top Line Color Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-bottom-line.html">Bottom Line</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-bottom-line-animated.html">Bottom Line Animated</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-slide.html">Slide</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-sub-title.html">Sub Title</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hover-line-under-text.html">Line Under Text</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Vertical</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-vertical-dropdown.html">Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-vertical-expand.html">Expand</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-vertical-columns.html">Columns</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-vertical-slide.html">Slide</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Hamburguer</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-hamburguer-sidebar.html">Sidebar</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-hamburguer-overlay.html">Overlay</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Dropdown Styles</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-dark.html">Dark</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-light.html">Light</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-colors.html">Colors</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-top-line.html">Top Line</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-square.html">Square</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-arrow.html">Arrow Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-arrow-center.html">Arrow Center Dropdown</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-modern-light.html">Modern Light</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-modern-dark.html">Modern Dark</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Dropdown Effects</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-no-effect.html">No Effect</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-opacity.html">Opacity</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-move-to-top.html">Move To Top</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-move-to-bottom.html">Move To Bottom</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-move-to-right.html">Move To Right</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-dropdowns-effect-move-to-left.html">Move To Left</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Font Styles</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-font-small.html">Small</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-font-medium.html">Medium</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-font-large.html">Large</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-font-alternative.html">Alternative</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Icons</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-navigations-icons.html">Icons</a></li>
-																					<li><a class="dropdown-item" href="feature-navigations-icons-float-icons.html">Float Icons</a></li>
-																				</ul>
-																			</li>
-																			<li><a class="dropdown-item" href="feature-navigations-sub-title.html">Sub Title</a></li>
-																			<li><a class="dropdown-item" href="feature-navigations-divisors.html">Divisors</a></li>
-																			<li><a class="dropdown-item" href="feature-navigations-logo-between.html">Logo Between</a></li>
-																			<li><a class="dropdown-item" href="feature-navigations-one-page.html">One Page Nav</a></li>
-																			<li><a class="dropdown-item" href="feature-navigations-click-to-open.html">Click To Open</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Page Headers</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-page-headers-overview.html">Overview</a></li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Classic</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-page-headers-classic-small.html">Small</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-classic-medium.html">Medium</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-classic-large.html">Large</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Modern</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-page-headers-modern-small.html">Small</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-modern-medium.html">Medium</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-modern-large.html">Large</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Colors</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-primary.html">Primary</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-secondary.html">Secondary</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-tertiary.html">Tertiary</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-quaternary.html">Quaternary</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-light.html">Light</a></li>				
-																					<li><a class="dropdown-item" href="feature-page-headers-colors-dark.html">Dark</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Title Position</a>
-																				<ul class="dropdown-menu">
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Left</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-left-small.html">Small</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-left-medium.html">Medium</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-left-large.html">Large</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Right</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-right-small.html">Small</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-right-medium.html">Medium</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-right-large.html">Large</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Center</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-center-small.html">Small</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-center-medium.html">Medium</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-title-position-center-large.html">Large</a></li>
-																						</ul>
-																					</li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Background</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-page-headers-background-fixed.html">Fixed</a></li>		
-																					<li><a class="dropdown-item" href="feature-page-headers-background-parallax.html">Parallax</a></li>
-																					<li><a class="dropdown-item" href="feature-page-headers-background-video.html">Video</a></li>			
-																					<li><a class="dropdown-item" href="feature-page-headers-background-transparent-header.html">Transparent Header</a></li>			
-																					<li><a class="dropdown-item" href="feature-page-headers-background-pattern.html">Pattern</a></li>			
-																					<li><a class="dropdown-item" href="feature-page-headers-background-overlay.html">Overlay</a></li>			
-																					<li><a class="dropdown-item" href="feature-page-headers-background-clean.html">Clean (No Background)</a></li>	
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Extra</a>
-																				<ul class="dropdown-menu">
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Breadcrumb</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-page-headers-extra-breadcrumb-outside.html">Outside</a></li>				
-																							<li><a class="dropdown-item" href="feature-page-headers-extra-breadcrumb-dark.html">Dark</a></li>			
-																						</ul>
-																					</li>
-																					<li><a class="dropdown-item" href="feature-page-headers-extra-scroll-to-content.html">Scroll to Content</a></li>			
-																					<li><a class="dropdown-item" href="feature-page-headers-extra-full-width.html">Full Width</a></li>
-																				</ul>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Footers</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-footers-overview.html">Overview</a></li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Classic</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-classic.html#footer">Classic</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-classic-advanced.html#footer">Advanced</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-classic-compact.html#footer">Compact</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-classic-simple.html#footer">Simple</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-classic-locations.html#footer">Locations</a></li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Copyright</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-classic-copyright-light.html#footer">Light</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-copyright-dark.html#footer">Dark</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-copyright-social-icons.html#footer">Social Icons</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Colors</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-primary.html#footer">Primary</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-secondary.html#footer">Secondary</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-tertiary.html#footer">Tertiary</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-quaternary.html#footer			">Quaternary</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-light.html#footer">Light</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-classic-colors-light-simple.html#footer">Light Simple</a></li>
-																						</ul>
-																					</li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Modern</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-modern.html#footer">Modern</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-modern-font-style-alternative.html#footer">Font Style Alternative</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-modern-clean.html#footer">Clean</a></li>	
-																					<li><a class="dropdown-item" href="feature-footers-modern-useful-links.html#footer">Useful Links</a></li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Background</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-modern-background-image-simple.html#footer">Image Simple</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-modern-background-image-advanced.html#footer">Image Advanced</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-modern-background-video-simple.html#footer">Video Simple</a></li>
-																						</ul>
-																					</li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Call to Action</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-modern-call-to-action-button.html#footer">Button</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-modern-call-to-action-simple.html#footer">Simple</a></li>
-																						</ul>
-																					</li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Blog</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-blog-classic.html#footer">Blog Classic</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">eCommerce</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-ecommerce-classic.html#footer">eCommerce Classic</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Contact Form</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-contact-form-classic.html#footer">Classic</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-contact-form-above-the-map.html#footer">Above the Map</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-contact-form-center.html#footer">Center</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-contact-form-columns.html#footer">Columns</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Map</a>
-																				<ul class="dropdown-menu">
-																					<li><a class="dropdown-item" href="feature-footers-map-hidden.html#footer">Hidden Map</a></li> 
-																					<li><a class="dropdown-item" href="feature-footers-map-full-width.html#footer">Full Width</a></li>
-																				</ul>
-																			</li>
-																			<li class="dropdown-submenu">
-																				<a class="dropdown-item" href="#">Extra</a>
-																				<ul class="dropdown-menu">
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Simple</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-extra-top-social-icons.html#footer">Top Social Icons</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-extra-big-icons.html#footer">Big Icons</a></li>
-																						</ul>
-																					</li>
-																					<li><a class="dropdown-item" href="feature-footers-extra-recent-work.html#footer">Recent Work</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-extra-reveal.html#footer">Reveal</a></li>
-																					<li><a class="dropdown-item" href="feature-footers-extra-instagram.html#footer">Instagram</a></li>
-																					<li class="dropdown-submenu">
-																						<a class="dropdown-item" href="#">Full Width</a>
-																						<ul class="dropdown-menu">
-																							<li><a class="dropdown-item" href="feature-footers-extra-full-width-light.html#footer">Simple Light</a></li>
-																							<li><a class="dropdown-item" href="feature-footers-extra-full-width-dark.html#footer">Simple Dark</a></li>
-																						</ul>
-																					</li>
-																				</ul>
-																			</li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Admin Extension <span class="tip tip-dark">hot</span><em class="not-included">(Not Included)</em></a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-admin-forms-basic.html">Forms Basic</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-forms-advanced.html">Forms Advanced</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-forms-wizard.html">Forms Wizard</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-forms-code-editor.html">Code Editor</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-tables-advanced.html">Tables Advanced</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-tables-responsive.html">Tables Responsive</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-tables-editable.html">Tables Editable</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-tables-ajax.html">Tables Ajax</a></li>
-																			<li><a class="dropdown-item" href="feature-admin-charts.html">Charts</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Sliders</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="index-classic.html">Revolution Slider</a></li>
-																			<li><a class="dropdown-item" href="index-slider-nivo.html">Nivo Slider</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Layout Options</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-layout-boxed.html">Boxed</a></li>
-																			<li><a class="dropdown-item" href="feature-layout-dark.html">Dark</a></li>
-																			<li><a class="dropdown-item" href="feature-layout-rtl.html">RTL</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Extra</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="feature-grid-system.html">Grid System</a></li>
-																			<li><a class="dropdown-item" href="feature-page-loading.html">Page Loading</a></li>
-																			<li><a class="dropdown-item" href="feature-page-transition.html">Page Transition</a></li>
-																			<li><a class="dropdown-item" href="feature-lazy-load.html">Lazy Load</a></li>
-																			<li><a class="dropdown-item" href="feature-side-panel.html">Side Panel</a></li>
-																		</ul>
-																	</li>
-																</ul>
-															</li>
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="#">
-																	Pages
-																</a>
-																<ul class="dropdown-menu">
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Contact Us</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="contact-us-advanced.php">Contact Us - Advanced</a></li>
-																			<li><a class="dropdown-item" href="contact-us.html">Contact Us - Basic</a></li>
-																			<li><a class="dropdown-item" href="contact-us-recaptcha.html">Contact Us - Recaptcha</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">About Us</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="about-us-advanced.html">About Us - Advanced</a></li>
-																			<li><a class="dropdown-item" href="about-us.html">About Us - Basic</a></li>
-																			<li><a class="dropdown-item" href="about-me.html">About Me</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Layouts</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="page-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="page-left-sidebar.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="page-right-sidebar.html">Right Sidebar</a></li>
-																			<li><a class="dropdown-item" href="page-left-and-right-sidebars.html">Left and Right Sidebars</a></li>
-																			<li><a class="dropdown-item" href="page-sticky-sidebar.html">Sticky Sidebar</a></li>
-																			<li><a class="dropdown-item" href="page-secondary-navbar.html">Secondary Navbar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Extra</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="page-404.html">404 Error</a></li>
-																			<li><a class="dropdown-item" href="page-500.html">500 Error</a></li>
-																			<li><a class="dropdown-item" href="page-coming-soon.html">Coming Soon</a></li>
-																			<li><a class="dropdown-item" href="page-maintenance-mode.html">Maintenance Mode</a></li>
-																			<li><a class="dropdown-item" href="page-search-results.html">Search Results</a></li>
-																			<li><a class="dropdown-item" href="sitemap.html">Sitemap</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Team</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="page-team-advanced.html">Team - Advanced</a></li>
-																			<li><a class="dropdown-item" href="page-team.html">Team - Basic</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Services</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="page-services.html">Services - Version 1</a></li>
-																			<li><a class="dropdown-item" href="page-services-2.html">Services - Version 2</a></li>
-																			<li><a class="dropdown-item" href="page-services-3.html">Services - Version 3</a></li>
-																		</ul>
-																	</li>
-																	<li><a class="dropdown-item" href="page-custom-header.html">Custom Header</a></li>
-																	<li><a class="dropdown-item" href="page-careers.html">Careers</a></li>
-																	<li><a class="dropdown-item" href="page-faq.html">FAQ</a></li>
-																	<li><a class="dropdown-item" href="page-login.html">Login / Register</a></li>
-																	<li><a class="dropdown-item" href="page-user-profile.html">User Profile</a></li>
-																</ul>
-															</li>
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="#">
-																	Portfolio
-																</a>
-																<ul class="dropdown-menu">
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Single Project</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-single-wide-slider.html">Wide Slider</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-small-slider.html">Small Slider</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-full-width-slider.html">Full Width Slider</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-gallery.html">Gallery</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-carousel.html">Carousel</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-medias.html">Medias</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-full-width-video.html">Full Width Video</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-masonry-images.html">Masonry Images</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-left-sidebar.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-right-sidebar.html">Right Sidebar</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-left-and-right-sidebars.html">Left and Right Sidebars</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-sticky-sidebar.html">Sticky Sidebar</a></li>
-																			<li><a class="dropdown-item" href="portfolio-single-extended.html">Extended</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Grid Layouts</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-grid-1-column.html">1 Column</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-2-columns.html">2 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-3-columns.html">3 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-4-columns.html">4 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-5-columns.html">5 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-6-columns.html">6 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-no-margins.html">No Margins</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-full-width-no-margins.html">Full Width No Margins</a></li>
-																			<li><a class="dropdown-item" href="portfolio-grid-1-column-title-and-description.html">Title and Description</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Masonry Layouts</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-masonry-2-columns.html">2 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-3-columns.html">3 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-4-columns.html">4 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-5-columns.html">5 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-6-columns.html">6 Columns</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-no-margins.html">No Margins</a></li>
-																			<li><a class="dropdown-item" href="portfolio-masonry-full-width.html">Full Width</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Sidebar Layouts</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="portfolio-sidebar-right.html">Right Sidebar</a></li>
-																			<li><a class="dropdown-item" href="portfolio-sidebar-left-and-right.html">Left and Right Sidebars</a></li>
-																			<li><a class="dropdown-item" href="portfolio-sidebar-sticky.html">Sticky Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Ajax</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-ajax-page.html">Ajax on Page</a></li>
-																			<li><a class="dropdown-item" href="portfolio-ajax-modal.html">Ajax on Modal</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Extra</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="portfolio-extra-timeline.html">Timeline</a></li>
-																			<li><a class="dropdown-item" href="portfolio-extra-lightbox.html">Lightbox</a></li>
-																			<li><a class="dropdown-item" href="portfolio-extra-load-more.html">Load More</a></li>
-																			<li><a class="dropdown-item" href="portfolio-extra-infinite-scroll.html">Infinite Scroll</a></li>
-																			<li><a class="dropdown-item" href="portfolio-extra-pagination.html">Pagination</a></li>
-																			<li><a class="dropdown-item" href="portfolio-extra-combination-filters.html">Combination Filters</a></li>
-																		</ul>
-																	</li>
-																</ul>
-															</li>
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle" href="#">
-																	Blog
-																</a>
-																<ul class="dropdown-menu">
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Large Image</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-large-image-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-large-image-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-large-image-sidebar-right.html">Right Sidebar </a></li>
-																			<li><a class="dropdown-item" href="blog-large-image-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Medium Image</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-medium-image-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-medium-image-sidebar-right.html">Right Sidebar </a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Grid</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-grid-4-columns.html">4 Columns</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-3-columns.html">3 Columns</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-no-margins.html">No Margins</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-no-margins-full-width.html">No Margins Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-grid-sidebar-right.html">Right Sidebar </a></li>
-																			<li><a class="dropdown-item" href="blog-grid-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Masonry</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-masonry-4-columns.html">4 Columns</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-3-columns.html">3 Columns</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-no-margins.html">No Margins</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-no-margins-full-width.html">No Margins Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-masonry-sidebar-right.html">Right Sidebar </a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Timeline</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-timeline.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-timeline-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-timeline-sidebar-right.html">Right Sidebar </a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Single Post</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-post.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="blog-post-slider-gallery.html">Slider Gallery</a></li>
-																			<li><a class="dropdown-item" href="blog-post-image-gallery.html">Image Gallery</a></li>
-																			<li><a class="dropdown-item" href="blog-post-embedded-video.html">Embedded Video</a></li>
-																			<li><a class="dropdown-item" href="blog-post-html5-video.html">HTML5 Video</a></li>
-																			<li><a class="dropdown-item" href="blog-post-blockquote.html">Blockquote</a></li>
-																			<li><a class="dropdown-item" href="blog-post-link.html">Link</a></li>
-																			<li><a class="dropdown-item" href="blog-post-embedded-audio.html">Embedded Audio</a></li>
-																			<li><a class="dropdown-item" href="blog-post-small-image.html">Small Image</a></li>
-																			<li><a class="dropdown-item" href="blog-post-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="blog-post-sidebar-right.html">Right Sidebar </a></li>
-																			<li><a class="dropdown-item" href="blog-post-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Post Comments</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="blog-post.html#comments">Default</a></li>
-																			<li><a class="dropdown-item" href="blog-post-comments-facebook.html#comments">Facebook Comments</a></li>
-																			<li><a class="dropdown-item" href="blog-post-comments-disqus.html#comments">Disqus Comments</a></li>
-																		</ul>
-																	</li>
-																</ul>
-															</li>
-															<li class="dropdown">
-																<a class="dropdown-item dropdown-toggle active" href="#">
-																	Shop
-																</a>
-																<ul class="dropdown-menu">
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">Single Product</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="shop-product-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="shop-product-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="shop-product-sidebar-right.html">Right Sidebar</a></li>
-																			<li><a class="dropdown-item" href="shop-product-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li><a class="dropdown-item" href="shop-4-columns.html">4 Columns</a></li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">3 Columns</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="shop-3-columns-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="shop-3-columns-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="shop-3-columns-sidebar-right.html">Right Sidebar </a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">2 Columns</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="shop-2-columns-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="shop-2-columns-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="shop-2-columns-sidebar-right.html">Right Sidebar </a></li>
-																			<li><a class="dropdown-item" href="shop-2-columns-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li class="dropdown-submenu">
-																		<a class="dropdown-item" href="#">1 Column</a>
-																		<ul class="dropdown-menu">
-																			<li><a class="dropdown-item" href="shop-1-column-full-width.html">Full Width</a></li>
-																			<li><a class="dropdown-item" href="shop-1-column-sidebar-left.html">Left Sidebar</a></li>
-																			<li><a class="dropdown-item" href="shop-1-column-sidebar-right.html">Right Sidebar </a></li>
-																			<li><a class="dropdown-item" href="shop-1-column-sidebar-left-and-right.html">Left and Right Sidebar</a></li>
-																		</ul>
-																	</li>
-																	<li><a class="dropdown-item" href="shop-cart.html">Cart</a></li>
-																	<li><a class="dropdown-item" href="shop-login.html">Login</a></li>
-																	<li><a class="dropdown-item" href="shop-checkout.html">Checkout</a></li>
-																</ul>
-															</li>
-														</ul>
-													</nav>
-												</div>
-												<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
-													<i class="fas fa-bars"></i>
-												</button>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					-->
 
 					<div class="container">
 						<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
@@ -1719,6 +791,446 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</aside>
 								</div>
 							-->
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+
+			<?php function cart(){ ?>
+				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+				
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-9">
+								<form action="actions.php?a=checkout" id="frmBillingAddress" method="post">
+
+									<div class="accordion accordion-modern" id="accordion">
+										<div class="card card-default">
+											<div class="card-header">
+												<h4 class="card-title m-0">
+													<a class="accordion-toggle">
+														Cart
+													</a>
+												</h4>
+											</div>
+											<div id="collapseOne" class="collapse show">
+												<div class="card-body">
+													<div class="card-body">
+														<table class="shop_table cart">
+															<thead>
+																<tr>
+																	<th class="product-name">
+																		Product
+																	</th>
+																	<th class="product-price">
+																		Price
+																	</th>
+																	<th class="product-quantity">
+																		Quantity
+																	</th>
+																	<th class="product-subtotal">
+																		Total
+																	</th>
+																</tr>
+															</thead>
+															<tbody>
+																
+																<tr class="cart_table_item">
+																	<td class="product-name">
+																		<strong>Business Builder Kit</strong>
+																	</td>
+																	<td class="product-price">
+																		<span class="amount">£40.00</span>
+																	</td>
+																	<td class="product-quantity">
+																		1
+																	</td>
+																	<td class="product-subtotal">
+																		<span class="amount">£40.00</span>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+													<div class="form-row">
+														<div class="form-group col-lg-6">
+															<label class="font-weight-bold text-dark text-2">First Name</label>
+															<input type="text" id="first_name" name="first_name" class="form-control" required="">
+														</div>
+														<div class="form-group col-lg-6">
+															<label class="font-weight-bold text-dark text-2">Last Name</label>
+															<input type="text" id="last_name" name="last_name" class="form-control" required="">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Company Name <small>(optional)</small></label>
+															<input type="text" id="company_name" name="company_name" class="form-control">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Address 1</label>
+															<input type="text" id="address_1" name="address_1" class="form-control" required="">
+														</div>
+													</div>
+													<!--
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Address 2 <small>(optional)</small></label>
+															<input type="text" id="address_2" name="address_2" class="form-control">
+														</div>
+													</div>
+													-->
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">City </label>
+															<input type="text" id="address_city" name="address_city" class="form-control" required="">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">County / State </label>
+															<input type="text" id="address_state" name="address_state" class="form-control" required="">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Country</label>
+															<select id="address_country" name="address_country" class="form-control">
+																<option value="AF">Afghanistan</option>
+																<option value="AX">Åland Islands</option>
+																<option value="AL">Albania</option>
+																<option value="DZ">Algeria</option>
+																<option value="AS">American Samoa</option>
+																<option value="AD">Andorra</option>
+																<option value="AO">Angola</option>
+																<option value="AI">Anguilla</option>
+																<option value="AQ">Antarctica</option>
+																<option value="AG">Antigua and Barbuda</option>
+																<option value="AR">Argentina</option>
+																<option value="AM">Armenia</option>
+																<option value="AW">Aruba</option>
+																<option value="AU">Australia</option>
+																<option value="AT">Austria</option>
+																<option value="AZ">Azerbaijan</option>
+																<option value="BS">Bahamas</option>
+																<option value="BH">Bahrain</option>
+																<option value="BD">Bangladesh</option>
+																<option value="BB">Barbados</option>
+																<option value="BY">Belarus</option>
+																<option value="BE">Belgium</option>
+																<option value="BZ">Belize</option>
+																<option value="BJ">Benin</option>
+																<option value="BM">Bermuda</option>
+																<option value="BT">Bhutan</option>
+																<option value="BO">Bolivia, Plurinational State of</option>
+																<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+																<option value="BA">Bosnia and Herzegovina</option>
+																<option value="BW">Botswana</option>
+																<option value="BV">Bouvet Island</option>
+																<option value="BR">Brazil</option>
+																<option value="IO">British Indian Ocean Territory</option>
+																<option value="BN">Brunei Darussalam</option>
+																<option value="BG">Bulgaria</option>
+																<option value="BF">Burkina Faso</option>
+																<option value="BI">Burundi</option>
+																<option value="KH">Cambodia</option>
+																<option value="CM">Cameroon</option>
+																<option value="CA">Canada</option>
+																<option value="CV">Cape Verde</option>
+																<option value="KY">Cayman Islands</option>
+																<option value="CF">Central African Republic</option>
+																<option value="TD">Chad</option>
+																<option value="CL">Chile</option>
+																<option value="CN">China</option>
+																<option value="CX">Christmas Island</option>
+																<option value="CC">Cocos (Keeling) Islands</option>
+																<option value="CO">Colombia</option>
+																<option value="KM">Comoros</option>
+																<option value="CG">Congo</option>
+																<option value="CD">Congo, the Democratic Republic of the</option>
+																<option value="CK">Cook Islands</option>
+																<option value="CR">Costa Rica</option>
+																<option value="CI">Côte d'Ivoire</option>
+																<option value="HR">Croatia</option>
+																<option value="CU">Cuba</option>
+																<option value="CW">Curaçao</option>
+																<option value="CY">Cyprus</option>
+																<option value="CZ">Czech Republic</option>
+																<option value="DK">Denmark</option>
+																<option value="DJ">Djibouti</option>
+																<option value="DM">Dominica</option>
+																<option value="DO">Dominican Republic</option>
+																<option value="EC">Ecuador</option>
+																<option value="EG">Egypt</option>
+																<option value="SV">El Salvador</option>
+																<option value="GQ">Equatorial Guinea</option>
+																<option value="ER">Eritrea</option>
+																<option value="EE">Estonia</option>
+																<option value="ET">Ethiopia</option>
+																<option value="FK">Falkland Islands (Malvinas)</option>
+																<option value="FO">Faroe Islands</option>
+																<option value="FJ">Fiji</option>
+																<option value="FI">Finland</option>
+																<option value="FR">France</option>
+																<option value="GF">French Guiana</option>
+																<option value="PF">French Polynesia</option>
+																<option value="TF">French Southern Territories</option>
+																<option value="GA">Gabon</option>
+																<option value="GM">Gambia</option>
+																<option value="GE">Georgia</option>
+																<option value="DE">Germany</option>
+																<option value="GH">Ghana</option>
+																<option value="GI">Gibraltar</option>
+																<option value="GR">Greece</option>
+																<option value="GL">Greenland</option>
+																<option value="GD">Grenada</option>
+																<option value="GP">Guadeloupe</option>
+																<option value="GU">Guam</option>
+																<option value="GT">Guatemala</option>
+																<option value="GG">Guernsey</option>
+																<option value="GN">Guinea</option>
+																<option value="GW">Guinea-Bissau</option>
+																<option value="GY">Guyana</option>
+																<option value="HT">Haiti</option>
+																<option value="HM">Heard Island and McDonald Islands</option>
+																<option value="VA">Holy See (Vatican City State)</option>
+																<option value="HN">Honduras</option>
+																<option value="HK">Hong Kong</option>
+																<option value="HU">Hungary</option>
+																<option value="IS">Iceland</option>
+																<option value="IN">India</option>
+																<option value="ID">Indonesia</option>
+																<option value="IR">Iran, Islamic Republic of</option>
+																<option value="IQ">Iraq</option>
+																<option value="IE">Ireland</option>
+																<option value="IM">Isle of Man</option>
+																<option value="IL">Israel</option>
+																<option value="IT">Italy</option>
+																<option value="JM">Jamaica</option>
+																<option value="JP">Japan</option>
+																<option value="JE">Jersey</option>
+																<option value="JO">Jordan</option>
+																<option value="KZ">Kazakhstan</option>
+																<option value="KE">Kenya</option>
+																<option value="KI">Kiribati</option>
+																<option value="KP">Korea, Democratic People's Republic of</option>
+																<option value="KR">Korea, Republic of</option>
+																<option value="KW">Kuwait</option>
+																<option value="KG">Kyrgyzstan</option>
+																<option value="LA">Lao People's Democratic Republic</option>
+																<option value="LV">Latvia</option>
+																<option value="LB">Lebanon</option>
+																<option value="LS">Lesotho</option>
+																<option value="LR">Liberia</option>
+																<option value="LY">Libya</option>
+																<option value="LI">Liechtenstein</option>
+																<option value="LT">Lithuania</option>
+																<option value="LU">Luxembourg</option>
+																<option value="MO">Macao</option>
+																<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+																<option value="MG">Madagascar</option>
+																<option value="MW">Malawi</option>
+																<option value="MY">Malaysia</option>
+																<option value="MV">Maldives</option>
+																<option value="ML">Mali</option>
+																<option value="MT">Malta</option>
+																<option value="MH">Marshall Islands</option>
+																<option value="MQ">Martinique</option>
+																<option value="MR">Mauritania</option>
+																<option value="MU">Mauritius</option>
+																<option value="YT">Mayotte</option>
+																<option value="MX">Mexico</option>
+																<option value="FM">Micronesia, Federated States of</option>
+																<option value="MD">Moldova, Republic of</option>
+																<option value="MC">Monaco</option>
+																<option value="MN">Mongolia</option>
+																<option value="ME">Montenegro</option>
+																<option value="MS">Montserrat</option>
+																<option value="MA">Morocco</option>
+																<option value="MZ">Mozambique</option>
+																<option value="MM">Myanmar</option>
+																<option value="NA">Namibia</option>
+																<option value="NR">Nauru</option>
+																<option value="NP">Nepal</option>
+																<option value="NL">Netherlands</option>
+																<option value="NC">New Caledonia</option>
+																<option value="NZ">New Zealand</option>
+																<option value="NI">Nicaragua</option>
+																<option value="NE">Niger</option>
+																<option value="NG">Nigeria</option>
+																<option value="NU">Niue</option>
+																<option value="NF">Norfolk Island</option>
+																<option value="MP">Northern Mariana Islands</option>
+																<option value="NO">Norway</option>
+																<option value="OM">Oman</option>
+																<option value="PK">Pakistan</option>
+																<option value="PW">Palau</option>
+																<option value="PS">Palestinian Territory, Occupied</option>
+																<option value="PA">Panama</option>
+																<option value="PG">Papua New Guinea</option>
+																<option value="PY">Paraguay</option>
+																<option value="PE">Peru</option>
+																<option value="PH">Philippines</option>
+																<option value="PN">Pitcairn</option>
+																<option value="PL">Poland</option>
+																<option value="PT">Portugal</option>
+																<option value="PR">Puerto Rico</option>
+																<option value="QA">Qatar</option>
+																<option value="RE">Réunion</option>
+																<option value="RO">Romania</option>
+																<option value="RU">Russian Federation</option>
+																<option value="RW">Rwanda</option>
+																<option value="BL">Saint Barthélemy</option>
+																<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+																<option value="KN">Saint Kitts and Nevis</option>
+																<option value="LC">Saint Lucia</option>
+																<option value="MF">Saint Martin (French part)</option>
+																<option value="PM">Saint Pierre and Miquelon</option>
+																<option value="VC">Saint Vincent and the Grenadines</option>
+																<option value="WS">Samoa</option>
+																<option value="SM">San Marino</option>
+																<option value="ST">Sao Tome and Principe</option>
+																<option value="SA">Saudi Arabia</option>
+																<option value="SN">Senegal</option>
+																<option value="RS">Serbia</option>
+																<option value="SC">Seychelles</option>
+																<option value="SL">Sierra Leone</option>
+																<option value="SG">Singapore</option>
+																<option value="SX">Sint Maarten (Dutch part)</option>
+																<option value="SK">Slovakia</option>
+																<option value="SI">Slovenia</option>
+																<option value="SB">Solomon Islands</option>
+																<option value="SO">Somalia</option>
+																<option value="ZA">South Africa</option>
+																<option value="GS">South Georgia and the South Sandwich Islands</option>
+																<option value="SS">South Sudan</option>
+																<option value="ES">Spain</option>
+																<option value="LK">Sri Lanka</option>
+																<option value="SD">Sudan</option>
+																<option value="SR">Suriname</option>
+																<option value="SJ">Svalbard and Jan Mayen</option>
+																<option value="SZ">Swaziland</option>
+																<option value="SE">Sweden</option>
+																<option value="CH">Switzerland</option>
+																<option value="SY">Syrian Arab Republic</option>
+																<option value="TW">Taiwan, Province of China</option>
+																<option value="TJ">Tajikistan</option>
+																<option value="TZ">Tanzania, United Republic of</option>
+																<option value="TH">Thailand</option>
+																<option value="TL">Timor-Leste</option>
+																<option value="TG">Togo</option>
+																<option value="TK">Tokelau</option>
+																<option value="TO">Tonga</option>
+																<option value="TT">Trinidad and Tobago</option>
+																<option value="TN">Tunisia</option>
+																<option value="TR">Turkey</option>
+																<option value="TM">Turkmenistan</option>
+																<option value="TC">Turks and Caicos Islands</option>
+																<option value="TV">Tuvalu</option>
+																<option value="UG">Uganda</option>
+																<option value="UA">Ukraine</option>
+																<option value="AE">United Arab Emirates</option>
+																<option value="GB" selected>United Kingdom</option>
+																<option value="US">United States</option>
+																<option value="UM">United States Minor Outlying Islands</option>
+																<option value="UY">Uruguay</option>
+																<option value="UZ">Uzbekistan</option>
+																<option value="VU">Vanuatu</option>
+																<option value="VE">Venezuela, Bolivarian Republic of</option>
+																<option value="VN">Viet Nam</option>
+																<option value="VG">Virgin Islands, British</option>
+																<option value="VI">Virgin Islands, U.S.</option>
+																<option value="WF">Wallis and Futuna</option>
+																<option value="EH">Western Sahara</option>
+																<option value="YE">Yemen</option>
+																<option value="ZM">Zambia</option>
+																<option value="ZW">Zimbabwe</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Zip / Postal Code </label>
+															<input type="text" id="address_zip" name="address_zip" class="form-control" required="">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Email Address </label>
+															<input type="text" id="email" name="email" class="form-control" required="">
+														</div>
+													</div>
+													<!--
+													<div class="form-row">
+														<div class="form-group col">
+															<label class="font-weight-bold text-dark text-2">Tel </label>
+															<input type="text" id="tel" name="tel" class="form-control" placeholder="+44 7399 973949" required="">
+														</div>
+													</div>
+													-->
+													<div class="form-row">
+														<div class="form-group col-lg-6">
+															<label class="font-weight-bold text-dark text-2">Password </label>
+															<input type="password" id="password" name="password" class="form-control" placeholder="********" required="">
+														</div>
+														<div class="form-group col-lg-6">
+															<label class="font-weight-bold text-dark text-2">Re-type Password </label>
+															<input type="password" id="password2" name="password2" class="form-control" placeholder="********" required="">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col">
+															<input type="submit" value="Next" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+								
+								<!--
+								<div class="actions-continue">
+									<input type="submit" value="Place Order" name="proceed" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0">
+								</div>
+								-->
+
+							</div>
+							<div class="col-lg-3">
+								<h4 class="text-primary">Cart Totals</h4>
+								<table class="cart-totals">
+									<tbody>
+										<tr class="cart-subtotal">
+											<th>
+												<strong class="text-dark">Cart Subtotal</strong>
+											</th>
+											<td>
+												<strong class="text-dark"><span class="amount">£<?php echo number_format(123.00, 2); ?></span></strong>
+											</td>
+										</tr>
+										<tr class="shipping">
+											<th>
+												Shipping
+											</th>
+											<td>
+												Free Shipping<input type="hidden" value="free_shipping" id="shipping_method" name="shipping_method">
+											</td>
+										</tr>
+										<tr class="total">
+											<th>
+												<strong class="text-dark">Order Total</strong>
+											</th>
+											<td>
+												<strong class="text-dark"><span class="amount">£<?php echo number_format($order_total, 2); ?></span></strong>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
