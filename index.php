@@ -1239,8 +1239,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 										</tr>
 									</tbody>
 								</table>
-								<input type="submit" value="Next" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
-								<input type="submit" value="Next" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
 							</div>
 						</div>
 					</div>
