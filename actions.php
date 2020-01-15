@@ -256,7 +256,7 @@ function checkout(){
 		$cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 		foreach($cart_items as $cart_item){
-			for($x = 0; $x <= $cart_item['quantity']; $x++) {
+			for($x = 1; $x <= $cart_item['quantity']; $x++) {
 				$order_pids[] = $cart_item['product_id'];
 			}
 		}
