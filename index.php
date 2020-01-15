@@ -172,7 +172,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</ul>
 									<!-- cart summary -->
 									<div class="header-nav-features">
-										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
+										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '178px'}" data-sticky-header-style-deactive="{'top': '0'}">
 											<a href="#" class="header-nav-features-toggle">
 												<img src="img/icons/icon-cart-big.svg" height="34" alt="" class="header-nav-top-icon-img">
 												<span class="cart-info">
