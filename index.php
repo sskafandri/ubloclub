@@ -1400,14 +1400,18 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</div>
 								</div>
 								<div class="col-md-5 col-lg-4">
-									<h5 class="text-4 text-color-light mb-3 mt-4 mt-lg-0">MAIN FEATURES</h5>
-									<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Super Fast Theme</a></p>
-									<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">SEO Optmized</a></p>
-									<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">RTL Support</a></p>
+									<!--
+										<h5 class="text-4 text-color-light mb-3 mt-4 mt-lg-0">MAIN FEATURES</h5>
+										<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Super Fast Theme</a></p>
+										<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">SEO Optmized</a></p>
+										<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">RTL Support</a></p>
+									-->
 								</div>
 								<div class="col-lg-3">
-									<p class="mb-1 mt-lg-3 pt-lg-3"><a href="" class="text-3">Powerful Admin Panel</a></p>
-									<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Mobile & Retina Optimized</a></p>
+									<!--
+										<p class="mb-1 mt-lg-3 pt-lg-3"><a href="" class="text-3">Powerful Admin Panel</a></p>
+										<p class="mb-1"><a href="#" class="text-3 link-hover-style-1">Mobile & Retina Optimized</a></p>
+									-->
 								</div>
 							</div>
 							<div class="row footer-top-light-border mt-4 pt-4">
