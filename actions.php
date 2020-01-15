@@ -180,7 +180,12 @@ function checkout(){
     	go($_SERVER['HTTP_REFERER']);
 	}
 
-	$upline_id 			= $_SESSION['mlm_affiliate'];
+	if(!isset($_SESSION['mlm_affiliate'])){
+		$upline_id 		= 1;
+	}else{
+		$upline_id 		= $_SESSION['mlm_affiliate'];
+	}
+	
 
 	$ip_address 		= $_SERVER['REMOTE_ADDR'];
 
