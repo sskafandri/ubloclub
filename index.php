@@ -1482,24 +1482,24 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 		</script>
 
 		<script src="jquery.bs.gdpr.cookies.js"></script>
-    <script type="text/javascript">
-        var settings = {
-            message: 'This site uses cookies to provide you with a great user experience. By using this site you accept our use of cookies.',
-            moreLinkLabel: '',
-            messageMaxHeightPercent: 30,
-            delay: 1000,
-            OnAccept : function() {
-                console.log('User accepted cookies');
-            }
-        }
+	    <script type="text/javascript">
+	        var settings = {
+	            message: 'This site uses cookies to provide you with a great user experience. By using this site you accept our use of cookies.',
+	            moreLinkLabel: '',
+	            messageMaxHeightPercent: 30,
+	            delay: 1000,
+	            OnAccept : function() {
+	                console.log('User accepted cookies');
+	            }
+	        }
 
-        $(document).ready(function() {
-            $('body').bsgdprcookies(settings);
+	        $(document).ready(function() {
+	            $('body').bsgdprcookies(settings);
 
-            $('#cookiesBtn').on('click', function(){
-                $('body').bsgdprcookies(settings, 'reinit');
-            });
-        });
-    </script>
+	            $('#cookiesBtn').on('click', function(){
+	                $('body').bsgdprcookies(settings, 'reinit');
+	            });
+	        });
+	    </script>
 	</body>
 </html>
