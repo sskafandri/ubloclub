@@ -1481,6 +1481,14 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			}
 		</script>
 
-
+		<script src="dist/jquery.cookieMessage.min.js"></script>
+		<script type="text/javascript">
+			$.cookieMessage({
+			    'mainMessage': 'This website uses cookies. By using this website you consent to our use of these cookies. For more information visit our <a href="https://www.jqueryscript.net/privacy/">Privacy Policy</a>. ',
+			    'acceptButton': 'Got It!',
+			    'fontSize': '16px',
+			    'backgroundColor': '#222',
+			});
+		</script>
 	</body>
 </html>
