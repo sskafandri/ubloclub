@@ -1484,12 +1484,12 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 		<script src="jquery.bs.gdpr.cookies.js"></script>
     <script type="text/javascript">
         var settings = {
-            message: 'This is your cookies message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque, magna quis iaculis vulputate, ipsum sem commodo risus, sed egestas ipsum neque ut orci. Nulla ultrices dignissim pharetra. Pellentesque nec placerat dui. Mauris porta risus vitae nulla rutrum convallis. Aliquam elementum consequat ligula, sed malesuada nunc. Nam imperdiet a eros ac imperdiet. <b> Read more  ',
-            moreLinkLabel: 'here.</b>',
+            message: 'This site uses cookies to provide you with a great user experience. By using this site you accept our use of cookies.',
+            moreLinkLabel: '',
             messageMaxHeightPercent: 30,
             delay: 1000,
             OnAccept : function() {
-                console.log('Yay! User accepted your cookies window!');
+                console.log('User accepted cookies');
             }
         }
 
