@@ -228,6 +228,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
+					<!-- top menu -->
 					<div class="container">
 						<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
 							<div class="header-row">
@@ -797,14 +798,13 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php } ?>
 
 			<?php function cart(){ ?>
-				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $cart_items; ?>
 				
 				<div role="main" class="main shop py-4">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-9">
 								<form action="actions.php?a=checkout" id="frmBillingAddress" method="post">
-
 									<div class="accordion accordion-modern" id="accordion">
 										<div class="card card-default">
 											<div class="card-header">
@@ -835,21 +835,30 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																</tr>
 															</thead>
 															<tbody>
-																
-																<tr class="cart_table_item">
-																	<td class="product-name">
-																		<strong>Business Builder Kit</strong>
-																	</td>
-																	<td class="product-price">
-																		<span class="amount">£40.00</span>
-																	</td>
-																	<td class="product-quantity">
-																		1
-																	</td>
-																	<td class="product-subtotal">
-																		<span class="amount">£40.00</span>
-																	</td>
-																</tr>
+																<?php if(isset($cart_items[0])){ ?>
+																	<ol class="mini-products-list">
+																		<?php foreach($cart_items as $cart_item){ ?>
+																			<?php foreach($all_products as $product){ ?>
+																				<?php if($cart_item['product_id'] == $product['id']){ ?>
+																					<tr class="cart_table_item">
+																						<td class="product-name">
+																							<strong><?php echo stripslashes($product['title']); ?></strong>
+																						</td>
+																						<td class="product-price">
+																							<span class="amount">£<?php echo $cart_item['price']; ?></span>
+																						</td>
+																						<td class="product-quantity">
+																							<?php echo stripslashes($cart_item['quantity']); ?>
+																						</td>
+																						<td class="product-subtotal">
+																							<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
+																						</td>
+																					</tr>
+																				<?php break; ?>
+																			<?php } ?>
+																		<?php } ?>
+																	<?php } ?>
+																<?php } ?>
 															</tbody>
 														</table>
 													</div>
@@ -1209,7 +1218,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 												<strong class="text-dark">Cart Subtotal</strong>
 											</th>
 											<td>
-												<strong class="text-dark"><span class="amount">£<?php echo number_format(123.00, 2); ?></span></strong>
+												<strong class="text-dark"><span class="amount">£<?php echo number_format($_SESSION['cart_total'], 2); ?></span></strong>
 											</td>
 										</tr>
 										<tr class="shipping">
@@ -1225,7 +1234,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 												<strong class="text-dark">Order Total</strong>
 											</th>
 											<td>
-												<strong class="text-dark"><span class="amount">£<?php echo number_format($order_total, 2); ?></span></strong>
+												<strong class="text-dark"><span class="amount">£<?php echo number_format($_SESSION['cart_total'], 2); ?></span></strong>
 											</td>
 										</tr>
 									</tbody>
