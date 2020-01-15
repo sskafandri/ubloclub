@@ -1481,39 +1481,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			}
 		</script>
 
-		<script type="text/javascript" src="js/jquery.ihavecookies.js"></script>
-	    <script type="text/javascript">
-		    var options = {
-		        title: '&#x1F36A; Accept Cookies & Privacy Policy?',
-		        message: 'Our site uses cookies to store basic information to enhance your stay with us, this includes the use of our shopping cart.',
-		        delay: 600,
-		        expires: 1,
-		        link: '#privacy',
-		        onAccept: function(){
-		            var myPreferences = $.fn.ihavecookies.cookie();
-		            console.log('The following preferences were saved.');
-		            console.log(myPreferences);
-		        },
-		        uncheckBoxes: true,
-		        acceptBtnLabel: 'Accept Cookies',
-		        moreInfoLabel: 'More information',
-		        cookieTypesTitle: 'Select which cookies you want to accept',
-		        fixedCookieTypeLabel: 'Essential',
-		        fixedCookieTypeDesc: 'These are essential for the website to work correctly.'
-		    }
 
-		    $(document).ready(function() {
-		        $('body').ihavecookies(options);
-
-		        if ($.fn.ihavecookies.preference('marketing') === true) {
-		            console.log('This should run because marketing is accepted.');
-		        }
-
-		        $('#ihavecookiesBtn').on('click', function(){
-		            $('body').ihavecookies(options, 'reinit');
-		        });
-		    });
-		</script>
-		<link href="css/example.css" rel="stylesheet">
 	</body>
 </html>
