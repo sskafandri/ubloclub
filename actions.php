@@ -28,6 +28,10 @@ switch ($a)
 		add_to_cart();
 		break;
 
+	case "checkout":
+		checkout();
+		break;
+
 // default		
 	default:
 		home();
@@ -58,8 +62,7 @@ function test(){
 	echo '<hr>';
 }
 
-function empty_cart()
-{
+function empty_cart(){
 	global $conn;
 
 	$delete = $conn->exec("DELETE FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
@@ -73,8 +76,7 @@ function empty_cart()
     go($_SERVER['HTTP_REFERER']);
 }
 
-function add_to_cart()
-{
+function add_to_cart(){
 	global $conn;
 
 	$cart_total 	= 0;
@@ -125,4 +127,231 @@ function add_to_cart()
     // log_add("[".$name."] has been updated.");
     status_message('success',"Cart updated.");
     go($_SERVER['HTTP_REFERER']);
+}
+
+function checkout(){
+	global $conn, $global_settings, $whmcs;
+
+	$order_pids 		= array();
+
+	$account_type 		= 'customer';
+
+	$company_name 		= post('company_name');
+	$company_name 		= preg_replace("/[^a-zA-Z0-9]+/", "", $company_name);
+
+	$first_name 		= post('first_name');
+	$first_name 		= preg_replace("/[^a-zA-Z0-9]+/", "", $first_name);
+
+	$last_name 			= post('last_name');
+	$last_name 			= preg_replace("/[^a-zA-Z0-9]+/", "", $last_name);
+
+	$email 				= post('email');
+	$email 				= trim($email);
+
+	$tel 				= post('tel');
+	$tel 				= trim($tel);
+
+	$password 			= post('password');
+	$password 			= trim($password);
+
+	$password2 			= post('password2');
+	$password2 			= trim($password2);
+
+	$address_1 			= post('address_1');
+	$address_1 			= addslashes($address_1);
+
+	$address_2 			= post('address_2');
+	$address_2 			= addslashes($address_2);
+
+	$address_city 		= post('address_city');
+	$address_city 		= addslashes($address_city);
+
+	$address_state 		= post('address_state');
+	$address_state 		= addslashes($address_state);
+
+	$address_country 	= post('address_country');
+	$address_country 	= addslashes($address_country);
+
+	$address_zip 		= post('address_zip');
+	$address_zip 		= addslashes($address_zip);
+
+	if($password != $password2){
+		status_message('danger',"Passwords do not match.");
+    	go($_SERVER['HTTP_REFERER']);
+	}
+
+	$upline_id 			= $_SESSION['mlm_affiliate'];
+
+	$ip_address 		= $_SERVER['REMOTE_ADDR'];
+
+	/*
+	$insert = $conn->exec("INSERT INTO `users` 
+		(`type`, `added`, `updated`, `status`, `upline_id`, `username`, `password`, `avatar`, `email`, `tel`, `company_name`, `first_name`, `last_name`, `address_1`, `address_2`, `address_city`, `address_state`, `address_country`, `address_zip`,`signup_ip`) VALUES
+		
+		('".$account_type."',
+		'".time()."',
+		'".time()."',
+		'pending',
+		'".$upline_id."',
+		'".$username."',
+		'".$password."',
+		'img/avatar.png',
+		'".$email."',
+		'".$tel."',
+		'".$company_name."',
+		'".$first_name."',
+		'".$last_name."',
+		'".$address_1."',
+		'".$address_2."',
+		'".$address_city."',
+		'".$address_state."',
+		'".$address_country."',
+		'".$address_zip."',
+		'".$ip_address."'
+		);
+	");
+    
+    $user_id = $conn->lastInsertId();
+
+    $_SESSION['registration'] 				= '1';
+    $_SESSION['logged_in']					= true;
+	$_SESSION['account']['id']				= $user_id;
+	$_SESSION['account']['type']			= $account_type;
+
+	status_message('success',"Registration stage complete.");
+    go('index.php?c=process_payment');
+    */
+
+	// register account with whmcs
+	$postfields["username"] 		= $whmcs['username']; 
+	$postfields["password"] 		= $whmcs['password'];
+	$postfields['accesskey']		= $whmcs['accesskey'];
+	$postfields["action"] 			= "AddClient";
+	$postfields["responsetype"] 	= 'json';
+	$postfields['noemail']			= true;
+	$postfields['skipvalidation']	= true;
+
+	$postfields['firstname'] 		= $first_name;
+    $postfields['lastname'] 		= $last_name;
+    $postfields['email']			= $email;
+    $postfields['address1']			= $address_1;
+    $postfields['address2']			= $address_2;
+    $postfields['city'] 			= $address_city;
+    $postfields['state'] 			= $address_state;
+    $postfields['postcode']			= $address_zip;
+    $postfields['country'] 			= $address_country;
+    $postfields['phonenumber'] 		= $tel;
+    $postfields['password2']		= $password;
+    $postfields['clientip'] 		= $ip_address;
+
+    # debug($whmcs);
+    # debug($postfields);
+
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postfields));
+	$data = curl_exec($ch);
+
+	if (curl_error($ch)) {
+	    die('Unable to connect: ' . curl_errno($ch) . ' - ' . curl_error($ch));
+	}
+
+	curl_close($ch);
+
+	$results = json_decode($data, true);
+
+	# debug($data);
+	# debug($results);
+
+	if($results["result"]=="success"){
+		// account registered
+		$client_id = $results['clientid'];
+
+		// create record in dashboard
+		$insert = $conn->exec("INSERT INTO `users` 
+			(`id`,`type`, `added`, `updated`, `status`, `upline_id`) VALUES
+			
+			('".$client_id."',
+			'".$account_type."',
+			'".time()."',
+			'".time()."',
+			'pending',
+			'".$upline_id."'
+			);
+		");
+
+		// get cart for whmcs order
+		$query 								= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+		$cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
+
+		foreach($cart_items as $cart_item){
+			$order_pids[] = $cart_item['product_id'];
+		}
+
+		// place order with whmcs
+		$postfields["username"] 		= $whmcs['username']; 
+		$postfields["password"] 		= $whmcs['password'];
+		$postfields['accesskey']		= $whmcs['accesskey'];
+		$postfields["action"] 			= "AddOrder";
+		$postfields["responsetype"] 	= 'json';
+		$postfields['paymentmethod']	= 'worldpay';
+
+		$postfields['clientid'] 		= $client_id;
+	    $postfields['pid'] 				= $order_pids;
+	    $postfields['affid']			= $_SESSION['whmcs_affiliate'];
+
+	    # debug($whmcs);
+	    # debug($postfields);
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $whmcs['url']);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postfields));
+		$data = curl_exec($ch);
+
+		if (curl_error($ch)) {
+		    die('Unable to connect: ' . curl_errno($ch) . ' - ' . curl_error($ch));
+		}
+
+		curl_close($ch);
+
+		$results = json_decode($data, true);
+
+		# debug($data);
+		# debug($results);
+
+		if($results["result"]=="success"){
+			// order placed
+			$order_id 				= $results['orderid'];
+			$invoice_id 			= $results['invoiceid'];
+
+			// redirect to invoice for payment
+			$whmcsurl 			= "https://ublo.club/billing/dologin.php";
+			$autoauthkey 		= "admin1372";
+			$email 				= $email;
+			
+			$timestamp 			= time(); 
+			$goto 				= "viewinvoice.php?id=".$invoice_id;
+			
+			$hash 				= sha1($email.$timestamp.$autoauthkey);
+			
+			$url 				= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
+			go($url);
+		}else{
+			status_message('danger',"Unable to place order with billing platform.");
+    		go($_SERVER['HTTP_REFERER']);
+		}
+	}else{
+		status_message('danger',"Unable to register account with billing platform.");
+    	go($_SERVER['HTTP_REFERER']);
+	}
 }

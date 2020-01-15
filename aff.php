@@ -16,15 +16,18 @@ include('inc/global_vars.php');
 include('inc/functions.php');
 
 // get affiliate username
-$username 		= get('username');
+$username 						= get('username');
 
 // convert username to userid
-$query      	= $conn->query("SELECT `id` FROM `users` WHERE `affiliate_username` = '".$username."' ");
-$user      	 	= $query->fetch(PDO::FETCH_ASSOC);
+$query      					= $conn->query("SELECT `id` FROM `users` WHERE `affiliate_username` = '".$username."' ");
+$user      	 					= $query->fetch(PDO::FETCH_ASSOC);
+$_SESSION['mlm_affiliate'] 		= $user['id'];
+
 
 // convert userid to affiliateid
-$query      	= $conn->query("SELECT `id` FROM `whmcs`.`tblaffiliates` WHERE `clientid` = '".$user['id']."' ");
-$affiliate 		= $query->fetch(PDO::FETCH_ASSOC);
+$query      					= $conn->query("SELECT `id` FROM `whmcs`.`tblaffiliates` WHERE `clientid` = '".$user['id']."' ");
+$affiliate 						= $query->fetch(PDO::FETCH_ASSOC);
+$_SESSION['whmcs_affiliate'] 	= $affiliate['id'];
 
 if(!isset($affiliate['id'])){
 	$affiliate['id'] = 1;
