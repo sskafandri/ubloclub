@@ -1481,14 +1481,25 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			}
 		</script>
 
-		<script src="dist/jquery.cookieMessage.min.js"></script>
-		<script type="text/javascript">
-			$.cookieMessage({
-			    'mainMessage': 'This website uses cookies. By using this website you consent to our use of these cookies. For more information visit our <a href="https://www.jqueryscript.net/privacy/">Privacy Policy</a>. ',
-			    'acceptButton': 'Got It!',
-			    'fontSize': '16px',
-			    'backgroundColor': '#222',
-			});
-		</script>
+		<script src="jquery.bs.gdpr.cookies.js"></script>
+    <script type="text/javascript">
+        var settings = {
+            message: 'This is your cookies message. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque, magna quis iaculis vulputate, ipsum sem commodo risus, sed egestas ipsum neque ut orci. Nulla ultrices dignissim pharetra. Pellentesque nec placerat dui. Mauris porta risus vitae nulla rutrum convallis. Aliquam elementum consequat ligula, sed malesuada nunc. Nam imperdiet a eros ac imperdiet. <b> Read more  ',
+            moreLinkLabel: 'here.</b>',
+            messageMaxHeightPercent: 30,
+            delay: 1000,
+            OnAccept : function() {
+                console.log('Yay! User accepted your cookies window!');
+            }
+        }
+
+        $(document).ready(function() {
+            $('body').bsgdprcookies(settings);
+
+            $('#cookiesBtn').on('click', function(){
+                $('body').bsgdprcookies(settings, 'reinit');
+            });
+        });
+    </script>
 	</body>
 </html>
