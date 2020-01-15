@@ -522,8 +522,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 										<div class="tabs tabs-product mb-2">
 											<ul class="nav nav-tabs">
 												<li class="nav-item active"><a class="nav-link py-3 px-4" href="#productDescription" data-toggle="tab">Description</a></li>
-												<li class="nav-item"><a class="nav-link py-3 px-4" href="#productInfo" data-toggle="tab">Additional Information</a></li>
-												<li class="nav-item"><a class="nav-link py-3 px-4" href="#productReviews" data-toggle="tab">Reviews (2)</a></li>
+												<!-- <li class="nav-item"><a class="nav-link py-3 px-4" href="#productInfo" data-toggle="tab">Additional Information</a></li> -->
+												<!-- <li class="nav-item"><a class="nav-link py-3 px-4" href="#productReviews" data-toggle="tab">Reviews (2)</a></li> -->
 											</ul>
 											<div class="tab-content p-0">
 												<div class="tab-pane p-4 active" id="productDescription">
