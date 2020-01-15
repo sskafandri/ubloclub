@@ -19,3 +19,9 @@ $site['url']									= $global_settings['shop_site_url'];
 $site['title']									= $global_settings['shop_site_title'];
 $site['name_long']								= $global_settings['shop_site_name'];
 // $site['name_short']								= $global_settings['shop_site_name_short'];
+
+// whmcs vars
+$whmcs['url'] 									= "https://ublo.club/billing/includes/api.php"; # URL to WHMCS API file
+$whmcs["username"] 								= "api_user"; # Admin username goes here
+$whmcs["password"] 								= md5("admin1372"); # Admin password goes here  
+$whmcs['accesskey']								= 'admin1372';
