@@ -29,6 +29,8 @@ $query 								= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY
 $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // set some defaults
+$query 								= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+$cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -175,8 +177,8 @@ $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 												<img src="img/icons/icon-cart-big.svg" height="34" alt="" class="header-nav-top-icon-img">
 												<span class="cart-info">
 													<?php
-														if(!empty($_SESSION['cart'])){
-															$cart_total = count($_SESSION['cart']);
+														if(isset($cart_items[0])){
+															$cart_total = count($cart_items);
 
 															echo '<span class="cart-qty">'.$cart_total.'</span>';
 														}
@@ -184,9 +186,9 @@ $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 												</span>
 											</a>
 											<div class="header-nav-features-dropdown" id="headerTopCartDropdown">
-												<?php if(!empty($_SESSION['cart'])){ ?>
+												<?php if(isset($cart_items[0])){ ?>
 													<ol class="mini-products-list">
-														<?php foreach($_SESSION['cart'] as $cart_item){ ?>
+														<?php foreach($cart_items as $cart_item){ ?>
 															<?php foreach($all_products as $product){ ?>
 																<?php if($cart_item['product_id'] == $product['id']){ ?>
 																	<li class="item">
