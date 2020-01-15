@@ -1376,7 +1376,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 							<p class="text-3 mb-0 text-color-light opacity-7">ADDRESS</p>
 							<p class="text-3 mb-3">Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">PHONE</p>
-							<p class="text-3 mb-3">Toll Free (123) 456-7890</p>
+							<p class="text-3 mb-3">Free Phone 0800 123 4567</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">EMAIL</p>
 							<p class="text-3 mb-0"><a href="mailto:info@porto.com" class="">sales@ublo.club</a></p>
 						</div>
