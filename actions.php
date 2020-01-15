@@ -313,6 +313,9 @@ function checkout(){
 			$hash 				= sha1($email.$timestamp.$autoauthkey);
 			
 			$url 				= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
+
+			empty_cart();
+
 			go($url);
 		}else{
 			status_message('danger',"Unable to place order with billing platform.");
