@@ -101,7 +101,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills">
 												<li class="nav-item nav-item-borders py-2">
-													<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> 1 Blah Street, City, County, A1 2BC</span>
+													<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</span>
 												</li>
 												<li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
 													<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
@@ -1374,11 +1374,11 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						<div class="col-md-3 text-center text-md-left">
 							<h5 class="text-4 text-color-light mb-3 mt-4 mt-lg-0">CONTACT INFO</h5>
 							<p class="text-3 mb-0 text-color-light opacity-7">ADDRESS</p>
-							<p class="text-3 mb-3">123 Street name, City, USA.</p>
+							<p class="text-3 mb-3">Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">PHONE</p>
 							<p class="text-3 mb-3">Toll Free (123) 456-7890</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">EMAIL</p>
-							<p class="text-3 mb-0"><a href="mailto:info@porto.com" class="">mail@example.com</a></p>
+							<p class="text-3 mb-0"><a href="mailto:info@porto.com" class="">sales@ublo.club</a></p>
 						</div>
 						<div class="col-md-9 text-center text-md-left">
 							<div class="row">
@@ -1414,7 +1414,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 								</div>
 								<div class="col-lg-3 text-center text-md-left">
 									<p class="text-3 mb-0 font-weight-semibold text-color-light opacity-8">BUSINESS HOURS</p>
-									<p class="text-3 mb-0">Mon - Sun /9:00AM -8:00PM</p>
+									<p class="text-3 mb-0">Mon - Sat 9:00AM -5:00PM</p>
 								</div>
 								<div class="col-lg-4 text-center text-md-left">
 									<img src="img/payment-icon.png" alt="Payment icons" class="img-fluid mt-4 mt-lg-2">
