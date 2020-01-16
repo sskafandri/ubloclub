@@ -860,7 +860,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																								<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
 																							</td>
 																							<td>
-																								<a class="btn btn-danger" href="actions.php?a=empty_cart" onclick="return confirm('Are you sure?')">X</a>
+																								<a href="actions.php?a=empty_cart" title="Delete this item" class="btn btn-danger" onclick="return confirm('Are you sure?')"><strong>X</strong></a>
 																							</td>
 																						</tr>
 																					<?php break; ?>
