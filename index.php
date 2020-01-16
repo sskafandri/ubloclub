@@ -854,7 +854,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																							</td>
 																							<td class="product-price">
 																								<input type="hidden" name="prices[]" value="<?php echo $cart_item['price']; ?>">
-																								<span class="amount">£<?php number_format(echo $cart_item['price'], 2); ?></span>
+																								<span class="amount">£<?php echo number_format($cart_item['price'], 2); ?></span>
 																							</td>
 																							<td class="product-quantity">
 																								<div class="quantity quantity-lg">
