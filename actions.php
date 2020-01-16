@@ -448,8 +448,10 @@ function checkout(){
 		$goto 					= "viewinvoice.php?id=".$invoice_id;
 		
 		$hash 					= sha1($email.$timestamp.$autoauthkey);
+
+		$timestamp_var 			= htmlentities('&amp;timestamp');
 		
-		$url 					= $whmcsurl."?email=".$email."&amp;timestamp=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
+		$url 					= $whmcsurl."?email=".$email.$timestamp_var."=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
 
 		// empty_cart();
 
