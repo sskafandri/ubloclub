@@ -854,7 +854,11 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																								<span class="amount">£<?php echo $cart_item['price']; ?></span>
 																							</td>
 																							<td class="product-quantity">
-																								<?php echo stripslashes($cart_item['quantity']); ?>
+																								<div class="quantity quantity-lg">
+																									<input type="button" class="minus" value="-">
+																									<input type="text" class="input-text qty text" title="Qty" value="<?php echo stripslashes($cart_item['quantity']); ?>" id="quantity" name="quantity" min="1" step="1">
+																									<input type="button" class="plus" value="+">
+																								</div>
 																							</td>
 																							<td class="product-subtotal">
 																								<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
