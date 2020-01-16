@@ -386,11 +386,7 @@ function checkout(){
 				);
 			");
 		}else{
-			if($results['result'] == 'error' && $results['message'] == 'A user already exists with that email address'){
-				status_message('danger',"The email address '".$email."' has already been used. Please either login as an existing customer or use a different email address.");
-			}else{
-				status_message('danger',"Unable to register account with billing platform.");
-			}
+			status_message('danger',$results['message'].".");
     		go($_SERVER['HTTP_REFERER']);
 		}
 	}
