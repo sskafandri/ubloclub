@@ -878,7 +878,12 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																	<?php } ?>
 																</tbody>
 															</table>
-															<button type="submit" class="btn btn-primary btn-modern text-uppercase pull-right">Update Cart</button>
+
+															<div class="form-row">
+																<div class="form-group col">
+																	<input type="submit" value="Update Cart" class="btn btn-success btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
+																</div>
+															</div>
 														</form>
 													<?php }else{ ?>
 														Your cart is empty. Please add at least one product from our <a href="?c=home">shop</a>.
