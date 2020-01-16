@@ -364,10 +364,10 @@ function checkout(){
 
 		$results = json_decode($data, true);
 
-		debug($data);
-		debug($results);
+		// debug($data);
+		// debug($results);
 
-		die();
+		// die();
 
 		if($results["result"]=="success"){
 			// account registered
