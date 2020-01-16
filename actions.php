@@ -453,9 +453,9 @@ function checkout(){
 
 		// empty_cart();
 
-		echo "URL: ".$url;
+		// echo "URL: ".$url;
 
-		// go($url);
+		go($url);
 	}else{
 		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
