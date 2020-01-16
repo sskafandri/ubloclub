@@ -1241,7 +1241,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																		</form>
 																	</div>
 																	<div class="tab-pane p-4" id="existing_customer">
-																		<form action="actions.php?a=checkout" id="frmBillingAddress" method="post">
+																		<form action="actions.php?a=checkout&login=yes" id="frmBillingAddress" method="post">
 																			<div class="form-row">
 																				<div class="form-group col-lg-6">
 																					<label class="font-weight-bold text-dark text-2">Email Address </label>
