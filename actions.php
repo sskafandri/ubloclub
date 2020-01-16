@@ -72,7 +72,7 @@ function empty_cart(){
 	unset($_SESSION['cart_total']);
 
     // log_add("[".$name."] has been updated.");
-    status_message('success',"Cart empty.");
+    status_message('success',"Cart is now empty.");
     go($_SERVER['HTTP_REFERER']);
 }
 
@@ -125,7 +125,7 @@ function add_to_cart(){
 	$_SESSION['cart_total']		= $cart_total;
 
     // log_add("[".$name."] has been updated.");
-    status_message('success',"Cart updated.");
+    status_message('success',"Item(s) have been added to your cart.");
     go($_SERVER['HTTP_REFERER']);
 }
 
@@ -176,6 +176,19 @@ function checkout(){
 	$address_zip 		= addslashes($address_zip);
 
 	if($password != $password2){
+		$_SESSION['checkout_details']['company_name']			= $company_name;
+		$_SESSION['checkout_details']['email']					= $email;
+		$_SESSION['checkout_details']['tel']					= $tel;
+		$_SESSION['checkout_details']['first_name']				= $first_name;
+		$_SESSION['checkout_details']['last_name']				= $last_name;
+		$_SESSION['checkout_details']['address_1']				= $address_1;
+		$_SESSION['checkout_details']['address_2']				= $address_2;
+		$_SESSION['checkout_details']['address_city']			= $address_city;
+		$_SESSION['checkout_details']['address_state']			= $address_state;
+		$_SESSION['checkout_details']['address_country']		= $address_country;
+		$_SESSION['checkout_details']['address_zip']			= $address_zip;
+
+
 		status_message('danger',"Passwords do not match.");
     	go($_SERVER['HTTP_REFERER']);
 	}

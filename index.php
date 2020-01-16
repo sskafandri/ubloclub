@@ -873,49 +873,50 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 														<div class="form-row">
 															<div class="form-group col-lg-6">
 																<label class="font-weight-bold text-dark text-2">First Name</label>
-																<input type="text" id="first_name" name="first_name" class="form-control" required="">
+																<input type="text" id="first_name" name="first_name" class="form-control" value="<?php echo $_SESSION['checkout_details']['first_name']; ?>" required="">
 															</div>
 															<div class="form-group col-lg-6">
 																<label class="font-weight-bold text-dark text-2">Last Name</label>
-																<input type="text" id="last_name" name="last_name" class="form-control" required="">
+																<input type="text" id="last_name" name="last_name" class="form-control" value="<?php echo $_SESSION['checkout_details']['last_name']; ?>" required="">
 															</div>
 														</div>
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Company Name <small>(optional)</small></label>
-																<input type="text" id="company_name" name="company_name" class="form-control">
+																<input type="text" id="company_name" name="company_name" class="form-control" value="<?php echo $_SESSION['checkout_details']['company_name']; ?>">
 															</div>
 														</div>
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Address 1</label>
-																<input type="text" id="address_1" name="address_1" class="form-control" required="">
+																<input type="text" id="address_1" name="address_1" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_1']; ?>" required="">
 															</div>
 														</div>
 														<!--
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Address 2 <small>(optional)</small></label>
-																<input type="text" id="address_2" name="address_2" class="form-control">
+																<input type="text" id="address_2" name="address_2" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_2']; ?>">
 															</div>
 														</div>
 														-->
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">City </label>
-																<input type="text" id="address_city" name="address_city" class="form-control" required="">
+																<input type="text" id="address_city" name="address_city" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_city']; ?>" required="">
 															</div>
 														</div>
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">County / State </label>
-																<input type="text" id="address_state" name="address_state" class="form-control" required="">
+																<input type="text" id="address_state" name="address_state" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_state']; ?>" required="">
 															</div>
 														</div>
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Country</label>
-																<select id="address_country" name="address_country" class="form-control">
+																<select id="address_country" name="address_country" class="form-control" required="">
+																	<option value="" disabled="">Choose one</option>
 																	<option value="AF">Afghanistan</option>
 																	<option value="AX">Åland Islands</option>
 																	<option value="AL">Albania</option>
@@ -1171,20 +1172,20 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Zip / Postal Code </label>
-																<input type="text" id="address_zip" name="address_zip" class="form-control" required="">
+																<input type="text" id="address_zip" name="address_zip" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_zip']; ?>"  required="">
 															</div>
 														</div>
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Email Address </label>
-																<input type="text" id="email" name="email" class="form-control" required="">
+																<input type="text" id="email" name="email" class="form-control" value="<?php echo $_SESSION['checkout_details']['email']; ?>" required="">
 															</div>
 														</div>
 														<!--
 														<div class="form-row">
 															<div class="form-group col">
 																<label class="font-weight-bold text-dark text-2">Tel </label>
-																<input type="text" id="tel" name="tel" class="form-control" placeholder="+44 7399 973949" required="">
+																<input type="text" id="tel" name="tel" class="form-control" placeholder="+44 7399 973949" value="<?php echo $_SESSION['checkout_details']['tel']; ?>" required="">
 															</div>
 														</div>
 														-->
