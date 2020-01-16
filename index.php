@@ -228,8 +228,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
-					<div id="status_message"></div>
-
 					<!-- top menu -->
 					<div class="container">
 						<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
@@ -279,6 +277,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					</div>
 				</div>
 			</header>
+
+			<div id="status_message"></div>
 
 			<?php
 				$c = $_GET['c'];
