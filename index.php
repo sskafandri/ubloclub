@@ -835,6 +835,9 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																		<th class="product-subtotal">
 																			Total
 																		</th>
+																		<th>
+																			Actions
+																		</th>
 																	</tr>
 																</thead>
 																<tbody>
@@ -855,6 +858,9 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																							</td>
 																							<td class="product-subtotal">
 																								<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
+																							</td>
+																							<td>
+																								<a class="btn btn-danger" href="actions.php?a=empty_cart" onclick="return confirm('Are you sure?')">X</a>
 																							</td>
 																						</tr>
 																					<?php break; ?>
