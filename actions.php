@@ -115,7 +115,7 @@ function add_to_cart(){
 	        ('".$_SESSION['cart_key']."',
 	        '".$product_id."',
 	        '".$quantity."',
-	        '".$price."'
+	        '".number_format($price, 2)."'
 	    	)"
 	    );
 	}
@@ -130,7 +130,7 @@ function add_to_cart(){
 		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	$_SESSION['cart_total']		= $cart_total;
+	$_SESSION['cart_total']		= number_format($cart_total, 2);
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been added to your cart.");
