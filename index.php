@@ -882,7 +882,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 															<div class="form-row">
 																<div class="form-group col">
 																	<input type="submit" value="Update Cart" class="btn btn-success btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
-																	<a href="?c=home" class="btn btn-default btn-modern text-uppercase">Continue Shopping</a>
+																	<a href="?c=home" class="btn btn-default btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2">Continue Shopping</a>
 																</div>
 															</div>
 														</form>
