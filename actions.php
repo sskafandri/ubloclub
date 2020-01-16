@@ -203,11 +203,18 @@ function checkout(){
 	// set account type
 	$account_type 		= 'customer';
 
-	// set the affiliate
+	// set the mlm_affiliate
 	if(!isset($_SESSION['mlm_affiliate'])){
 		$upline_id 		= 1;
 	}else{
 		$upline_id 		= $_SESSION['mlm_affiliate'];
+	}
+
+	// set the whmcs_affiliate
+	if(!isset($_SESSION['whmcs_affiliate'])){
+		$whmcs_affiliate 		= 1;
+	}else{
+		$whmcs_affiliate 		= $_SESSION['whmcs_affiliate'];
 	}
 	
 	// get the client ip address
@@ -391,8 +398,6 @@ function checkout(){
 		}
 	}
 
-	
-
 	// place order with whmcs
 	$postfields["username"] 		= $whmcs['username']; 
 	$postfields["password"] 		= $whmcs['password'];
@@ -403,7 +408,7 @@ function checkout(){
 
 	$postfields['clientid'] 		= $client_id;
     $postfields['pid'] 				= $order_pids;
-    $postfields['affid']			= $_SESSION['whmcs_affiliate'];
+    $postfields['affid']			= $whmcs_affiliate;
 
     # debug($whmcs);
     # debug($postfields);
@@ -450,7 +455,7 @@ function checkout(){
 
 		go($url);
 	}else{
-		status_message('danger',"Unable to place order with billing platform.");
+		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
 	}
 }
