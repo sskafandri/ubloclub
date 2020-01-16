@@ -214,7 +214,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 													</div>
 													<div class="actions">
 														<a class="btn btn-danger" href="actions.php?a=empty_cart" onclick="return confirm('Are you sure?')">Empty Cart</a>
-														<a class="btn btn-primary" href="?c=cart">View Cart</a>
+														<a class="btn btn-success" href="?c=cart">View Cart</a>
 														<!-- <a class="btn btn-primary" href="#">Checkout</a> -->
 													</div>
 												<?php }else{ ?>
@@ -504,6 +504,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 															</div>
 
 															<button type="submit" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
+															<a class="btn btn-success" href="?c=cart">View Cart</a>
 														</div>
 													</div>
 
