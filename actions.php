@@ -223,7 +223,7 @@ function checkout(){
 		}
 	}
 
-	if(get('login') == 'yes')){
+	if(get('login') == 'yes'){
 		$email 							= post('email');
 		$password 						= post('password');
 
