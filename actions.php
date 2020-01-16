@@ -440,23 +440,24 @@ function checkout(){
 		$invoice_id 			= $results['invoiceid'];
 
 		// redirect to invoice for payment
-		$whmcsurl 			= "https://ublo.club/billing/dologin.php";
-		$autoauthkey 		= "admin1372";
-		$email 				= $email;
+		$whmcsurl 				= "https://ublo.club/billing/dologin.php";
+		$autoauthkey 			= "admin1372";
+		$email 					= $email;
 		
-		$timestamp 			= time(); 
-		$goto 				= "viewinvoice.php?id=".$invoice_id;
+		$timestamp 				= time(); 
+		$goto 					= "viewinvoice.php?id=".$invoice_id;
 		
-		$hash 				= sha1($email.$timestamp.$autoauthkey);
+		$hash 					= sha1($email.$timestamp.$autoauthkey);
 		
-		$url 				= $whmcsurl."?email=$email".urlencode("&timestamp")."=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
+		$url 					= $whmcsurl."?email=".$email."&timestamp=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
 
 		// empty_cart();
 
-		// echo "URL: ".$url;
+		echo "URL: ".$url;
 
-		go($url);
+		// go($url);
 	}else{
+		// unable to place order
 		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
 	}
