@@ -820,7 +820,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="card-body">
 												<div class="card-body">
 													<?php if(isset($cart_items[0])){ ?>
-														<form action="actions.php?a=update_checkout_cart" enctype="multipart/form-data" method="post" class="cart">
+														<form action="actions.php?a=test" enctype="multipart/form-data" method="post" class="cart">
 															<table class="shop_table cart">
 																<thead>
 																	<tr>
