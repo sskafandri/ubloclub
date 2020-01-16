@@ -28,6 +28,10 @@ switch ($a)
 		add_to_cart();
 		break;
 
+	case "delete_cart_item":
+		delete_cart_item();
+		break;
+
 	case "checkout":
 		checkout();
 		break;
@@ -126,6 +130,32 @@ function add_to_cart(){
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been added to your cart.");
+    go($_SERVER['HTTP_REFERER']);
+}
+
+function delete_cart_item(){
+	global $conn;
+
+	$cart_total 		= 0;
+	$cart_item_id 		= get('id');
+
+	// delete cart item
+	$delete = $conn->exec("DELETE FROM `shop_carts` WHERE `id` = '".$cart_item_id."' AND `key` = '".$_SESSION['cart_key']."' ");
+
+	// update cart total
+	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+	$cart_items 				= $query->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($cart_items as $cart_item){
+		$item_total_price 		= ($cart_item['price'] * $cart_item['quantity']);
+
+		$cart_total				= ($cart_total + $item_total_price);
+	}
+
+	$_SESSION['cart_total']		= $cart_total;
+
+    // log_add("[".$name."] has been updated.");
+    status_message('success',"Item(s) have been removed to your cart.");
     go($_SERVER['HTTP_REFERER']);
 }
 
