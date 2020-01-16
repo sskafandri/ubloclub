@@ -449,13 +449,13 @@ function checkout(){
 		
 		$hash 				= sha1($email.$timestamp.$autoauthkey);
 		
-		$url 				= $whmcsurl."?email=$email&timestamp=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
+		$url 				= $whmcsurl."?email=$email&timestamp=".$timestamp."&hash=".$hash."&goto=".$goto;
 
 		// empty_cart();
 
-		echo "URL: ".$url;
+		// echo "URL: ".$url;
 
-		// go($url);
+		go(urlencode($url);
 	}else{
 		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
