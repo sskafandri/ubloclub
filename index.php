@@ -1254,7 +1254,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																			</div>
 																			<div class="form-row">
 																				<div class="form-group col">
-																					<input type="submit" value="Login" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
+																					<input type="submit" value="Login & Order" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
 																				</div>
 																			</div>
 																		</form>
