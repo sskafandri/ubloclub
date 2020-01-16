@@ -868,16 +868,18 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																									<a href="actions.php?a=delete_cart_item&id=<?php echo $cart_item['id']; ?>" title="Delete this item" class="btn btn-danger" onclick="return confirm('Are you sure?')"><strong>X</strong></a>
 																								</td>
 																							</tr>
-																						<?php break; ?>
+
+																							<?php break; ?>
+																						<?php } ?>
 																					<?php } ?>
-																				<?php } ?>
+																				</ol>
 																			<?php } ?>
 																		<?php } ?>
 																	</tbody>
 																</table>
 															</form>
 														<?php }else{ ?>
-															Cart is empty.
+															Your cart is empty. Please add at least one product from our <a href="?c=home">shop</a>.
 														<?php } ?>
 													</div>
 
