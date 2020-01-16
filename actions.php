@@ -72,7 +72,7 @@ function empty_cart(){
 	unset($_SESSION['cart_total']);
 
     // log_add("[".$name."] has been updated.");
-    status_message('success',"Cart is now empty.");
+    status_message('success',"Your cart is now empty.");
     go($_SERVER['HTTP_REFERER']);
 }
 
