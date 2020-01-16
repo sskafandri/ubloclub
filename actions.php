@@ -449,7 +449,7 @@ function checkout(){
 		
 		$hash 					= sha1($email.$timestamp.$autoauthkey);
 
-		$timestamp_var 			= htmlentities('&amp;timestamp');
+		$timestamp_var 			= htmlentities('&timestamp');
 		
 		$url 					= $whmcsurl."?email=".$email.$timestamp_var."=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
 
