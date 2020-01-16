@@ -854,7 +854,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																							</td>
 																							<td class="product-price">
 																								<input type="hidden" name="prices[]" value="<?php echo $cart_item['price']; ?>">
-																								<span class="amount">£<?php echo $cart_item['price']; ?></span>
+																								<span class="amount">£<?php number_format(echo $cart_item['price'], 2); ?></span>
 																							</td>
 																							<td class="product-quantity">
 																								<div class="quantity quantity-lg">
@@ -864,7 +864,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																								</div>
 																							</td>
 																							<td class="product-subtotal">
-																								<span class="amount">£<?php echo $cart_item['price'] * $cart_item['quantity']; ?></span>
+																								<span class="amount">£<?php echo number_format($cart_item['price'] * $cart_item['quantity'], 2); ?></span>
 																							</td>
 																							<td>
 																								<a href="actions.php?a=delete_cart_item&id=<?php echo $cart_item['id']; ?>" title="Delete this item" class="btn btn-danger" onclick="return confirm('Are you sure?')"><strong>X</strong></a>
