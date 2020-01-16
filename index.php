@@ -228,6 +228,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						</div>
 					</div>
 
+					<div id="status_message"></div>
+
 					<!-- top menu -->
 					<div class="container">
 						<div class="header-nav-bar bg-color-light-scale-1 mb-3 px-3 px-lg-0">
@@ -1507,5 +1509,15 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 	            });
 	        });
 	    </script>
+
+	    <?php if(!empty($_SESSION['alert']['status'])){ ?>
+	    	<script>
+				document.getElementById('status_message').innerHTML = '<div class="container"><div class="row"><div class="col-md-12"><div class="alert alert-<?php echo $_SESSION['alert']['status']; ?>" role="alert"><?php echo $_SESSION['alert']['message']; ?></div></div></div></div>';
+				setTimeout(function() {
+					$('#status_message').fadeOut('fast');
+				}, 10000);
+	        </script>
+	        <?php unset($_SESSION['alert']); ?>
+	    <?php } ?>
 	</body>
 </html>
