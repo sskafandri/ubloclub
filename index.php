@@ -213,7 +213,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 														<span class="price-total"><span class="price">£<?php echo number_format($_SESSION['cart_total'], 2); ?></span></span>
 													</div>
 													<div class="actions">
-														<a class="btn btn-danger" href="actions.php?a=empty_cart">Empty Cart</a>
+														<a class="btn btn-danger" href="actions.php?a=empty_cart" onclick="return confirm('Are you sure?')">Empty Cart</a>
 														<a class="btn btn-primary" href="?c=cart">View Cart</a>
 														<!-- <a class="btn btn-primary" href="#">Checkout</a> -->
 													</div>
