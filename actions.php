@@ -453,7 +453,7 @@ function checkout(){
 
 		// empty_cart();
 
-		echo "URL: ".$url;
+		echo "URL: ".urlencode($url);
 
 		// go($url);
 	}else{
