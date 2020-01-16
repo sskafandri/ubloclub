@@ -455,7 +455,7 @@ function checkout(){
 
 		// echo "URL: ".$url;
 
-		go(urlencode($url);
+		go(urlencode($url));
 	}else{
 		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
