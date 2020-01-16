@@ -453,9 +453,9 @@ function checkout(){
 
 		// empty_cart();
 
-		echo "URL: ".$url;
+		// echo "URL: ".$url;
 
-		// go($url);
+		go($url);
 	}else{
 		// unable to place order
 		status_message('danger',$results['message'].".");
