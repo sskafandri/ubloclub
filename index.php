@@ -820,7 +820,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 											<div class="card-body">
 												<div class="card-body">
 													<?php if(isset($cart_items[0])){ ?>
-														<form action="actions.php?a=test" enctype="multipart/form-data" method="post" class="cart">
+														<form action="actions.php?a=update_cart_checkout" enctype="multipart/form-data" method="post" class="cart">
 															<table class="shop_table cart">
 																<thead>
 																	<tr>
@@ -849,16 +849,17 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 																					<?php if($cart_item['product_id'] == $product['id']){ ?>
 																						<tr class="cart_table_item">
 																							<td class="product-name">
-																								<input type="hidden" name="product_id[]" value="<?php echo $product['id']; ?>">
+																								<input type="hidden" name="product_ids[]" value="<?php echo $product['id']; ?>">
 																								<strong><?php echo stripslashes($product['title']); ?></strong>
 																							</td>
 																							<td class="product-price">
+																								<input type="hidden" name="prices[]" value="<?php echo $cart_item['price']; ?>">
 																								<span class="amount">£<?php echo $cart_item['price']; ?></span>
 																							</td>
 																							<td class="product-quantity">
 																								<div class="quantity quantity-lg">
 																									<input type="button" class="minus" value="-">
-																									<input type="text" class="input-text qty text" title="Qty" value="<?php echo stripslashes($cart_item['quantity']); ?>" id="quantity" name="quantity[]" min="1" step="1">
+																									<input type="text" class="input-text qty text" title="Qty" value="<?php echo stripslashes($cart_item['quantity']); ?>" id="quantity" name="quantities[]" min="1" step="1">
 																									<input type="button" class="plus" value="+">
 																								</div>
 																							</td>

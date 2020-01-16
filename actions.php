@@ -32,6 +32,10 @@ switch ($a)
 		delete_cart_item();
 		break;
 
+	case "update_cart_checkout":
+		update_cart_checkout();
+		break;
+
 	case "checkout":
 		checkout();
 		break;
@@ -156,6 +160,38 @@ function delete_cart_item(){
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been removed to your cart.");
+    go($_SERVER['HTTP_REFERER']);
+}
+
+function update_cart_checkout(){
+	global $conn;
+
+	$cart_total 	= 0;
+	$count 			= 0;
+	$product_ids 	= post('product_ids');
+	$quantities 	= post('quantities');
+	$prices 		= post('prices');
+	
+	// loop over each cart item to update quantities
+	foreach($product_ids as $product_id){
+		$update = $conn->exec("UPDATE `shop_carts` SET `quantity` = '".$quantities[$count]."' 	WHERE `key` = '".$_SESSION['cart_key']."' AND `product_id` = '".$product_id."' ");
+		$count++;
+	}
+
+	// update cart total
+	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+	$cart_items 				= $query->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($cart_items as $cart_item){
+		$item_total_price 		= ($cart_item['price'] * $cart_item['quantity']);
+
+		$cart_total				= ($cart_total + $item_total_price);
+	}
+
+	$_SESSION['cart_total']		= $cart_total;
+
+    // log_add("[".$name."] has been updated.");
+    status_message('success',"Item(s) have been added to your cart.");
     go($_SERVER['HTTP_REFERER']);
 }
 
