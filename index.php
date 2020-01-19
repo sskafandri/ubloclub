@@ -93,55 +93,55 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 		<div class="body">
 			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 135, 'stickySetTop': '-135px', 'stickyChangeLogo': true}">
 				<div class="header-body border-color-primary border-bottom-0 box-shadow-none" data-sticky-header-style="{'minResolution': 0}" data-sticky-header-style-active="{'background-color': '#f7f7f7'}" data-sticky-header-style-deactive="{'background-color': '#FFF'}">
-					<!-- 
-						<div class="header-top header-top-borders">
+					<div class="header-top header-top-borders">
 						<div class="container h-100">
 							<div class="header-row h-100">
-								<div class="header-column justify-content-start">
-									<div class="header-row">
-										<nav class="header-nav-top">
-											<ul class="nav nav-pills">
-												<li class="nav-item nav-item-borders py-2">
-													<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</span>
-												</li>
-												<li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
-													<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
-												</li>
-												<li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
-													<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> sales@ublo.club</a>
-												</li>
-											</ul>
-										</nav>
+								<!--
+									<div class="header-column justify-content-start">
+										<div class="header-row">
+											<nav class="header-nav-top">
+												<ul class="nav nav-pills">
+													<li class="nav-item nav-item-borders py-2">
+														<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</span>
+													</li>
+													<li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
+														<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
+													</li>
+													<li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
+														<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> sales@ublo.club</a>
+													</li>
+												</ul>
+											</nav>
+										</div>
 									</div>
-								</div>
-								<div class="header-column justify-content-end">
-									<div class="header-row">
-										<nav class="header-nav-top">
-											<ul class="nav nav-pills">
-												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													<a class="nav-link pl-0" href="?c=about_us"><i class="fas fa-angle-right"></i> About Us</a>
-												</li>
-												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													<a class="nav-link" href="?c=contact_us"><i class="fas fa-angle-right"></i> Contact Us</a>
-												</li>
-												<li class="nav-item dropdown nav-item-left-border d-none d-sm-block">
-													<a class="nav-link" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-														<img src="img/blank.gif" class="flag flag-us" alt="English" /> English
-														<i class="fas fa-angle-down"></i>
-													</a>
-													<div class="dropdown-menu" aria-labelledby="dropdownLanguage">
-														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-us" alt="English" /> English</a>
-														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-es" alt="English" /> Español</a>
-														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-fr" alt="English" /> Française</a>
-													</div>
-												</li>
-											</ul>
-										</nav>
+									<div class="header-column justify-content-end">
+										<div class="header-row">
+											<nav class="header-nav-top">
+												<ul class="nav nav-pills">
+													<li class="nav-item nav-item-anim-icon d-none d-md-block">
+														<a class="nav-link pl-0" href="?c=about_us"><i class="fas fa-angle-right"></i> About Us</a>
+													</li>
+													<li class="nav-item nav-item-anim-icon d-none d-md-block">
+														<a class="nav-link" href="?c=contact_us"><i class="fas fa-angle-right"></i> Contact Us</a>
+													</li>
+													<li class="nav-item dropdown nav-item-left-border d-none d-sm-block">
+														<a class="nav-link" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<img src="img/blank.gif" class="flag flag-us" alt="English" /> English
+															<i class="fas fa-angle-down"></i>
+														</a>
+														<div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-us" alt="English" /> English</a>
+															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-es" alt="English" /> Español</a>
+															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-fr" alt="English" /> Française</a>
+														</div>
+													</li>
+												</ul>
+											</nav>
+										</div>
 									</div>
-								</div>
+								-->
 							</div>
 						</div>
-					-->
 					</div>
 					<div class="header-container container">
 						<div class="header-row py-2">
