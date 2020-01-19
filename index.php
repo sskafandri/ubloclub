@@ -93,7 +93,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 		<div class="body">
 			<header id="header" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 135, 'stickySetTop': '-135px', 'stickyChangeLogo': true}">
 				<div class="header-body border-color-primary border-bottom-0 box-shadow-none" data-sticky-header-style="{'minResolution': 0}" data-sticky-header-style-active="{'background-color': '#f7f7f7'}" data-sticky-header-style-deactive="{'background-color': '#FFF'}">
-					<div class="header-top header-top-borders">
+					<!-- 
+						<div class="header-top header-top-borders">
 						<div class="container h-100">
 							<div class="header-row h-100">
 								<div class="header-column justify-content-start">
@@ -123,25 +124,24 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 												<li class="nav-item nav-item-anim-icon d-none d-md-block">
 													<a class="nav-link" href="?c=contact_us"><i class="fas fa-angle-right"></i> Contact Us</a>
 												</li>
-												<!--
-													<li class="nav-item dropdown nav-item-left-border d-none d-sm-block">
-														<a class="nav-link" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<img src="img/blank.gif" class="flag flag-us" alt="English" /> English
-															<i class="fas fa-angle-down"></i>
-														</a>
-														<div class="dropdown-menu" aria-labelledby="dropdownLanguage">
-															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-us" alt="English" /> English</a>
-															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-es" alt="English" /> Español</a>
-															<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-fr" alt="English" /> Française</a>
-														</div>
-													</li>
-												-->
+												<li class="nav-item dropdown nav-item-left-border d-none d-sm-block">
+													<a class="nav-link" href="#" role="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<img src="img/blank.gif" class="flag flag-us" alt="English" /> English
+														<i class="fas fa-angle-down"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-us" alt="English" /> English</a>
+														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-es" alt="English" /> Español</a>
+														<a class="dropdown-item" href="#"><img src="img/blank.gif" class="flag flag-fr" alt="English" /> Française</a>
+													</div>
+												</li>
 											</ul>
 										</nav>
 									</div>
 								</div>
 							</div>
 						</div>
+					-->
 					</div>
 					<div class="header-container container">
 						<div class="header-row py-2">
