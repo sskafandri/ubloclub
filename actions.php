@@ -455,7 +455,10 @@ function checkout(){
 
 		// echo "URL: ".$url;
 
-		go($url);
+		header("Location: $url");
+		exit;
+
+		// go($url);
 	}else{
 		// unable to place order
 		status_message('danger',$results['message'].".");
