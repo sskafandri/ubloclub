@@ -246,6 +246,11 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 															</a>
 														</li>
 														<li class="dropdown">
+															<a class="<?php if(get('c')=='about_us'){echo'active';} ?>" href="?c=about_us">
+																About Us
+															</a>
+														</li>
+														<li class="dropdown">
 															<a class="<?php if(get('c')=='contact_us'){echo'active';} ?>" href="?c=contact_us">
 																Contact Us
 															</a>
