@@ -1413,11 +1413,13 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						</div>
 						<div class="col-lg-3 text-center text-lg-left">
 							<div class="pt-3 mt-1">
-								<ul class="footer-social-icons social-icons social-icons-clean social-icons-big social-icons-opacity-light social-icons-icon-light mt-0 mt-lg-3">
-									<li class="social-icons-facebook"><a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-									<li class="social-icons-twitter"><a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-									<li class="social-icons-linkedin"><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-								</ul>
+								<!--
+									<ul class="footer-social-icons social-icons social-icons-clean social-icons-big social-icons-opacity-light social-icons-icon-light mt-0 mt-lg-3">
+										<li class="social-icons-facebook"><a href="https://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="social-icons-twitter"><a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+										<li class="social-icons-linkedin"><a href="https://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+									</ul>
+								-->
 							</div>
 						</div>
 					</div>
@@ -1426,10 +1428,10 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					<div class="row py-4">
 						<div class="col-md-3 text-center text-md-left">
 							<h5 class="text-4 text-color-light mb-3 mt-4 mt-lg-0">CONTACT INFO</h5>
-							<p class="text-3 mb-0 text-color-light opacity-7">ADDRESS</p>
+							<p class="text-3 mb-0 text-color-light opacity-7">REGISTERED ADDRESS</p>
 							<p class="text-3 mb-3">Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">PHONE</p>
-							<p class="text-3 mb-3">Free Phone 0800 123 4567</p>
+							<p class="text-3 mb-3">0121 2856690</p>
 							<p class="text-3 mb-0 text-color-light opacity-7">EMAIL</p>
 							<p class="text-3 mb-0"><a href="mailto:info@porto.com" class="">sales@ublo.club</a></p>
 						</div>
@@ -1469,12 +1471,14 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 							<div class="row footer-top-light-border mt-4 pt-4">
 								<div class="col-lg-5 text-center text-md-left">
-									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved.</p>
+									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved. UK Registered Company No 12182038. VAT Number GB 333 2139 35</p>
 								</div>
-								<div class="col-lg-3 text-center text-md-left">
-									<p class="text-3 mb-0 font-weight-semibold text-color-light opacity-8">BUSINESS HOURS</p>
-									<p class="text-3 mb-0">Mon - Sat 9:00AM -5:00PM</p>
-								</div>
+								<!--
+									<div class="col-lg-3 text-center text-md-left">
+										<p class="text-3 mb-0 font-weight-semibold text-color-light opacity-8">BUSINESS HOURS</p>
+										<p class="text-3 mb-0">Mon - Sat 9:00AM -5:00PM</p>
+									</div>
+								-->
 								<div class="col-lg-4 text-center text-md-left">
 									<img src="img/payment-icon.png" alt="Payment icons" class="img-fluid mt-4 mt-lg-2">
 								</div>
