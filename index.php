@@ -1395,6 +1395,27 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 			<?php } ?>
 
+			<?php function contact_us(){ ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<h3>Contact Us</h3>
+						<strong>Registered Address</strong><br>
+						Ublo Club Ltd<br>
+						20-22 Wenlock Road<br>
+						London<br>
+						England<br>
+						N1 7GU<br>
+						<br>
+						<strong>Phone</strong><br>
+						0121 2856690<br>
+						<br>
+						<strong>Email</strong><br>
+						<a href="mailto:sales@ublo.club">sales@ublo.club</a>
+					</div>
+				</div>
+			<?php } ?>
+
 			<?php function privacy_policy(){ ?>
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
 				<div role="main" class="main shop py-4">
