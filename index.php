@@ -1381,73 +1381,84 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 			<?php } ?>
 
-			<?php function privacy_policy(){ ?>
+			<?php function about_us(){ ?>
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
-	        	<?php $max_stars = 5; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
-						<strong>Privacy Policy</strong><br>
-Ublo Club complies with the General Data Protection Regulation (GDPR) 2018<br>
-<br>
-Your privacy is important to us. Read this policy to learn about the personal data that we collect from you and how we use it. We encourage you to read the policy and get in touch if you have any queries.<br>
-This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from https://ublo.club (the “Site”).<br>
-<br>
+						<h3>About Us</h3><br>
+						Ublo Club was launched with a clearly defined goal of bringing the very highest quality Premium Quality British Made & Certified Juice to the British vaper.<br>
+						<br>
+						For your peace of mind, the ingredients Ublo Club use in our vaping liquids are pharmaceutical grade and the finest food grade flavourings. They are laboratory tested and certified to comply with the TPD (Tobacco Products Directive*) so that you can relax and enjoying your vaping without having to worry about cheap sub standard and ‘grey market’ products.<br>
+						<br>
+						<a href="https://www.gov.uk/guidance/e-cigarettes-regulations-for-consumer-products" target="_blank" rel=nofollow>‘Tobacco Products Directive</a>
+					</div>
+				</div>
+			<?php } ?>
 
-<strong>PERSONAL INFORMATION WE COLLECT</strong><br>
-When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically collected information as “Device Information.”<br>
-We collect Device Information using the following technologies:<br>
-– “Cookies” are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.<br>
-– “Log files” track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.<br>
-– “Web beacons,” “tags,” and “pixels” are electronic files used to record information about how you browse the Site.<br>
-Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit or debit card numbers, email address, and phone number). We refer to this information as “Order Information.”<br>
-When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device Information and Order Information.<br>
-<br>
+			<?php function privacy_policy(){ ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<h3>Privacy Policy</h3><br>
+						Ublo Club complies with the General Data Protection Regulation (GDPR) 2018<br>
+						<br>
+						Your privacy is important to us. Read this policy to learn about the personal data that we collect from you and how we use it. We encourage you to read the policy and get in touch if you have any queries.<br>
+						This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from https://ublo.club (the “Site”).<br>
+						<br>
 
-<strong>HOW DO WE USE YOUR PERSONAL INFORMATION?</strong><br>
-We use the Order Information that we collect generally to fulfil any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:<br>
-Communicate with you;<br>
-Screen our orders for potential risk or fraud; and<br>
-When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.<br>
-We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimise our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).<br>
-<br>
+						<strong>PERSONAL INFORMATION WE COLLECT</strong><br>
+						When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically collected information as “Device Information.”<br>
+						We collect Device Information using the following technologies:<br>
+						– “Cookies” are data files that are placed on your device or computer and often include an anonymous unique identifier. For more information about cookies, and how to disable cookies, visit http://www.allaboutcookies.org.<br>
+						– “Log files” track actions occurring on the Site, and collect data including your IP address, browser type, Internet service provider, referring/exit pages, and date/time stamps.<br>
+						– “Web beacons,” “tags,” and “pixels” are electronic files used to record information about how you browse the Site.<br>
+						Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit or debit card numbers, email address, and phone number). We refer to this information as “Order Information.”<br>
+						When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device Information and Order Information.<br>
+						<br>
 
-<strong>SHARING YOUR PERSONAL INFORMATION</strong><br>
-We share your Personal Information with third parties to help us use your Personal Information, as described above.<br>
-We use Google Analytics to help us understand how our customers use the Site – you can read more about how Google uses your Personal Information here: https://www.google.com/intl/en/policies/privacy/.<br>
-You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.<br>
-Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.<br>
-<br>
+						<strong>HOW DO WE USE YOUR PERSONAL INFORMATION?</strong><br>
+						We use the Order Information that we collect generally to fulfil any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations). Additionally, we use this Order Information to:<br>
+						Communicate with you;<br>
+						Screen our orders for potential risk or fraud; and<br>
+						When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.<br>
+						We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimise our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).<br>
+						<br>
 
-<strong>DO NOT TRACK</strong><br>
-Please note that we do not alter our Site’s data collection and use practices when we see a Do Not Track signal from your browser.<br>
-<br>
+						<strong>SHARING YOUR PERSONAL INFORMATION</strong><br>
+						We share your Personal Information with third parties to help us use your Personal Information, as described above.<br>
+						We use Google Analytics to help us understand how our customers use the Site – you can read more about how Google uses your Personal Information here: https://www.google.com/intl/en/policies/privacy/.<br>
+						You can also opt-out of Google Analytics here: https://tools.google.com/dlpage/gaoptout.<br>
+						Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.<br>
+						<br>
 
-<strong>YOUR RIGHTS</strong><br>
-If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.<br>
-Additionally, if you are a European resident we note that we are processing your information in order to fulfil contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above.<br>
-<br>
+						<strong>DO NOT TRACK</strong><br>
+						Please note that we do not alter our Site’s data collection and use practices when we see a Do Not Track signal from your browser.<br>
+						<br>
 
-<strong>DATA RETENTION</strong><br>
-When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.<br>
-<br>
+						<strong>YOUR RIGHTS</strong><br>
+						If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.<br>
+						Additionally, if you are a European resident we note that we are processing your information in order to fulfil contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above.<br>
+						<br>
 
-<strong>MINORS</strong><br>
-The Site is not intended for individuals under the age of 18.<br>
-<br>
+						<strong>DATA RETENTION</strong><br>
+						When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.<br>
+						<br>
 
-<strong>CHANGES</strong><br>
-We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.<br>
-<br>
+						<strong>MINORS</strong><br>
+						The Site is not intended for individuals under the age of 18.<br>
+						<br>
 
-<strong>TERMS OF SERVICE</strong><br>
-Specific terms relating to accessing our website and the purchase of our products can be found in our Terms of Service policy. Please read before using our service.<br>
-<br>
+						<strong>CHANGES</strong><br>
+						We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.<br>
+						<br>
 
-<strong>CONTACT US</strong><br>
-For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us via the contact form on this website or by mail using the details provided below:<br>
-Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU
+						<strong>TERMS OF SERVICE</strong><br>
+						Specific terms relating to accessing our website and the purchase of our products can be found in our Terms of Service policy. Please read before using our service.<br>
+						<br>
 
-
+						<strong>CONTACT US</strong><br>
+						For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us via the contact form on this website or by mail using the details provided below:<br>
+						Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU
 					</div>
 				</div>
 			<?php } ?>
