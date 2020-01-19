@@ -96,24 +96,14 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					<div class="header-top header-top-borders">
 						<div class="container h-100">
 							<div class="header-row h-100">
-								<!--
-									<div class="header-column justify-content-start">
-										<div class="header-row">
-											<nav class="header-nav-top">
-												<ul class="nav nav-pills">
-													<li class="nav-item nav-item-borders py-2">
-														<span class="pl-0"><i class="far fa-dot-circle text-4 text-color-primary" style="top: 1px;"></i> Ublo Club Ltd, 20-22 Wenlock Road, London, England, N1 7GU</span>
-													</li>
-													<li class="nav-item nav-item-borders py-2 d-none d-lg-inline-flex">
-														<a href="tel:123-456-7890"><i class="fab fa-whatsapp text-4 text-color-primary" style="top: 0;"></i> 0800 123 4567</a>
-													</li>
-													<li class="nav-item nav-item-borders py-2 d-none d-sm-inline-flex">
-														<a href="mailto:mail@domain.com"><i class="far fa-envelope text-4 text-color-primary" style="top: 1px;"></i> sales@ublo.club</a>
-													</li>
-												</ul>
-											</nav>
-										</div>
+								<div class="header-column justify-content-start">
+									<div class="header-row">
+										<nav class="header-nav-top">
+											
+										</nav>
 									</div>
+								</div>
+								<!--
 									<div class="header-column justify-content-end">
 										<div class="header-row">
 											<nav class="header-nav-top">
