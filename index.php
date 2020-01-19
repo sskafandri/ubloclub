@@ -146,20 +146,22 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 							</div>
 							<div class="header-column justify-content-end">
 								<div class="header-row">
-									<ul class="header-extra-info d-flex align-items-center mr-3">
-										<li class="d-none d-sm-inline-flex">
-											<div class="header-extra-info-text">
-												<label>SEND US AN EMAIL</label>
-												<strong><a href="mailto:mail@example.com">sales@ublo.club</a></strong>
-											</div>
-										</li>
-										<li>
-											<div class="header-extra-info-text">
-												<label>CALL US NOW</label>
-												<strong><a href="tel:8001234567">0800 123 4567</a></strong>
-											</div>
-										</li>
-									</ul>
+									<!--
+										<ul class="header-extra-info d-flex align-items-center mr-3">
+											<li class="d-none d-sm-inline-flex">
+												<div class="header-extra-info-text">
+													<label>SEND US AN EMAIL</label>
+													<strong><a href="mailto:mail@example.com">sales@ublo.club</a></strong>
+												</div>
+											</li>
+											<li>
+												<div class="header-extra-info-text">
+													<label>CALL US NOW</label>
+													<strong><a href="tel:8001234567">0800 123 4567</a></strong>
+												</div>
+											</li>
+										</ul>
+									-->
 									<!-- cart summary -->
 									<div class="header-nav-features">
 										<div class="header-nav-feature header-nav-features-cart header-nav-features-cart-big d-inline-flex ml-2" data-sticky-header-style="{'minResolution': 991}" data-sticky-header-style-active="{'top': '78px'}" data-sticky-header-style-deactive="{'top': '0'}">
