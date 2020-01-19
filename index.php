@@ -1385,7 +1385,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
-						<h3>About Us</h3><br>
+						<h3>About Us</h3>
 						Ublo Club was launched with a clearly defined goal of bringing the very highest quality Premium Quality British Made & Certified Juice to the British vaper.<br>
 						<br>
 						For your peace of mind, the ingredients Ublo Club use in our vaping liquids are pharmaceutical grade and the finest food grade flavourings. They are laboratory tested and certified to comply with the TPD (Tobacco Products Directive*) so that you can relax and enjoying your vaping without having to worry about cheap sub standard and ‘grey market’ products.<br>
@@ -1399,7 +1399,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
-						<h3>Privacy Policy</h3><br>
+						<h3>Privacy Policy</h3>
 						Ublo Club complies with the General Data Protection Regulation (GDPR) 2018<br>
 						<br>
 						Your privacy is important to us. Read this policy to learn about the personal data that we collect from you and how we use it. We encourage you to read the policy and get in touch if you have any queries.<br>
