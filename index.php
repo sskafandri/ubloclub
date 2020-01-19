@@ -246,11 +246,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="<?php if(get('c')=='about_us'){echo'active';} ?>" href="?c=about_us">
-																About Us
-															</a>
-														</li>
-														<li class="dropdown">
 															<a class="<?php if(get('c')=='contact_us'){echo'active';} ?>" href="?c=contact_us">
 																Contact Us
 															</a>
@@ -1530,6 +1525,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 											<p class="mb-1"><a href="?c=about_us" class="text-3 link-hover-style-1">About us</a></p>
 											<p class="mb-1"><a href="?c=contact_us" class="text-3 link-hover-style-1">Contact Us</a></p>
 											<p class="mb-1"><a href="?c=privacy_policy" class="text-3 link-hover-style-1">Privacy Policy</a></p>
+											<p class="mb-1"><a href="?c=faq" class="text-3 link-hover-style-1">FAQ</a></p>
 											<p class="mb-1"><a href="https://ublo.club/billing" class="text-3 link-hover-style-1">My account</a></p>
 										</div>
 										<!--
