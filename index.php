@@ -1306,9 +1306,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									<?php foreach($faqs as $faq){ ?>
 										<section class="toggle">
 											<label><?php echo stripslashes($faq['title']); ?></label>
-											<p>
-												<?php echo htmlspecialchars_decode(stripslashes($faq['description'])); ?>
-											</p>
+											<?php echo htmlspecialchars_decode(stripslashes($faq['description'])); ?>
 										</section>
 									<?php } ?>
 								</div>
