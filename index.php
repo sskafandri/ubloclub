@@ -108,9 +108,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									<div class="header-row">
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills">
-												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													Premium Quality Vape Juice British Made and Certified
-												</li>
+												Premium Quality Vape Juice British Made and Certified
 											</ul>
 										</nav>
 									</div>
