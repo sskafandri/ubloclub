@@ -1292,6 +1292,10 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php function faq(){ ?>
 				<?php 
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
+
+					// set some defaults
+					$query 								= $conn->query("SELECT * FROM `shop_faq` ORDER BY 'title' ");
+					$faqs 								= $query->fetchAll(PDO::FETCH_ASSOC);
 				?>
 
 				<div role="main" class="main">
@@ -1299,62 +1303,14 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						<div class="row">
 							<div class="col">
 								<div class="toggle toggle-primary" data-plugin-toggle>
-									<section class="toggle active">
-										<label>Is vape legal in the UK?</label>
-										<p>
-											Vape is perfectly legal in the UK.
-										</p>
-									</section>
-
-									<section class="toggle">
-										<label>Is is safe to vape?</label>
-										<p>
-											On this matter, we can only speak for our own brand, Ublo.
-
-											Yes, all our product is tested, certified and made in the UK. The product is organically sourced and bottled here in the UK, unlike some other cheaper products available on the market.
-										</p>
-									</section>
-
-									<section class="toggle">
-										<label>Do I need a special E-Cig?</label>
-										<p>
-											You do not need a special E-Cig, you simply need a medium to high wattage E-Cig to get the best experience.
-										</p>
-									</section>
-
-									<section class="toggle">
-										<label>How much should I use?</label>
-										<p>
-											We recommended initially using the product in small doses until you feel comfortable with the dosage that you are using.
-										</p>
-									</section>
-
-									<section class="toggle">
-										<label>I have some doubts.</label>
-										<p>
-											If you are unsure about anything please feel free to contact us on sales@ublo.club
-										</p>
-									</section>
-
-									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet varius iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-									</section>
-
-									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-									</section>
-
-									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet viaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.</p>
-									</section>
-
-									<section class="toggle">
-										<label>Curabitur eget leo at velit imperdiet varius iaculis vitaes?</label>
-										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
-									</section>
+									<?php foreach($faqs as $faq){ ?>
+										<section class="toggle">
+											<label><?php echo stripslashes($faq['title']); ?></label>
+											<p>
+												<?php echo stripslashes($faq['description']); ?>
+											</p>
+										</section>
+									<?php } ?>
 								</div>
 							</div>
 						</div>
