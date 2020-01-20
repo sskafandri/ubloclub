@@ -1294,7 +1294,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
 
 					// set some defaults
-					$query 								= $conn->query("SELECT * FROM `shop_faq` ORDER BY 'title' ");
+					$query 								= $conn->query("SELECT * FROM `shop_faq` WHERE `website` = ' ublo.club' ORDER BY 'title' ");
 					$faqs 								= $query->fetchAll(PDO::FETCH_ASSOC);
 				?>
 
@@ -1307,7 +1307,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 										<section class="toggle">
 											<label><?php echo stripslashes($faq['title']); ?></label>
 											<p>
-												<?php echo stripslashes($faq['description']); ?>
+												<?php echo htmlspecialchars_decode(stripslashes($faq['description'])); ?>
 											</p>
 										</section>
 									<?php } ?>
