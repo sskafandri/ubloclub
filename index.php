@@ -391,11 +391,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php function product(){ ?>
 				<?php 
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
-					
-					function cmp($a, $b)
-					{
-					    return strcmp($a["title"], $b["title"]);
-					}
 
 					$product_id = get('id');
 				
@@ -408,7 +403,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					}
 
 					// get linked products
-					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ");
+					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ORDER BY `title` ASC ");
 					$linked_products_raw 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 					// get the linked product name
@@ -425,8 +420,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 						$count++;
 					}
-
-					usort($linked_products, "cmp");
 				?>
 
 				<div role="main" class="main shop py-4">
