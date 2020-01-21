@@ -421,7 +421,10 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$count++;
 					}
 
-					array_multisort($linked_products['title']);
+					function compareByName($a, $b) {
+						return strcmp($a["title"], $b["title"]);
+					}
+					usort($linked_products, 'compareByName');
 				?>
 
 				<div role="main" class="main shop py-4">
