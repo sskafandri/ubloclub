@@ -430,7 +430,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$count++;
 					}
 
-					array_sort_by_column($linked_products, 'order');
+					$linked_products = array_sort_by_column($linked_products, 'order');
 				?>
 
 				<div role="main" class="main shop py-4">
