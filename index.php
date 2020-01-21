@@ -424,7 +424,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					function compareByName($a, $b) {
 						return strnatcmp($a["title"], $b["title"]);
 					}
-					natsort($linked_products, 'compareByName');
+					usort($linked_products, 'compareByName');
 				?>
 
 				<div role="main" class="main shop py-4">
