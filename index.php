@@ -422,7 +422,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					}
 
 					function compareByName($a, $b) {
-						return strcmp($a["title"], $b["title"]);
+						return strnatcmp($a["title"], $b["title"]);
 					}
 					natsort($linked_products, 'compareByName');
 				?>
