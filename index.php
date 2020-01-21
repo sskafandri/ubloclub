@@ -402,15 +402,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						}
 					}
 
-					function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
-					    $sort_col = array();
-					    foreach ($arr as $key=> $row) {
-					        $sort_col[$key] = $row[$col];
-					    }
-
-					    array_multisort($sort_col, $dir, $arr);
-					}
-
 					// get linked products
 					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ");
 					$linked_products_raw 		= $query->fetchAll(PDO::FETCH_ASSOC);
@@ -430,7 +421,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$count++;
 					}
 
-					array_sort_by_column($linked_products, 'order');
+					array_multisort($linked_products['title']);
 				?>
 
 				<div role="main" class="main shop py-4">
