@@ -403,7 +403,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 					}
 
 					// get linked products
-					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ORDER BY `title` ASC ");
+					$query 						= $conn->query("SELECT * FROM `shop_products_linked` WHERE `primary` = '".$product_id."' ");
 					$linked_products_raw 		= $query->fetchAll(PDO::FETCH_ASSOC);
 
 					// get the linked product name
@@ -414,7 +414,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$linked_products[$count]['primary'] 		= $linked_product_raw['primary'];
 						$linked_products[$count]['secondary'] 		= $linked_product_raw['secondary'];
 
-						$query 					= $conn->query("SELECT `id`,`title` FROM `shop_products` WHERE `id` = '".$linked_product_raw['secondary']."' ");
+						$query 					= $conn->query("SELECT `id`,`title` FROM `shop_products` WHERE `id` = '".$linked_product_raw['secondary']."' ORDER BY `title` ASC ");
 						$linked_product_data 	= $query->fetch(PDO::FETCH_ASSOC);
 						$linked_products[$count]['title']			= stripslashes($linked_product_data['title']);
 
