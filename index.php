@@ -421,10 +421,11 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$count++;
 					}
 
-					function compareByName($a, $b) {
+					function sort_array_by_title($a, $b) {
 						return strnatcmp($a["title"], $b["title"]);
 					}
-					usort($linked_products, 'compareByName');
+
+					usort($linked_products, 'sort_array_by_title');
 				?>
 
 				<div role="main" class="main shop py-4">
@@ -516,7 +517,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 											</ul>
 											<div class="tab-content p-0">
 												<div class="tab-pane p-4 active" id="productDescription">
-													<?php debug($linked_products); ?>
 													<?php echo stripslashes($product['description']); ?>
 												</div>
 												<div class="tab-pane p-4" id="productInfo">
