@@ -392,6 +392,11 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 				<?php 
 					global $conn, $globals, $global_settings, $site, $all_products, $all_categories;
 					
+					function cmp($a, $b)
+					{
+					    return strcmp($a["title"], $b["title"]);
+					}
+
 					$product_id = get('id');
 				
 					// get product from existing array
@@ -420,6 +425,8 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 						$count++;
 					}
+
+					usort($linked_products, "cmp");
 				?>
 
 				<div role="main" class="main shop py-4">
