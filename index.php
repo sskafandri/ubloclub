@@ -425,7 +425,9 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						return strnatcmp($a["title"], $b["title"]);
 					}
 
-					usort($linked_products, 'sort_array_by_title');
+					if(isset($linked_products) && is_array($linked_products)){
+						usort($linked_products, 'sort_array_by_title');
+					}
 				?>
 
 				<div role="main" class="main shop py-4">
