@@ -421,10 +421,6 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 						$count++;
 					}
 
-					function sort_array_by_title($a, $b) {
-						return strnatcmp($a["title"], $b["title"]);
-					}
-
 					if(isset($linked_products) && is_array($linked_products)){
 						usort($linked_products, 'sort_array_by_title');
 					}

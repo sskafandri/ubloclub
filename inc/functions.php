@@ -1,5 +1,10 @@
 <?php
 
+function sort_array_by_title($a, $b)
+{
+    return strnatcmp($a["title"], $b["title"]);
+}
+
 function ip_in_range($ip, $range)
 {
     if (strpos($range, '/') == false) {
