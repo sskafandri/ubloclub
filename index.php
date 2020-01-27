@@ -801,6 +801,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 						<div class="row">
 							<div class="col-lg-9">
 								<div class="accordion accordion-modern" id="accordion">
+									Your sponsor is <?php echo $affiliate['first_name'].' '.$affiliate['last_name']; ?> <br>
 									<div class="card card-default">
 										<div class="card-header">
 											<h4 class="card-title m-0">
