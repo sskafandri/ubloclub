@@ -812,7 +812,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 										<div id="collapseOne" class="collapse show">
 											<div class="card-body">
 												<center>
-													<h4>Your sponsor is: <span style="font-weight:normal;"><?php echo $affiliate['affiliate_username'].' / '.$affiliate['first_name'].' '.$affiliate['last_name']; ?></span></h4>
+													<h4>Your sponsor is: <span style="font-weight:normal;"><?php echo $affiliate['affiliate_username'].' | '.$affiliate['first_name'].' '.$affiliate['last_name']; ?></span></h4>
 												</center>
 
 												<div class="card-body">
