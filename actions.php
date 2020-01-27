@@ -50,7 +50,8 @@ function home(){
 	die('access denied to function name ' . $_GET['a']);
 }
 
-function test(){
+function test()
+{
 	echo exec('whoami');
 	echo "<hr>";
 	echo '<h3>$_SESSION</h3>';
@@ -70,7 +71,8 @@ function test(){
 	echo '<hr>';
 }
 
-function empty_cart(){
+function empty_cart()
+{
 	global $conn;
 
 	$delete = $conn->exec("DELETE FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
@@ -84,7 +86,8 @@ function empty_cart(){
     go($_SERVER['HTTP_REFERER']);
 }
 
-function add_to_cart(){
+function add_to_cart()
+{
 	global $conn;
 
 	$cart_total 	= 0;
@@ -137,7 +140,8 @@ function add_to_cart(){
     go($_SERVER['HTTP_REFERER']);
 }
 
-function delete_cart_item(){
+function delete_cart_item()
+{
 	global $conn;
 
 	$cart_total 		= 0;
@@ -163,7 +167,8 @@ function delete_cart_item(){
     go($_SERVER['HTTP_REFERER']);
 }
 
-function update_cart_checkout(){
+function update_cart_checkout()
+{
 	global $conn;
 
 	$cart_total 	= 0;
@@ -195,7 +200,8 @@ function update_cart_checkout(){
     go($_SERVER['HTTP_REFERER']);
 }
 
-function checkout(){
+function checkout()
+{
 	global $conn, $global_settings, $whmcs;
 
 	$order_pids 		= array();
@@ -449,7 +455,7 @@ function checkout(){
 		
 		$hash 					= sha1($email.$timestamp.$autoauthkey);
 		
-		$url 					= $whmcsurl."?email=".$email."&timestamp=".$timestamp."&hash=".$hash."&goto=".urlencode($goto);
+		$url 					= $whmcsurl."?email=$email&amp;timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 
 		// empty_cart();
 
