@@ -812,9 +812,9 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 										<div id="collapseOne" class="collapse show">
 											<div class="card-body">
 												<center>
-													<h4>Your sponsor is <?php echo $affiliate['first_name'].' '.$affiliate['last_name']; ?></h4>
+													<h4>Your sponsor is: <span style="font-weight:normal;"><?php echo $affiliate['first_name'].' '.$affiliate['last_name']; ?></span></h4>
 												</center>
-												
+
 												<div class="card-body">
 													<?php if(isset($cart_items[0])){ ?>
 														<form action="actions.php?a=update_cart_checkout" enctype="multipart/form-data" method="post" class="cart">
