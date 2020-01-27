@@ -1498,7 +1498,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</div>
 								-->
 								<div class="col-lg-4 text-center text-md-left">
-									<img src="https://www.pngkey.com/png/detail/87-870355_carto-visa-e-master-png-clipart-visa-logo.png" alt="Payment icons" height="50">
+									<img src="img/visa-and-mastercard-logo-26.png" alt="Payment icons" height="50">
 								</div>
 							</div>
 						</div>
