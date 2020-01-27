@@ -1534,7 +1534,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 									</div>
 								-->
 								<div class="col-lg-4 text-center text-md-left">
-									<img src="img/creditcards.jpg" width="255" height="35" alt="Payment icons" class="img-fluid mt-4 mt-lg-2">
+									<img src="img/creditcards.jpg" width="255" height="25" alt="Payment icons" class="img-fluid mt-4 mt-lg-2">
 								</div>
 							</div>
 						</div>
