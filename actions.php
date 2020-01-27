@@ -404,7 +404,7 @@ function checkout(){
 	$postfields['accesskey']		= $whmcs['accesskey'];
 	$postfields["action"] 			= "AddOrder";
 	$postfields["responsetype"] 	= 'json';
-	$postfields['paymentmethod']	= 'worldpay';
+	$postfields['paymentmethod']	= 'worldpayfuturepay';
 
 	$postfields['clientid'] 		= $client_id;
     $postfields['pid'] 				= $order_pids;
