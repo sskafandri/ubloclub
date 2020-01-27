@@ -32,6 +32,12 @@ $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 $query 								= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
 $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
+// get sponsor / affiliate details
+if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
+	$query 								= $conn->query("SELECT * FROM `users` WHERE `id` = '".$_SESSION['mlm_affiliate']."' ");
+	$affiliate 							= $query->fetch(PDO::FETCH_ASSOC);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -788,7 +794,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 			<?php } ?>
 
 			<?php function cart(){ ?>
-				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $cart_items; ?>
+				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $cart_items, $affiliate; ?>
 				
 				<div role="main" class="main shop py-4">
 					<div class="container">
@@ -805,6 +811,7 @@ $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 										</div>
 										<div id="collapseOne" class="collapse show">
 											<div class="card-body">
+												Your sponsor is <?php echo $affiliate['first_name'].' '.$affiliate['last_name']; ?> <br>
 												<div class="card-body">
 													<?php if(isset($cart_items[0])){ ?>
 														<form action="actions.php?a=update_cart_checkout" enctype="multipart/form-data" method="post" class="cart">
