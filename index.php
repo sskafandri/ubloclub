@@ -237,16 +237,13 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																Shop
 															</a>
 															<ul class="dropdown-menu">
-																<li>
-																	<a class="dropdown-item" href="index.html">
-																		Landing Page
-																	</a>
-																</li>
-																<li>
-																		<a class="dropdown-item" href="index.html">
-																			Landing Page
+																<?php foreach($all_sub_categories as $sub_category){ ?>
+																	<li>
+																		<a class="dropdown-item" href="?c=home&sub_id=<?php echo $sub_category['id']; ?>">
+																			<?php echo stripslashes($sub_category['name']); ?>
 																		</a>
-																</li>
+																	</li>
+																<?php } ?>
 															</ul>
 														</li>
 														<li class="dropdown">
