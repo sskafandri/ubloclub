@@ -249,11 +249,19 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																	</a>
 																</li>
 																<?php foreach($all_sub_categories as $sub_category){ ?>
-																	<li>
-																		<a class="dropdown-item" href="?c=home&sub_id=<?php echo $sub_category['id']; ?>">
-																			<?php echo stripslashes($sub_category['name']); ?>
-																		</a>
-																	</li>
+																	<?php 
+																		$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `sub_category_id` = '".$sub_category['id']."' ");
+																		$product_found 						= $query->fetchAll(PDO::FETCH_ASSOC);
+
+																		if(isset($product_found[0]['id'])){
+																			echo '<li>
+																					<a class="dropdown-item" href="?c=home&sub_id='.$sub_category['id'].'>
+																						'.stripslashes($sub_category['name']).'
+																					</a>
+																				</li>
+																				';
+																		}
+																	?>
 																<?php } ?>
 															</ul>
 														</li>
