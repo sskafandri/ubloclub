@@ -138,7 +138,13 @@ function add_to_cart()
 		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	$_SESSION['cart_total']		= number_format($cart_total, 2);
+	$cart_total 				= number_format($cart_total, 2);
+
+	if($cart_total > '40.00'){
+		$_SESSION['shipping_id'] = 'shipping_free';
+	}
+	
+	$_SESSION['cart_total']		= $cart_total;
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been added to your cart.");
