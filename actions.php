@@ -145,6 +145,8 @@ function add_to_cart()
 
 	if($_SESSION['cart_total'] >= '40.00'){
 		$_SESSION['shipping_id'] = 'shipping_free';
+	}else{
+		$_SESSION['shipping_id'] = '';
 	}
 
     // log_add("[".$name."] has been updated.");
