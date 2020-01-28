@@ -935,7 +935,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																			</div>
 																			<div class="form-row">
 																				<div class="form-group col">
-																					<label class="font-weight-bold text-dark text-2">County / State </label>
+																					<label class="font-weight-bold text-dark text-2">County </label>
 																					<input type="text" id="address_state" name="address_state" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_state']; ?>" required="">
 																				</div>
 																			</div>
@@ -943,6 +943,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																				<div class="form-group col">
 																					<label class="font-weight-bold text-dark text-2">Country</label>
 																					<select id="address_country" name="address_country" class="form-control" required="">
+																						<!--
 																						<option value="" disabled="">Choose one</option>
 																						<option value="AF">Afghanistan</option>
 																						<option value="AX">Åland Islands</option>
@@ -1178,7 +1179,9 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																						<option value="UG">Uganda</option>
 																						<option value="UA">Ukraine</option>
 																						<option value="AE">United Arab Emirates</option>
+																						-->
 																						<option value="GB" selected>United Kingdom</option>
+																						<!--
 																						<option value="US">United States</option>
 																						<option value="UM">United States Minor Outlying Islands</option>
 																						<option value="UY">Uruguay</option>
@@ -1193,12 +1196,13 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																						<option value="YE">Yemen</option>
 																						<option value="ZM">Zambia</option>
 																						<option value="ZW">Zimbabwe</option>
+																						-->
 																					</select>
 																				</div>
 																			</div>
 																			<div class="form-row">
 																				<div class="form-group col">
-																					<label class="font-weight-bold text-dark text-2">Zip / Postal Code </label>
+																					<label class="font-weight-bold text-dark text-2">Postal Code </label>
 																					<input type="text" id="address_zip" name="address_zip" class="form-control" value="<?php echo $_SESSION['checkout_details']['address_zip']; ?>"  required="">
 																				</div>
 																			</div>
