@@ -481,6 +481,8 @@ function set_shipping()
 {
 	global $conn;
 
+	$cart_total 	= 0;
+
 	$shipping_id 				= get('shipping_id');
 	$_SESSION['shipping_id']	= $shipping_id;
 	if($shipping_id == 'shipping_free'){
