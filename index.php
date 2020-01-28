@@ -883,7 +883,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																		<?php }else{ ?>
 																			<option value="shipping_48" <?php if($_SESSION['shipping_id']=='shipping_48'){echo'selected';}?>>Royal Mail 48 Hour Signed For - £2.99</option>
 																			<option value="shipping_24" <?php if($_SESSION['shipping_id']=='shipping_24'){echo'selected';}?>>Royal Mail 24 Hour Signed For - £3.99</option>
-																			<option value="shipping_nextday" <?php if($_SESSION['shipping_id']=='shipping_nextday'){echo'selected';}?>>Guaranteed Next Working Day. - £7.99</option>
+																			<option value="shipping_nextday" <?php if($_SESSION['shipping_id']=='shipping_nextday'){echo'selected';}?>>Guaranteed Next Working Day - £7.99</option>
 																		<?php } ?>
 																	</select>
 																</div>
