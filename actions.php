@@ -507,7 +507,12 @@ function set_shipping()
 		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	$cart_total					= ($cart_total + $shipping_cost);
+	if($cart_total > '40.00'){
+		$_SESSION['shipping_id']	= 'shipping_free';
+		$cart_total					= $cart_total;
+	}else{
+		$cart_total					= ($cart_total + $shipping_cost);
+	}
 
 	$_SESSION['cart_total']		= number_format($cart_total, 2);
 
