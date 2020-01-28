@@ -227,11 +227,13 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 											<div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-dropdown-arrow header-nav-main-effect-3 header-nav-main-sub-effect-1">
 												<nav class="collapse">
 													<ul class="nav nav-pills" id="mainNav">
-														<li class="dropdown">
-															<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="?c=home">
-																Shop
-															</a>
-														</li>
+														<!--
+															<li class="dropdown">
+																<a class="<?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="?c=home">
+																	Shop
+																</a>
+															</li>
+														-->
 														<li class="dropdown">
 															<a class="dropdown-item dropdown-toggle <?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="?c=home">
 																Shop
