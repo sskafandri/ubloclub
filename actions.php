@@ -104,6 +104,7 @@ function add_to_cart()
 	// setup the cart
 	if(!isset($_SESSION['cart_key'])){
 		$_SESSION['cart_key'] 			= md5(rand(00000,99999).time());
+		$_SESSION['shipping_id']		= '';
 	}
 
 	// check for existing products like this one
@@ -140,10 +141,10 @@ function add_to_cart()
 
 	$cart_total 				= number_format($cart_total, 2);
 
-	if($cart_total > '40.00'){
+	if($cart_total >= '40.00'){
 		$_SESSION['shipping_id'] = 'shipping_free';
 	}
-	
+
 	$_SESSION['cart_total']		= $cart_total;
 
     // log_add("[".$name."] has been updated.");
@@ -513,7 +514,7 @@ function set_shipping()
 		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	if($cart_total > '40.00'){
+	if($cart_total >= '40.00'){
 		$_SESSION['shipping_id']	= 'shipping_free';
 		$cart_total					= $cart_total;
 	}else{
