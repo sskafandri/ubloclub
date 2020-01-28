@@ -143,7 +143,7 @@ function add_to_cart()
 
 	$_SESSION['cart_total']		= $cart_total;
 
-	if($_SESSION['cart_total'] >= '40.00'){
+	if($_SESSION['cart_total'] >= '39.90'){
 		$_SESSION['shipping_id'] = 'shipping_free';
 	}else{
 		$_SESSION['shipping_id'] = '';
@@ -209,7 +209,7 @@ function update_cart_checkout()
 
 	$_SESSION['cart_total']		= $cart_total;
 
-	if($_SESSION['cart_total'] >= '40.00'){
+	if($_SESSION['cart_total'] >= '39.90'){
 		$_SESSION['shipping_id'] = 'shipping_free';
 	}else{
 		$_SESSION['shipping_id'] = '';
@@ -535,7 +535,7 @@ function set_shipping()
 		$cart_total				= ($cart_total + $item_total_price);
 	}
 
-	if($cart_total >= '40.00'){
+	if($cart_total >= '39.90'){
 		$_SESSION['shipping_id']	= 'shipping_free';
 		$cart_total					= $cart_total;
 	}else{
