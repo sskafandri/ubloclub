@@ -267,7 +267,7 @@ function checkout()
 		$shipping_id = array('56');
 	}
 
-	array_merge($order_pids,$shipping_id)
+	array_merge($order_pids,$shipping_id);
 
 	if(get('login') == 'yes'){
 		$email 							= post('email');
