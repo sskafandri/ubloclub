@@ -255,7 +255,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 
 																		if(isset($product_found[0]['id'])){
 																			echo '<li>
-																					<a class="dropdown-item" href="?c=home&sub_id='.$sub_category['id'].'>
+																					<a class="dropdown-item" href="?c=home&sub_id='.$sub_category['id'].'">
 																						'.stripslashes($sub_category['name']).'
 																					</a>
 																				</li>
