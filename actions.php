@@ -209,6 +209,12 @@ function update_cart_checkout()
 
 	$_SESSION['cart_total']		= $cart_total;
 
+	if($_SESSION['cart_total'] >= '40.00'){
+		$_SESSION['shipping_id'] = 'shipping_free';
+	}else{
+		$_SESSION['shipping_id'] = '';
+	}
+
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been added to your cart.");
     go($_SERVER['HTTP_REFERER']);
