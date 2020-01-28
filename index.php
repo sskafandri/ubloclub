@@ -875,6 +875,17 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 
 															<div class="form-row">
 																<div class="form-group col">
+																	<label class="font-weight-bold text-dark text-2">Shipping</label>
+																	<select id="shipping" name="shipping" class="form-control" required="">
+																		<option value="" >Royal Mail 48 Hour Signed For - £2.99</option>
+																		<option value="" >Royal Mail 24 Hour Signed For - £3.99</option>
+																		<option value="" >Guaranteed Next Working Day. - £7.99</option>
+																	</select>
+																</div>
+															</div>
+
+															<div class="form-row">
+																<div class="form-group col">
 																	<a href="?c=home" class="btn btn-default btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2">Continue Shopping</a>
 																	<input type="submit" value="Update Cart" class="btn btn-success btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
 																</div>
