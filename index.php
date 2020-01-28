@@ -1310,14 +1310,16 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 													if($_SESSION['shipping_id'] == 'shipping_free'){
 														$shipping_cost = 'Free';
 													}elseif($_SESSION['shipping_id'] == 'shipping_48'){
-														$shipping_cost = '2.99';
+														$shipping_cost = '£2.99';
 													}elseif($_SESSION['shipping_id'] == 'shipping_24'){
-														$shipping_cost = '3.99';
+														$shipping_cost = '£3.99';
 													}elseif($_SESSION['shipping_id'] == 'shipping_nextday'){
-														$shipping_cost = '7.99';
+														$shipping_cost = '£7.99';
+													}else{
+														$shipping_cost = 'Select Option';
 													}
 
-													echo '£'.$shipping_cost;
+													echo $shipping_cost;
 												?>
 											</td>
 										</tr>
