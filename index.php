@@ -117,7 +117,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 										<nav class="header-nav-top">
 											<ul class="nav nav-pills">
 												<li class="nav-item nav-item-anim-icon d-none d-md-block">
-													Premium Quality Vape Juice British Made and Certified
+													Premium Quality E-Liquid British Made and Certified
 												</li>
 											</ul>
 										</nav>
