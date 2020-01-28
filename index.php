@@ -876,7 +876,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 															<div class="form-row">
 																<div class="form-group col">
 																	<label class="font-weight-bold text-dark text-2">Shipping</label>
-																	<select id="shipping" name="shipping" class="form-control" onchange="set_shipping(this);">
+																	<select id="shipping_id" name="shipping_id" class="form-control" onchange="set_shipping(this);">
 																		<option value="">Select Shipping Method</option>
 																		<?php if(number_format($_SESSION['cart_total'], 2) > 39.99){ ?>
 																			<option value="shipping_free" <?php if($_SESSION['shipping_id']=='shipping_free'){echo'selected';}?>>Free 48 Hour Shipping.</option>
@@ -1603,7 +1603,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 
 			function set_shipping(selectObject) {
 			    var shipping_id = selectObject.value; 
-			    window.location.href = "actions.php?a=set_shipping&id="+shipping_id;
+			    window.location.href = "actions.php?a=set_shipping&shipping_id="+shipping_id;
 			}
 		</script>
 
