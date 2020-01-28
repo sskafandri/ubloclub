@@ -256,6 +256,19 @@ function checkout()
 		}
 	}
 
+	// get shipping id
+	if($_SESSION['shipping_id'] == 'shipping_free'){
+		$shipping_id = array('57');
+	}elseif($_SESSION['shipping_id'] == 'shipping_48'){
+		$shipping_id = array('54');
+	}elseif($_SESSION['shipping_id'] == 'shipping_24'){
+		$shipping_id = array('55');
+	}elseif($_SESSION['shipping_id'] == 'shipping_nextday'){
+		$shipping_id = array('56');
+	}
+
+	array_merge($order_pids,$shipping_id)
+
 	if(get('login') == 'yes'){
 		$email 							= post('email');
 		$password 						= post('password');
