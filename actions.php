@@ -493,6 +493,8 @@ function set_shipping()
 		$shipping_cost = '3.99';
 	}elseif($shipping_id == 'shipping_nextday'){
 		$shipping_cost = '7.99';
+	}else{
+		$shipping_cost = '999.99';
 	}
 
 	// update cart total
