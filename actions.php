@@ -40,13 +40,18 @@ switch ($a)
 		checkout();
 		break;
 
+	case "set_shipping":
+		set_shipping();
+		break;
+
 // default		
 	default:
 		home();
 		break;
 }
 
-function home(){
+function home()
+{
 	die('access denied to function name ' . $_GET['a']);
 }
 
@@ -470,4 +475,39 @@ function checkout()
 		status_message('danger',$results['message'].".");
 		go($_SERVER['HTTP_REFERER']);
 	}
+}
+
+function set_shipping()
+{
+	global $conn;
+
+	$shipping_id 				= get('shipping_id');
+	$_SESSION['shipping_id']	= $shipping_id;
+	if($shipping_id == 'shipping_free'){
+		$shipping_cost = '0.00';
+	}elseif($shipping_id == 'shipping_48'){
+		$shipping_cost = '2.99';
+	}elseif($shipping_id == 'shipping_24'){
+		$shipping_cost = '3.99';
+	}elseif($shipping_id == 'shipping_nextday'){
+		$shipping_cost = '7.99';
+	}
+
+	// update cart total
+	$query 						= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+	$cart_items 				= $query->fetchAll(PDO::FETCH_ASSOC);
+	
+	foreach($cart_items as $cart_item){
+		$item_total_price 		= ($cart_item['price'] * $cart_item['quantity']);
+
+		$cart_total				= ($cart_total + $item_total_price);
+	}
+
+	$cart_total					= ($cart_total + $shipping_cost);
+
+	$_SESSION['cart_total']		= number_format($cart_total, 2);
+
+    // log_add("[".$name."] has been updated.");
+    status_message('success',"Item(s) have been added to your cart.");
+    go($_SERVER['HTTP_REFERER']);
 }

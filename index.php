@@ -876,10 +876,15 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 															<div class="form-row">
 																<div class="form-group col">
 																	<label class="font-weight-bold text-dark text-2">Shipping</label>
-																	<select id="shipping" name="shipping" class="form-control" required="">
-																		<option value="" >Royal Mail 48 Hour Signed For - £2.99</option>
-																		<option value="" >Royal Mail 24 Hour Signed For - £3.99</option>
-																		<option value="" >Guaranteed Next Working Day. - £7.99</option>
+																	<select id="shipping" name="shipping" class="form-control" onchange="set_shipping(this);">
+																		<option value="" disabled="">Select Shipping Method</option>
+																		<?php if(number_format($_SESSION['cart_total'], 2) > 39.99){ ?>
+																			<option value="shipping_free" <?php if($_SESSION['shipping_id']=='shipping_free'){echo'selected';}?>>Free 48 Hour Shipping.</option>
+																		<?php }else{ ?>
+																			<option value="shipping_48" <?php if($_SESSION['shipping_id']=='shipping_48'){echo'selected';}?>>Royal Mail 48 Hour Signed For - £2.99</option>
+																			<option value="shipping_24" <?php if($_SESSION['shipping_id']=='shipping_24'){echo'selected';}?>>Royal Mail 24 Hour Signed For - £3.99</option>
+																			<option value="shipping_nextday" <?php if($_SESSION['shipping_id']=='shipping_nextday'){echo'selected';}?>>Guaranteed Next Working Day. - £7.99</option>
+																		<?php } ?>
 																	</select>
 																</div>
 															</div>
@@ -1584,6 +1589,11 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
     		function jump_to_product(selectObject) {
 			    var product_id = selectObject.value; 
 			    window.location.href = "?c=product&id="+product_id;
+			}
+
+			function set_shipping(selectObject) {
+			    var shipping_id = selectObject.value; 
+			    window.location.href = "actions.php?a=set_shipping&id="+shipping_id;
 			}
 		</script>
 
