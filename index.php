@@ -1302,9 +1302,9 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 											</th>
 											<td>
 												<select id="shipping" name="shipping" class="form-control" required="">
-													<option value="" >Royal Mail 48 Hour Signed For - £2.99</option>
-													<option value="" >Royal Mail 24 Hour Signed For - £3.99</option>
-													<option value="" >Guaranteed Next Working Day. - £7.99</option>
+													<option value="" >Royal Mail 48: £2.99</option>
+													<option value="" >Royal Mail 24: £3.99</option>
+													<option value="" >Next Working Day: - £7.99</option>
 												</select>												
 											</td>
 										</tr>
