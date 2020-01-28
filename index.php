@@ -470,7 +470,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 											<!-- <p class="mb-4"><?php echo stripslashes($product['title_2']); ?></p> -->
 
 											<form action="actions.php?a=add_to_cart" enctype="multipart/form-data" method="post" class="cart">
-												<?php if($product['homepage'] == 'yes'){ ?>
+												<?php if($product['homepage'] == 'yes' && isset($linked_products) && is_array($linked_products)){ ?>
 													<div class="form-group row">
 														<label class="col-lg-12 control-label pt-2" for="blend">Step 1:</label>
 														<div class="col-lg-6 col-xs-12">
