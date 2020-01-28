@@ -238,9 +238,14 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 															</a>
 															<ul class="dropdown-menu">
 																<li>
-																	<a class="dropdown-item" href="index.html">
-																		Landing Page
-																	</a>
+																	<?php foreach(){ ?>
+																		<a class="dropdown-item" href="index.html">
+																			Landing Page
+																		</a>
+																		<a class="dropdown-item" href="index.html">
+																			Landing Page
+																		</a>
+																	<?php } ?>
 																</li>
 															</ul>
 														</li>
