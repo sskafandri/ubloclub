@@ -24,9 +24,13 @@ $start = $time;
 $query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `hidden` = 'no' ORDER BY `title` + 0 ");
 $all_products 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
-// get products
+// get categories
 $query 								= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY `name` ");
 $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
+
+// get sub categories
+$query 								= $conn->query("SELECT * FROM `shop_categories` ORDER BY `name` ");
+$all_sub_categories 				= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // set some defaults
 $query 								= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
@@ -228,6 +232,31 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																Shop
 															</a>
 														</li>
+														<li class="dropdown-submenu">
+															<a class="dropdown-item" href="#">Corporate <span class="tip tip-dark">hot</span></a>
+															<ul class="dropdown-menu">
+																<li><a class="dropdown-item" href="index-corporate.html" data-thumb-preview="img/previews/preview-corporate.jpg">Corporate - Version 1</a></li>
+																<li><a class="dropdown-item" href="index-corporate-2.html" data-thumb-preview="img/previews/preview-corporate-2.jpg">Corporate - Version 2</a></li>
+																<li><a class="dropdown-item" href="index-corporate-3.html" data-thumb-preview="img/previews/preview-corporate-3.jpg">Corporate - Version 3</a></li>
+																<li><a class="dropdown-item" href="index-corporate-4.html" data-thumb-preview="img/previews/preview-corporate-4.jpg">Corporate - Version 4</a></li>
+																<li><a class="dropdown-item" href="index-corporate-5.html" data-thumb-preview="img/previews/preview-corporate-5.jpg">Corporate - Version 5</a></li>
+																<li><a class="dropdown-item" href="index-corporate-6.html" data-thumb-preview="img/previews/preview-corporate-6.jpg">Corporate - Version 6</a></li>
+																<li><a class="dropdown-item" href="index-corporate-7.html" data-thumb-preview="img/previews/preview-corporate-7.jpg">Corporate - Version 7</a></li>
+																<li><a class="dropdown-item" href="index-corporate-8.html" data-thumb-preview="img/previews/preview-corporate-8.jpg">Corporate - Version 8</a></li>
+																<li><a class="dropdown-item" href="index-corporate-9.html" data-thumb-preview="img/previews/preview-corporate-9.jpg">Corporate - Version 9</a></li>
+																<li><a class="dropdown-item" href="index-corporate-10.html" data-thumb-preview="img/previews/preview-corporate-10.jpg">Corporate - Version 10</a></li>
+																<li><a class="dropdown-item" href="index-corporate-11.html" data-thumb-preview="img/previews/preview-corporate-11.jpg">Corporate - Version 11</a></li>
+																<li><a class="dropdown-item" href="index-corporate-12.html" data-thumb-preview="img/previews/preview-corporate-12.jpg">Corporate - Version 12</a></li>
+																<li><a class="dropdown-item" href="index-corporate-13.html" data-thumb-preview="img/previews/preview-corporate-13.jpg">Corporate - Version 13</a></li>
+																<li><a class="dropdown-item" href="index-corporate-14.html" data-thumb-preview="img/previews/preview-corporate-14.jpg">Corporate - Version 14</a></li>
+																<li><a class="dropdown-item" href="index-corporate-15.html" data-thumb-preview="img/previews/preview-corporate-15.jpg">Corporate - Version 15</a></li>
+																<li><a class="dropdown-item" href="index-corporate-16.html" data-thumb-preview="img/previews/preview-corporate-16.jpg">Corporate - Version 16</a></li>
+																<li><a class="dropdown-item" href="index-corporate-17.html" data-thumb-preview="img/previews/preview-corporate-17.jpg">Corporate - Version 17</a></li>
+																<li><a class="dropdown-item" href="index-corporate-18.html" data-thumb-preview="img/previews/preview-corporate-18.jpg">Corporate - Version 18</a></li>
+																<li><a class="dropdown-item" href="index-corporate-19.html" data-thumb-preview="img/previews/preview-corporate-19.jpg">Corporate - Version 19</a></li>
+																<li><a class="dropdown-item" href="index-corporate-20.html" data-thumb-preview="img/previews/preview-corporate-20.jpg">Corporate - Version 20</a></li>
+															</ul>
+														</li>
 														<li class="dropdown">
 															<a class="<?php if(get('c')=='cart'){echo'active';} ?>" href="?c=cart">
 																Cart
@@ -305,7 +334,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 			?>
 
 			<?php function home(){ ?>
-	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $all_sub_categories; ?>
 	        	<?php $max_stars = 5; ?>
 				<div role="main" class="main shop py-4">
 					<div class="container">
@@ -794,7 +823,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 			<?php } ?>
 
 			<?php function cart(){ ?>
-				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $cart_items, $affiliate; ?>
+				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $all_sub_categories, $cart_items, $affiliate; ?>
 				
 				<div role="main" class="main shop py-4">
 					<div class="container">
