@@ -21,7 +21,11 @@ $time = $time[1] + $time[0];
 $start = $time;
 
 // get products
-$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `hidden` = 'no' ORDER BY `title` + 0 ");
+if(!empty(get('sub_id')) && get('sub_id') != '0'){
+	$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `sub_category_id` = '".get('sub_id')."' AND `hidden` = 'no' ORDER BY `title` + 0 ");
+}else{
+	$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `hidden` = 'no' ORDER BY `title` + 0 ");
+}
 $all_products 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // get categories
