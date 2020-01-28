@@ -22,9 +22,9 @@ $start = $time;
 
 // get products
 if(!empty(get('sub_id')) && get('sub_id') != '0'){
-	$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `sub_category_id` = '".get('sub_id')."' AND `hidden` = 'no' ORDER BY `title` + 0 ");
+	$query 							= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `sub_category_id` = '".get('sub_id')."' AND `hidden` = 'no' ORDER BY `title` + 0 ");
 }else{
-	$query 								= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `hidden` = 'no' ORDER BY `title` + 0 ");
+	$query 							= $conn->query("SELECT * FROM `shop_products` WHERE `category_id` = '1' AND `hidden` = 'no' ORDER BY `title` + 0 ");
 }
 $all_products 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -243,6 +243,11 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 																Shop
 															</a>
 															<ul class="dropdown-menu">
+																<li>
+																	<a class="dropdown-item" href="?c=home">
+																		All Products
+																	</a>
+																</li>
 																<?php foreach($all_sub_categories as $sub_category){ ?>
 																	<li>
 																		<a class="dropdown-item" href="?c=home&sub_id=<?php echo $sub_category['id']; ?>">
