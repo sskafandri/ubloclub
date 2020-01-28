@@ -448,6 +448,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 									</div>
 
 									<div class="col-lg-6">
+										<?php debug($linked_products); ?>
 										<div class="summary entry-summary">
 											<h1 class="mb-0 font-weight-bold text-7"><?php echo stripslashes($product['title']); ?></h1>
 											<div class="pb-0 clearfix">
