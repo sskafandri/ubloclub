@@ -1371,7 +1371,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 				<div role="main" class="main shop py-4">
 					<div class="container">
 						<h3>About Us</h3>
-						Ublo Club was launched with a clearly defined goal of bringing the very highest quality Premium Quality British Made & Certified Juice to the British vaper.<br>
+						Ublo Club was launched with a clearly defined goal of bringing the very highest quality Premium Quality British Made & Certified E-Liquid to the British vaper.<br>
 						<br>
 						For your peace of mind, the ingredients Ublo Club use in our vaping liquids are pharmaceutical grade and the finest food grade flavourings. They are laboratory tested and certified to comply with the TPD (Tobacco Products Directive*) so that you can relax and enjoying your vaping without having to worry about cheap sub standard and ‘grey market’ products.<br>
 						<br>
