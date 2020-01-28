@@ -1306,11 +1306,19 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 												Shipping
 											</th>
 											<td>
-												<select id="shipping" name="shipping" class="form-control" required="">
-													<option value="" >Royal Mail 48: £2.99</option>
-													<option value="" >Royal Mail 24: £3.99</option>
-													<option value="" >Next Working Day: - £7.99</option>
-												</select>												
+												<?php 
+													if($_SESSION['shipping_id'] == 'shipping_free'){
+														$shipping_cost = 'Free';
+													}elseif($_SESSION['shipping_id'] == 'shipping_48'){
+														$shipping_cost = '2.99';
+													}elseif($_SESSION['shipping_id'] == 'shipping_24'){
+														$shipping_cost = '3.99';
+													}elseif($_SESSION['shipping_id'] == 'shipping_nextday'){
+														$shipping_cost = '7.99';
+													}
+
+													echo '£'.$shipping_cost;
+												?>
 											</td>
 										</tr>
 										<tr class="total">
