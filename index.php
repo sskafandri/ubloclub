@@ -33,7 +33,7 @@ $query 								= $conn->query("SELECT * FROM `whmcs`.`tblproductgroups` ORDER BY
 $all_categories 					= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // get sub categories
-$query 								= $conn->query("SELECT * FROM `shop_categories` ORDER BY `name` ");
+$query 								= $conn->query("SELECT * FROM `shop_categories` ORDER BY `order` ");
 $all_sub_categories 				= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // set some defaults
