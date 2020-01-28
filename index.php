@@ -233,8 +233,8 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 															</a>
 														</li>
 														<li class="dropdown">
-															<a class="dropdown-item dropdown-toggle active" href="?c=home">
-																Home
+															<a class="dropdown-item dropdown-toggle <?php if(get('c')=='' || get('c')=='home'){echo'active';} ?>" href="?c=home">
+																Shop
 															</a>
 															<ul class="dropdown-menu">
 																<li>
