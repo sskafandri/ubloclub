@@ -488,7 +488,7 @@ function checkout()
 		
 		$hash 					= sha1($email.$timestamp.$autoauthkey);
 		
-		$url 					= $whmcsurl."?email=$email&amp;timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
+		$url 					= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 
 		// empty_cart();
 
