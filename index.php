@@ -542,8 +542,9 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 															</div>
 
 															<button type="submit" class="btn btn-primary btn-modern text-uppercase">Add to cart</button>
-															<a href="?c=home" class="btn btn-primary btn-modern text-uppercase">Continue Shopping</a>
 															<a href="?c=cart" class="btn btn-success btn-modern text-uppercase">View Cart</a>
+															<br>
+															<a href="?c=home" class="btn btn-default btn-modern text-uppercase">Continue Shopping</a>
 														</div>
 													</div>
 
