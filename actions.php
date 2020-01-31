@@ -484,7 +484,7 @@ function checkout()
 		
 		$url 					= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 
-		// empty_cart();
+		empty_cart();
 
 		// echo "URL: ".$url;
 
