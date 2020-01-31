@@ -230,22 +230,11 @@ function checkout()
 	$account_type 		= 'customer';
 
 	// set the mlm_affiliate
-	/*
 	if(isset($_SESSION['mlm_affiliate'])){
 		$upline_id 		= $_SESSION['mlm_affiliate'];
 	}else{
 		$upline_id 		= 1;
 	}
-
-	// set the whmcs_affiliate
-	if(isset($_COOKIE['WHMCSAffiliateID'])){
-		$whmcs_affiliate 		= $_SESSION['whmcs_affiliate'];
-	}elseif(isset($_SESSION['whmcs_affiliate'])){
-		$whmcs_affiliate 		= $_SESSION['whmcs_affiliate'];
-	}else{
-		$whmcs_affiliate 		= 1;
-	}
-	*/
 	
 	// get the client ip address
 	$ip_address 						= $_SERVER['REMOTE_ADDR'];

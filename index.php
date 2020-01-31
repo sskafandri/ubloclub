@@ -22,6 +22,19 @@ if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")
 include('inc/db.php');
 include('inc/functions.php');
 
+// set affiliate from cookie
+if( isset( $_COOKIE['WHMCSAffiliateID'] ) ) {
+	// convert affiliateid to userid
+	$query      					= $conn->query("SELECT `id`,`clientid` FROM `whmcs`.`tblaffiliates` WHERE `id` = '".$_COOKIE['WHMCSAffiliateID']."' ");
+	$mlm_user 						= $query->fetch(PDO::FETCH_ASSOC);
+	$_SESSION['mlm_affiliate'] 		= $mlm_user['clientid'];
+	$_SESSION['whmcs_affiliate'] 	= $_COOKIE['WHMCSAffiliateID'];
+
+}
+
+
+
+
 // start timer for page loaded var
 $time = microtime();
 $time = explode(' ', $time);
