@@ -369,6 +369,7 @@ function checkout()
 		$postfields['noemail']			= true;
 		$postfields['skipvalidation']	= true;
 
+		$postfields['groupid'] 			= 1;
 		$postfields['firstname'] 		= $first_name;
 	    $postfields['lastname'] 		= $last_name;
 	    $postfields['email']			= $email;
