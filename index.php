@@ -32,9 +32,6 @@ if( isset( $_COOKIE['WHMCSAffiliateID'] ) ) {
 
 }
 
-
-
-
 // start timer for page loaded var
 $time = microtime();
 $time = explode(' ', $time);
