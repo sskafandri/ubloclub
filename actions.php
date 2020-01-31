@@ -484,7 +484,11 @@ function checkout()
 		
 		$url 					= $whmcsurl."?email=$email&timestamp=$timestamp&hash=$hash&goto=".urlencode($goto);
 
-		empty_cart();
+		$delete = $conn->exec("DELETE FROM `shop_carts` WHERE `key` = '".$_SESSION['cart_key']."' ");
+
+		unset($_SESSION['cart']);
+		unset($_SESSION['cart_key']);
+		unset($_SESSION['cart_total']);
 
 		// echo "URL: ".$url;
 
