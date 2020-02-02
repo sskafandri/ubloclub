@@ -1586,7 +1586,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 							</div>
 							<div class="row footer-top-light-border mt-4 pt-4">
 								<div class="col-lg-5 text-center text-md-left">
-									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved. UK Registered Company No 12182038. VAT Number GB 333 2139 35</p>
+									<p class="text-2 mt-1">© Copyright <?php echo date("Y", time()); ?>. All Rights Reserved. UK Registered Company No: 12182038. VAT No: GB 333 2139 35. Data Protection Registration No: ZA620842</p>
 								</div>
 								<!--
 									<div class="col-lg-3 text-center text-md-left">
