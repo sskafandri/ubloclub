@@ -356,6 +356,10 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 						age_check();
 						break;
 
+					case "futurepay_terms":
+						futurepay_terms();
+						break;
+
 					// home
 					default:
 						home();
@@ -1498,6 +1502,20 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 				</div>
 			<?php } ?>
 
+			<?php function futurepay_terms(){ ?>
+	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<h3>FuturePay Terms</h3>
+						When placing an order we process your payment using Worldpay Future Pay, this allows you to easily place orders in the future or to set up a monthly subscription.<br>
+						<br>
+						Any subscriptions are on a monthly until cancelled basis.<br>
+						<br>
+						You can cancel your subscription at any time from the billing area within your account.
+					</div>
+				</div>
+			<?php } ?>
+
 			<?php function contact_us(){ ?>
 	        	<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories; ?>
 				<div role="main" class="main shop py-4">
@@ -1620,6 +1638,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 											<p class="mb-1"><a href="?c=privacy_policy" class="text-3 link-hover-style-1">Privacy Policy</a></p>
 											<p class="mb-1"><a href="?c=faq" class="text-3 link-hover-style-1">FAQ</a></p>
 											<p class="mb-1"><a href="https://ublo.club/billing" class="text-3 link-hover-style-1">My Account</a></p>
+											<p class="mb-1"><a href="?c=futurepay_terms" class="text-3 link-hover-style-1">FuturePay Terms</a></p>
 										</div>
 										<!--
 											<div class="col-md-5">
