@@ -1443,7 +1443,7 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 							</div>
 							
 							<input type="hidden" id="country" name="country" class="form-control" value="GB">
-							<input type="hidden" id="merchantSecretKey" name="merchantSecretKey" class="form-control" value="5FfYFK0g3uA38sbplUwPLus%2bNYcYfn59GA4t0XXZesyFQ0ejcnUJ%2bOFvD3ug1qCJ">
+							<input type="hidden" id="merchantSecretKey" name="merchantSecretKey" class="form-control" value="U610club">
 							<input type="hidden" id="secret_key" name="secret_key" class="form-control" value="5FfYFK0g3uA38sbplUwPLus%2bNYcYfn59GA4t0XXZesyFQ0ejcnUJ%2bOFvD3ug1qCJ">
 							<input type="hidden" id="private_key" name="private_key" class="form-control" value="o6btFWd3qqHWf%2fY%2bPx5UozGwAl0oTcW%2bBwGmhw%2bj%2fNPGdPpkEC0BIGY2T9mYrQFP">
 							
