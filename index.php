@@ -352,6 +352,10 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 						cart();
 						break;
 
+					case "age_check":
+						age_check();
+						break;
+
 					// home
 					default:
 						home();
@@ -1392,6 +1396,63 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 								</table>
 							</div>
 						</div>
+					</div>
+				</div>
+			<?php } ?>
+
+			<?php function age_check(){ ?>
+				<?php global $conn, $globals, $global_settings, $site, $all_products, $all_categories, $all_sub_categories, $cart_items, $affiliate; ?>
+				
+				<div role="main" class="main shop py-4">
+					<div class="container">
+						<h3>Age Check</h3>
+						<form action="https://agechecked.com/api/acapiremote/cceroll" id="frmBillingAddress" method="post">
+							<div class="form-row">
+								<div class="form-group col">
+									<label class="font-weight-bold text-dark text-2">Email</label>
+									<input type="text" id="email" name="email" class="form-control" value="<?php echo $_SESSION['age_check']['email']; ?>" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-lg-6">
+									<label class="font-weight-bold text-dark text-2">First Name</label>
+									<input type="text" id="name" name="name" class="form-control" value="<?php echo $_SESSION['age_check']['first_name']; ?>" required="">
+								</div>
+								<div class="form-group col-lg-6">
+									<label class="font-weight-bold text-dark text-2">Last Name</label>
+									<input type="text" id="surname" name="surname" class="form-control" value="<?php echo $_SESSION['age_check']['surname']; ?>" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<label class="font-weight-bold text-dark text-2">House Number</label>
+									<input type="text" id="building" name="building" class="form-control" value="<?php echo $_SESSION['age_check']['building']; ?>" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<label class="font-weight-bold text-dark text-2">Street</label>
+									<input type="text" id="street" name="street" class="form-control" value="<?php echo $_SESSION['age_check']['street']; ?>" required="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<label class="font-weight-bold text-dark text-2">Postcode</label>
+									<input type="text" id="postcode" name="postcode" class="form-control" value="<?php echo $_SESSION['age_check']['postcode']; ?>" required="">
+								</div>
+							</div>
+							
+							<input type="hidden" id="country" name="country" class="form-control" value="GB">
+							<input type="hidden" id="merchantSecretKey" name="merchantSecretKey" class="form-control" value="5FfYFK0g3uA38sbplUwPLus%2bNYcYfn59GA4t0XXZesyFQ0ejcnUJ%2bOFvD3ug1qCJ">
+							<input type="hidden" id="secret_key" name="secret_key" class="form-control" value="5FfYFK0g3uA38sbplUwPLus%2bNYcYfn59GA4t0XXZesyFQ0ejcnUJ%2bOFvD3ug1qCJ">
+							<input type="hidden" id="private_key" name="private_key" class="form-control" value="o6btFWd3qqHWf%2fY%2bPx5UozGwAl0oTcW%2bBwGmhw%2bj%2fNPGdPpkEC0BIGY2T9mYrQFP">
+							
+							<div class="form-row">
+								<div class="form-group col">
+									<input type="submit" value="Place Order" class="btn btn-primary btn-modern text-uppercase mt-5 mb-5 mb-lg-0 float-right mb-2" data-loading-text="Loading...">
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			<?php } ?>

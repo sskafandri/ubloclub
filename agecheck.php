@@ -1,7 +1,7 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script
-src=https://api.agechecked.com/api/jsapi/getjavascript?merchantkey=o6btFWd3qqHWf%2fY%2bPx5UozGwAl0oTcW%2bBwGmhw%2bj%2fNPGdPpkEC0BIGY2T9mYrQFP&version=1.0
+src=https://api.agechecked.com/api/jsapi/getjavascript?merchantkey=5FfYFK0g3uA38sbplUwPLus%2bNYcYfn59GA4t0XXZesyFQ0ejcnUJ%2bOFvD3ug1qCJ&version=1.0
 type="text/javascript">
 </script>
 <script type="text/javascript">
