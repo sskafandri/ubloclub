@@ -260,7 +260,7 @@ function checkout()
 		$shipping_id = array('56');
 	}
 
-	array_merge($order_pids,$shipping_id);
+	$order_pids_final = array_merge( $order_pids, $shipping_id );
 
 	if(get('login') == 'yes'){
 		$email 							= post('email');
@@ -440,7 +440,7 @@ function checkout()
 	$postfields['paymentmethod']	= 'worldpayfuturepay';
 
 	$postfields['clientid'] 		= $client_id;
-    $postfields['pid'] 				= $order_pids;
+    $postfields['pid'] 				= $order_pids_final;
     $postfields['affid']			= $_COOKIE['WHMCSAffiliateID'];
 
     # debug($whmcs);
