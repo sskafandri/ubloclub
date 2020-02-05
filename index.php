@@ -1616,6 +1616,8 @@ if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
 				<div role="main" class="main shop py-4">
 					<div class="container">
 						<?php debug($_SESSION); ?>
+
+						<?php debug($_COOKIE); ?>
 					</div>
 				</div>
 			<?php } ?>
