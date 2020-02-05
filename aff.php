@@ -25,7 +25,7 @@ $_SESSION['mlm_affiliate'] 		= $user['id'];
 
 $cookie_name 							= "mlm_affiliate";
 $cookie_value 							= $user['id'];
-setcookie( $cookie_name, $cookie_value, time() + ( 86400 * 30 ), "/" ); // 86400 = 1 day
+setcookie( $cookie_name, $cookie_value, time() + 3600 * 24 * 365, "/" ); // 86400 = 1 day
 
 // convert userid to affiliateid
 /*
