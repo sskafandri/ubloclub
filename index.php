@@ -21,17 +21,14 @@ if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")
 include('inc/db.php');
 include('inc/functions.php');
 
-//Get user IP address
+// get user IP address
 $ip 				= $_SERVER['REMOTE_ADDR'];
-//Using the API to get information about this IP
+// using the API to get information about this IP
 $details 			= json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=$ip"));
 debug($details);
-//Using the geoplugin to get the continent for this IP
-$continent 			= $details->geoplugin_continentCode;
-//And for the country
-$country 			= $details->geoplugin_countryCode;
-//If continent is Europe
-if( $country === "UK" ) {
+
+// block if user is not in the UK
+if( $details['geoplugin_countryCode'] == "UK" ) {
 	die( "This website is only accessable to customers inside the UK." );   
 }
 
