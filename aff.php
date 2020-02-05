@@ -25,6 +25,7 @@ $_SESSION['mlm_affiliate'] 		= $user['id'];
 
 
 // convert userid to affiliateid
+/*
 $query      					= $conn->query("SELECT `id` FROM `whmcs`.`tblaffiliates` WHERE `clientid` = '".$user['id']."' ");
 $affiliate 						= $query->fetch(PDO::FETCH_ASSOC);
 $_SESSION['whmcs_affiliate'] 	= $affiliate['id'];
@@ -32,6 +33,7 @@ $_SESSION['whmcs_affiliate'] 	= $affiliate['id'];
 if(!isset($affiliate['id'])){
 	$affiliate['id'] = 17;
 }
+*/
 
-header("Location: https://ublo.club/billing/aff.php?aff=".$affiliate['id']);
+header( "Location: https://ublo.club/" );
 ?>

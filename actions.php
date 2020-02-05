@@ -228,13 +228,6 @@ function checkout()
 
 	// set account type
 	$account_type 		= 'customer';
-
-	// set the mlm_affiliate
-	if(isset($_SESSION['mlm_affiliate'])){
-		$upline_id 		= $_SESSION['mlm_affiliate'];
-	}else{
-		$upline_id 		= 1;
-	}
 	
 	// get the client ip address
 	$ip_address 						= $_SERVER['REMOTE_ADDR'];
@@ -262,7 +255,7 @@ function checkout()
 
 	$order_pids_final = array_merge( $order_pids, $shipping_id );
 
-	if(get('login') == 'yes'){
+	if( get( 'login' ) == 'yes' ) {
 		$email 							= post('email');
 		$password 						= post('password');
 
@@ -302,7 +295,7 @@ function checkout()
 			status_message('danger',"Login failed, please try again.");
     		go($_SERVER['HTTP_REFERER']);
 		}
-	}else{
+	} else {
 		$company_name 		= post('company_name');
 		$company_name 		= preg_replace("/[^a-zA-Z0-9]+/", "", $company_name);
 
@@ -431,6 +424,25 @@ function checkout()
 		}
 	}
 
+	// set the mlm_affiliate
+	if( get( 'login' ) == 'yes' ) {
+		// existing customer, get their existing upline_id
+		$query 								= $conn->query("SELECT `id`,`upline_id` FROM `users` WHERE `id` = '".$client_id."' ");
+		$customer_record 					= $query->fetch(PDO::FETCH_ASSOC);
+		$upline_id 							= $customer_record['upline_id'];
+		$_SESSION['mlm_affiliate']	 		= $customer_record['upline_id'];
+	} else {
+		if( isset( $_SESSION['mlm_affiliate'] ) ) {
+			$upline_id 		= $_SESSION['mlm_affiliate'];
+		} else {
+			$upline_id 		= 17;
+		}
+	}	
+
+	if( !isset( $upline_id ) || empty( $upline_id ) ) {
+		$upline_id = 17;
+	}
+
 	// place order with whmcs
 	$postfields["username"] 		= $whmcs['username']; 
 	$postfields["password"] 		= $whmcs['password'];
@@ -441,7 +453,7 @@ function checkout()
 
 	$postfields['clientid'] 		= $client_id;
     $postfields['pid'] 				= $order_pids_final;
-    $postfields['affid']			= $_COOKIE['WHMCSAffiliateID'];
+    // $postfields['affid']			= $_COOKIE['WHMCSAffiliateID'];
 
     # debug($whmcs);
     # debug($postfields);
