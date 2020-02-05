@@ -557,5 +557,5 @@ function set_shipping()
 
     // log_add("[".$name."] has been updated.");
     status_message('success',"Item(s) have been added to your cart.");
-    go($_SERVER['HTTP_REFERER']);
+    go($_SERVER['HTTP_REFERER']."#register_signup");
 }
