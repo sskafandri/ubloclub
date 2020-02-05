@@ -274,7 +274,7 @@ function checkout()
 	if( !isset( $upline_id ) || empty( $upline_id ) ) {
 		$upline_id = 17;
 	}
-	
+
 	if( get( 'login' ) == 'yes' ) {
 		$email 							= post('email');
 		$password 						= post('password');
@@ -439,7 +439,7 @@ function checkout()
 				);
 			");
 		}else{
-			status_message('danger',$results['message'].".");
+			status_message( 'danger',$results['message']."." );
     		go($_SERVER['HTTP_REFERER']);
 		}
 	}
