@@ -956,11 +956,13 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 
 															<div class="form-row">
 																<div class="form-group col">
-																	<font color="red">Select shipping method below.</font> (shipping is free on orders over £40)<br>
+																	<?php if( !isset( $_SESSION['shipping_id'] ) ) { ?>
+																		<font color="red">Select shipping method below.</font> (shipping is free on orders over £40)<br>
+																	<?php } ?>
 																	<label class="font-weight-bold text-dark text-2">Shipping</label>
 																	<select id="shipping_id" name="shipping_id" class="form-control" onchange="set_shipping(this);">
 																		<option value="">Select Shipping Method</option>
-																		<?php if(number_format($_SESSION['cart_total'], 2) >= 39.90){ ?>
+																		<?php if( number_format( $_SESSION['cart_total'], 2 ) >= 39.90 ) { ?>
 																			<option value="shipping_free" <?php if($_SESSION['shipping_id']=='shipping_free'){echo'selected';}?>>Free 48 Hour Shipping.</option>
 																		<?php }else{ ?>
 																			<option value="shipping_48" <?php if($_SESSION['shipping_id']=='shipping_48'){echo'selected';}?>>Royal Mail 48 Hour Signed For - £2.99</option>
