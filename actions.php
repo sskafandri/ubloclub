@@ -255,6 +255,26 @@ function checkout()
 
 	$order_pids_final = array_merge( $order_pids, $shipping_id );
 
+	// set the mlm_affiliate
+	if( get( 'login' ) == 'yes' ) {
+		// existing customer, get their existing upline_id
+		$query 								= $conn->query("SELECT `id`,`upline_id` FROM `users` WHERE `id` = '".$client_id."' ");
+		$customer_record 					= $query->fetch(PDO::FETCH_ASSOC);
+		$upline_id 							= $customer_record['upline_id'];
+		$_SESSION['mlm_affiliate']	 		= $customer_record['upline_id'];
+	} else {
+		if( isset( $_SESSION['mlm_affiliate'] ) ) {
+			$upline_id 		= $_SESSION['mlm_affiliate'];
+		} else {
+			$upline_id 		= 17;
+		}
+	}	
+
+	// fallback
+	if( !isset( $upline_id ) || empty( $upline_id ) ) {
+		$upline_id = 17;
+	}
+	
 	if( get( 'login' ) == 'yes' ) {
 		$email 							= post('email');
 		$password 						= post('password');
@@ -423,36 +443,6 @@ function checkout()
     		go($_SERVER['HTTP_REFERER']);
 		}
 	}
-
-	// set the mlm_affiliate
-	if( get( 'login' ) == 'yes' ) {
-		// existing customer, get their existing upline_id
-		$query 								= $conn->query("SELECT `id`,`upline_id` FROM `users` WHERE `id` = '".$client_id."' ");
-		$customer_record 					= $query->fetch(PDO::FETCH_ASSOC);
-		$upline_id 							= $customer_record['upline_id'];
-		$_SESSION['mlm_affiliate']	 		= $customer_record['upline_id'];
-	} else {
-		if( isset( $_SESSION['mlm_affiliate'] ) ) {
-			$upline_id 		= $_SESSION['mlm_affiliate'];
-		} else {
-			$upline_id 		= 17;
-		}
-	}	
-
-	// fallback
-	if( !isset( $upline_id ) || empty( $upline_id ) ) {
-		$upline_id = 17;
-	}
-
-	// create the user in ukmc 
-	$insert = $conn->exec("INSERT IGNORE INTO `users` 
-        (`id`,`added`,`type`,`upline_id`)
-        VALUE
-        ('".$client_id."',
-        '".time()."',
-        'customer',
-        '".$upline_id."'
-    )");
 
 	// place order with whmcs
 	$postfields["username"] 		= $whmcs['username']; 
