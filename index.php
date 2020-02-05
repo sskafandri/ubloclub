@@ -989,7 +989,7 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 													<div class="row">
 														<div class="col">
 															<div class="tabs tabs-product mb-2">
-																<ul class="nav nav-tabs">
+																<ul class="nav nav-tabs" id="register_signup">
 																	<li class="nav-item active"><a class="nav-link py-3 px-4" href="#new_customer" data-toggle="tab">New Customer</a></li>
 																	<li class="nav-item"><a class="nav-link py-3 px-4" href="#existing_customer" data-toggle="tab">Existing Customer</a></li>
 																	<!-- <li class="nav-item"><a class="nav-link py-3 px-4" href="#productReviews" data-toggle="tab">Reviews (2)</a></li> -->
