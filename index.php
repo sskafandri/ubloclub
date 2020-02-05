@@ -25,7 +25,6 @@ include('inc/functions.php');
 $ip 				= $_SERVER['REMOTE_ADDR'];
 // using the API to get information about this IP
 $details 			= json_decode( file_get_contents( "http://www.geoplugin.net/json.gp?ip=$ip" ), true );
-debug($details);
 
 // block if user is not in the UK
 if( $details['geoplugin_countryCode'] != "UK" || $details['geoplugin_countryCode'] != "GB" ) {
