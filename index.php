@@ -26,7 +26,7 @@ $continent 			= $details->geoplugin_continentCode;
 //And for the country
 $country 			= $details->geoplugin_countryCode;
 //If continent is Europe
-if( $country == "UK" ) {
+if( $country === "UK" ) {
 	die( "This website is only accessable to customers inside the UK." );   
 }
 
