@@ -28,8 +28,8 @@ $details 			= json_decode( file_get_contents( "http://www.geoplugin.net/json.gp?
 debug($details);
 
 // block if user is not in the UK
-if( $details['geoplugin_countryCode'] == "UK" || $details['geoplugin_countryCode'] == "GB" ) {
-	die( "This website is only accessable to customers inside the UK." );   
+if( $details['geoplugin_countryCode'] != "UK" || $details['geoplugin_countryCode'] != "GB" ) {
+	die( "This website is only accessible to customers inside the UK." );   
 }
 
 // set affiliate from cookie
