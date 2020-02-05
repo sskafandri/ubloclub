@@ -77,7 +77,9 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="robots" content="noindex">
 
 		<title><?php echo $site['title']; ?></title>	
 
