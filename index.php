@@ -21,6 +21,7 @@ if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")
 include('inc/db.php');
 include('inc/functions.php');
 
+// geoIP lock
 // get user IP address
 $ip 				= $_SERVER['REMOTE_ADDR'];
 // using the API to get information about this IP
