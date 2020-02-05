@@ -23,6 +23,9 @@ $query      					= $conn->query("SELECT `id` FROM `users` WHERE `affiliate_usern
 $user      	 					= $query->fetch(PDO::FETCH_ASSOC);
 $_SESSION['mlm_affiliate'] 		= $user['id'];
 
+$cookie_name 							= "mlm_affiliate";
+$cookie_value 							= $user['id'];
+setcookie( $cookie_name, $cookie_value, time() + ( 86400 * 30 ), "/" ); // 86400 = 1 day
 
 // convert userid to affiliateid
 /*

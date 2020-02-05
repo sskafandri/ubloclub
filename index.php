@@ -12,9 +12,8 @@ session_start();
 
 if(!isset($_SERVER["HTTPS"]) || $_SERVER["HTTPS"] != "on")
 {
-    //Tell the browser to redirect to the HTTPS URL.
+    // tell the browser to redirect to the HTTPS URL.
     header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"], true, 301);
-    //Prevent the rest of the script from executing.
     exit;
 }
 
@@ -23,13 +22,8 @@ include('inc/db.php');
 include('inc/functions.php');
 
 // set affiliate from cookie
-if( isset( $_COOKIE['WHMCSAffiliateID'] ) ) {
-	// convert affiliateid to userid
-	$query      					= $conn->query("SELECT `id`,`clientid` FROM `whmcs`.`tblaffiliates` WHERE `id` = '".$_COOKIE['WHMCSAffiliateID']."' ");
-	$mlm_user 						= $query->fetch(PDO::FETCH_ASSOC);
-	$_SESSION['mlm_affiliate'] 		= $mlm_user['clientid'];
-	$_SESSION['whmcs_affiliate'] 	= $_COOKIE['WHMCSAffiliateID'];
-
+if( isset( $_COOKIE['mlm_affiliate'] ) ) {
+	$_SESSION['mlm_affiliate'] 		= $_COOKIE['mlm_affiliate'];
 }
 
 // start timer for page loaded var
