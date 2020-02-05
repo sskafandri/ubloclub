@@ -980,6 +980,7 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 																</div>
 															</div>
 														</form>
+														<a name="register_signup"></a> 
 													<?php }else{ ?>
 														Your cart is empty. Please add at least one product from our <a href="?c=home">shop</a>.
 													<?php } ?>
@@ -989,7 +990,6 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 													<div class="row">
 														<div class="col">
 															<div class="tabs tabs-product mb-2">
-																<a name="register_signup"></a> 
 																<ul class="nav nav-tabs">
 																	<li class="nav-item active"><a class="nav-link py-3 px-4" href="#new_customer" data-toggle="tab">New Customer</a></li>
 																	<li class="nav-item"><a class="nav-link py-3 px-4" href="#existing_customer" data-toggle="tab">Existing Customer</a></li>
