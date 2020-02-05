@@ -38,5 +38,5 @@ if(!isset($affiliate['id'])){
 }
 */
 
-header( "Location: https://ublo.club/" );
+header( "Location: https://ublo.club/" , true, 301 );
 ?>

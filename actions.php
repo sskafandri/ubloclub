@@ -224,10 +224,10 @@ function checkout()
 {
 	global $conn, $global_settings, $whmcs;
 
-	$order_pids 		= array();
+	$order_pids 						= array();
 
 	// set account type
-	$account_type 		= 'customer';
+	$account_type 						= 'customer';
 	
 	// get the client ip address
 	$ip_address 						= $_SERVER['REMOTE_ADDR'];
@@ -439,9 +439,20 @@ function checkout()
 		}
 	}	
 
+	// fallback
 	if( !isset( $upline_id ) || empty( $upline_id ) ) {
 		$upline_id = 17;
 	}
+
+	// create the user in ukmc 
+	$insert = $conn->exec("INSERT IGNORE INTO `users` 
+        (`id`,`added`,`type`,`upline_id`)
+        VALUE
+        ('".$client_id."',
+        '".time()."',
+        'customer',
+        '".$upline_id."'
+    )");
 
 	// place order with whmcs
 	$postfields["username"] 		= $whmcs['username']; 
