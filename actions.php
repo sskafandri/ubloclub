@@ -266,13 +266,13 @@ function checkout()
 		if( isset( $_SESSION['mlm_affiliate'] ) ) {
 			$upline_id 		= $_SESSION['mlm_affiliate'];
 		} else {
-			$upline_id 		= 17;
+			$upline_id 		= 100;
 		}
 	}	
 
 	// fallback
 	if( !isset( $upline_id ) || empty( $upline_id ) ) {
-		$upline_id = 17;
+		$upline_id = 100;
 	}
 
 	if( get( 'login' ) == 'yes' ) {
