@@ -33,8 +33,8 @@ if( $details['geoplugin_countryCode'] != "GB" ) {
 }
 
 // set affiliate from cookie
-if( isset( $_COOKIE['mlm_affiliate'] ) ) {
-	$_SESSION['mlm_affiliate'] 		= $_COOKIE['mlm_affiliate'];
+if( isset( $_COOKIE['tracking_id'] ) ) {
+	$_SESSION['tracking_id'] 		= $_COOKIE['tracking_id'];
 }
 
 // start timer for page loaded var
@@ -64,8 +64,8 @@ $query 								= $conn->query("SELECT * FROM `shop_carts` WHERE `key` = '".$_SES
 $cart_items 						= $query->fetchAll(PDO::FETCH_ASSOC);
 
 // get sponsor / affiliate details
-if(isset($_SESSION['mlm_affiliate']) && !empty($_SESSION['mlm_affiliate'])){
-	$query 								= $conn->query("SELECT * FROM `users` WHERE `id` = '".$_SESSION['mlm_affiliate']."' ");
+if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
+	$query 								= $conn->query("SELECT * FROM `users` WHERE `id` = '".$_SESSION['tracking_id']."' ");
 	$affiliate 							= $query->fetch(PDO::FETCH_ASSOC);
 }
 

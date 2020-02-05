@@ -255,16 +255,16 @@ function checkout()
 
 	$order_pids_final = array_merge( $order_pids, $shipping_id );
 
-	// set the mlm_affiliate
+	// set the tracking_id
 	if( get( 'login' ) == 'yes' ) {
 		// existing customer, get their existing upline_id
 		$query 								= $conn->query("SELECT `id`,`upline_id` FROM `users` WHERE `id` = '".$client_id."' ");
 		$customer_record 					= $query->fetch(PDO::FETCH_ASSOC);
 		$upline_id 							= $customer_record['upline_id'];
-		$_SESSION['mlm_affiliate']	 		= $customer_record['upline_id'];
+		$_SESSION['tracking_id']	 		= $customer_record['upline_id'];
 	} else {
-		if( isset( $_SESSION['mlm_affiliate'] ) ) {
-			$upline_id 		= $_SESSION['mlm_affiliate'];
+		if( isset( $_SESSION['tracking_id'] ) ) {
+			$upline_id 		= $_SESSION['tracking_id'];
 		} else {
 			$upline_id 		= 100;
 		}

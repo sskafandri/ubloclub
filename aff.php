@@ -16,15 +16,15 @@ include('inc/global_vars.php');
 include('inc/functions.php');
 
 // get affiliate username
-$username 						= get('username');
+$username 									= get('username');
 
 // convert username to userid
-$query      					= $conn->query("SELECT `id` FROM `users` WHERE `affiliate_username` = '".$username."' ");
-$user      	 					= $query->fetch(PDO::FETCH_ASSOC);
-$_SESSION['mlm_affiliate'] 		= $user['id'];
+$query      								= $conn->query("SELECT `id` FROM `users` WHERE `affiliate_username` = '".$username."' ");
+$user      	 								= $query->fetch(PDO::FETCH_ASSOC);
+$_SESSION['tracking_id'] 					= $user['id'];
 
-$cookie_name 							= "mlm_affiliate";
-$cookie_value 							= $user['id'];
+$cookie_name 								= "tracking_id";
+$cookie_value 								= $user['id'];
 setcookie( $cookie_name, $cookie_value, time() + 3600 * 24 * 365, "/" ); // 86400 = 1 day
 
 // convert userid to affiliateid
