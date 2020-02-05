@@ -955,6 +955,7 @@ if(isset($_SESSION['tracking_id']) && !empty($_SESSION['tracking_id'])){
 															</table>
 
 															<div class="form-row">
+																<font color="red">Select shipping method below.</font> (shipping is free on orders over £40)
 																<div class="form-group col">
 																	<label class="font-weight-bold text-dark text-2">Shipping</label>
 																	<select id="shipping_id" name="shipping_id" class="form-control" onchange="set_shipping(this);">
