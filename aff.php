@@ -30,7 +30,7 @@ $affiliate 						= $query->fetch(PDO::FETCH_ASSOC);
 $_SESSION['whmcs_affiliate'] 	= $affiliate['id'];
 
 if(!isset($affiliate['id'])){
-	$affiliate['id'] = 1;
+	$affiliate['id'] = 17;
 }
 
 header("Location: https://ublo.club/billing/aff.php?aff=".$affiliate['id']);
